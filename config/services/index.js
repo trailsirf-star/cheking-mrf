@@ -1,4 +1,5 @@
 module.exports = {
     whatsapp: require('./whatsapp'),
-    facebook: require('./facebook')
+    facebook: require('./facebook'),
+    snapchat: require('./snapchat')
 };
