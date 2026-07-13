@@ -1,9 +1,11 @@
 const whatsapp = require('./whatsapp');
 const facebook = require('./facebook');
+const snapchat = require('./snapchat');
 
 const pricing = {
     whatsapp: whatsapp.pricing,
-    facebook: facebook.pricing
+    facebook: facebook.pricing,
+    snapchat: snapchat.pricing
 };
 
 const providerRanks = {
