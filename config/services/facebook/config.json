@@ -1,0 +1,924 @@
+{
+  "serviceType": "facebook",
+  "serviceName": "Facebook Number",
+  "serviceCode": "fb",
+  "countries": [
+    {
+      "name": "Canada",
+      "code": "+1",
+      "price": 40,
+      "countryId": 36,
+      "flag": "🇨🇦"
+    },
+    {
+      "name": "United Kingdom",
+      "code": "+44",
+      "price": 40,
+      "countryId": 16,
+      "flag": "🇬🇧"
+    },
+    {
+      "name": "USA",
+      "code": "+1",
+      "price": 75,
+      "countryId": 187,
+      "flag": "🇺🇸"
+    },
+    {
+      "name": "Pakistan",
+      "code": "+92",
+      "price": 24,
+      "countryId": 66,
+      "flag": "🇵🇰"
+    },
+    {
+      "name": "Philippines",
+      "code": "+63",
+      "price": 29,
+      "countryId": 4,
+      "flag": "🇵🇭"
+    },
+    {
+      "name": "Ethiopia",
+      "code": "+251",
+      "price": 31,
+      "countryId": 71,
+      "flag": "🇪🇹"
+    },
+    {
+      "name": "USA Virtual",
+      "code": "+1",
+      "price": 70,
+      "countryId": 12,
+      "flag": "🇺🇸"
+    },
+    {
+      "name": "Afghanistan",
+      "code": "+93",
+      "price": 31,
+      "countryId": 74,
+      "flag": "🇦🇫"
+    },
+    {
+      "name": "Peru",
+      "code": "+51",
+      "price": 33,
+      "countryId": 65,
+      "flag": "🇵🇪"
+    },
+    {
+      "name": "Egypt",
+      "code": "+20",
+      "price": 30,
+      "countryId": 21,
+      "flag": "🇪🇬"
+    },
+    {
+      "name": "Georgia",
+      "code": "+995",
+      "price": 34,
+      "countryId": 128,
+      "flag": "🇬🇪"
+    },
+    {
+      "name": "Finland",
+      "code": "+358",
+      "price": 29,
+      "countryId": 163,
+      "flag": "🇫🇮"
+    },
+    {
+      "name": "Papua New Guinea",
+      "code": "+675",
+      "price": 70,
+      "countryId": 79,
+      "flag": "🇵🇬"
+    },
+    {
+      "name": "Ivory Coast",
+      "code": "+225",
+      "price": 32,
+      "countryId": 27,
+      "flag": "🇨🇮"
+    },
+    {
+      "name": "Chad",
+      "code": "+235",
+      "price": 31,
+      "countryId": 42,
+      "flag": "🇹🇩"
+    },
+    {
+      "name": "Nepal",
+      "code": "+977",
+      "price": 33,
+      "countryId": 81,
+      "flag": "🇳🇵"
+    },
+    {
+      "name": "Moldova",
+      "code": "+373",
+      "price": 30,
+      "countryId": 85,
+      "flag": "🇲🇩"
+    },
+    {
+      "name": "Croatia",
+      "code": "+385",
+      "price": 34,
+      "countryId": 45,
+      "flag": "🇭🇷"
+    },
+    {
+      "name": "Nicaragua",
+      "code": "+505",
+      "price": 29,
+      "countryId": 90,
+      "flag": "🇳🇮"
+    },
+    {
+      "name": "Cuba",
+      "code": "+53",
+      "price": 120,
+      "countryId": 113,
+      "flag": "🇨🇺"
+    },
+    {
+      "name": "Mongolia",
+      "code": "+976",
+      "price": 32,
+      "countryId": 72,
+      "flag": "🇲🇳"
+    },
+    {
+      "name": "Slovenia",
+      "code": "+386",
+      "price": 31,
+      "countryId": 59,
+      "flag": "🇸🇮"
+    },
+    {
+      "name": "Benin",
+      "code": "+229",
+      "price": 33,
+      "countryId": 120,
+      "flag": "🇧🇯"
+    },
+    {
+      "name": "Belarus",
+      "code": "+375",
+      "price": 100,
+      "countryId": 51,
+      "flag": "🇧🇾"
+    },
+    {
+      "name": "Botswana",
+      "code": "+267",
+      "price": 100,
+      "countryId": 123,
+      "flag": "🇧🇼"
+    },
+    {
+      "name": "DR Congo",
+      "code": "+243",
+      "price": 30,
+      "countryId": 18,
+      "flag": "🇨🇩"
+    },
+    {
+      "name": "Madagascar",
+      "code": "+261",
+      "price": 34,
+      "countryId": 17,
+      "flag": "🇲🇬"
+    },
+    {
+      "name": "Colombia",
+      "code": "+57",
+      "price": 19,
+      "countryId": 33,
+      "flag": "🇨🇴"
+    },
+    {
+      "name": "Algeria",
+      "code": "+213",
+      "price": 29,
+      "countryId": 58,
+      "flag": "🇩🇿"
+    },
+    {
+      "name": "Austria",
+      "code": "+43",
+      "price": 32,
+      "countryId": 50,
+      "flag": "🇦🇹"
+    },
+    {
+      "name": "Panama",
+      "code": "+507",
+      "price": 31,
+      "countryId": 112,
+      "flag": "🇵🇦"
+    },
+    {
+      "name": "Norway",
+      "code": "+47",
+      "price": 33,
+      "countryId": 174,
+      "flag": "🇳🇴"
+    },
+    {
+      "name": "Ireland",
+      "code": "+353",
+      "price": 30,
+      "countryId": 23,
+      "flag": "🇮🇪"
+    },
+    {
+      "name": "Mauritius",
+      "code": "+230",
+      "price": 34,
+      "countryId": 157,
+      "flag": "🇲🇺"
+    },
+    {
+      "name": "Switzerland",
+      "code": "+41",
+      "price": 29,
+      "countryId": 173,
+      "flag": "🇨🇭"
+    },
+    {
+      "name": "Costa Rica",
+      "code": "+506",
+      "price": 60,
+      "countryId": 93,
+      "flag": "🇨🇷"
+    },
+    {
+      "name": "Bahrain",
+      "code": "+973",
+      "price": 90,
+      "countryId": 145,
+      "flag": "🇧🇭"
+    },
+    {
+      "name": "Gambia",
+      "code": "+220",
+      "price": 32,
+      "countryId": 28,
+      "flag": "🇬🇲"
+    },
+    {
+      "name": "Liberia",
+      "code": "+231",
+      "price": 31,
+      "countryId": 135,
+      "flag": "🇱🇷"
+    },
+    {
+      "name": "Angola",
+      "code": "+244",
+      "price": 33,
+      "countryId": 76,
+      "flag": "🇦🇴"
+    },
+    {
+      "name": "Armenia",
+      "code": "+374",
+      "price": 30,
+      "countryId": 148,
+      "flag": "🇦🇲"
+    },
+    {
+      "name": "Gabon",
+      "code": "+241",
+      "price": 34,
+      "countryId": 154,
+      "flag": "🇬🇦"
+    },
+    {
+      "name": "Hungary",
+      "code": "+36",
+      "price": 29,
+      "countryId": 84,
+      "flag": "🇭🇺"
+    },
+    {
+      "name": "Guinea",
+      "code": "+224",
+      "price": 32,
+      "countryId": 68,
+      "flag": "🇬🇳"
+    },
+    {
+      "name": "Serbia",
+      "code": "+381",
+      "price": 31,
+      "countryId": 29,
+      "flag": "🇷🇸"
+    },
+    {
+      "name": "Burundi",
+      "code": "+257",
+      "price": 33,
+      "countryId": 119,
+      "flag": "🇧🇮"
+    },
+    {
+      "name": "South Sudan",
+      "code": "+211",
+      "price": 30,
+      "countryId": 177,
+      "flag": "🇸🇸"
+    },
+    {
+      "name": "Maldives",
+      "code": "+960",
+      "price": 200,
+      "countryId": 159,
+      "flag": "🇲🇻"
+    },
+    {
+      "name": "Albania",
+      "code": "+355",
+      "price": 80,
+      "countryId": 155,
+      "flag": "🇦🇱"
+    },
+    {
+      "name": "Guinea-Bissau",
+      "code": "+245",
+      "price": 80,
+      "countryId": 130,
+      "flag": "🇬🇼"
+    },
+    {
+      "name": "Sierra Leone",
+      "code": "+232",
+      "price": 34,
+      "countryId": 115,
+      "flag": "🇸🇱"
+    },
+    {
+      "name": "Azerbaijan",
+      "code": "+994",
+      "price": 29,
+      "countryId": 35,
+      "flag": "🇦🇿"
+    },
+    {
+      "name": "Slovakia",
+      "code": "+421",
+      "price": 32,
+      "countryId": 141,
+      "flag": "🇸🇰"
+    },
+    {
+      "name": "North Macedonia",
+      "code": "+389",
+      "price": 31,
+      "countryId": 183,
+      "flag": "🇲🇰"
+    },
+    {
+      "name": "Togo",
+      "code": "+228",
+      "price": 33,
+      "countryId": 99,
+      "flag": "🇹🇬"
+    },
+    {
+      "name": "Lebanon",
+      "code": "+961",
+      "price": 170,
+      "countryId": 153,
+      "flag": "🇱🇧"
+    },
+    {
+      "name": "Hong Kong",
+      "code": "+852",
+      "price": 30,
+      "countryId": 14,
+      "flag": "🇭🇰"
+    },
+    {
+      "name": "Denmark",
+      "code": "+45",
+      "price": 33,
+      "countryId": 172,
+      "flag": "🇩🇰"
+    },
+    {
+      "name": "Tunisia",
+      "code": "+216",
+      "price": 80,
+      "countryId": 89,
+      "flag": "🇹🇳"
+    },
+    {
+      "name": "Kazakhstan",
+      "code": "+7",
+      "price": 30,
+      "countryId": 2,
+      "flag": "🇰🇿"
+    },
+    {
+      "name": "Latvia",
+      "code": "+371",
+      "price": 34,
+      "countryId": 49,
+      "flag": "🇱🇻"
+    },
+    {
+      "name": "Uganda",
+      "code": "+256",
+      "price": 29,
+      "countryId": 75,
+      "flag": "🇺🇬"
+    },
+    {
+      "name": "Greece",
+      "code": "+30",
+      "price": 32,
+      "countryId": 129,
+      "flag": "🇬🇷"
+    },
+    {
+      "name": "Estonia",
+      "code": "+372",
+      "price": 31,
+      "countryId": 34,
+      "flag": "🇪🇪"
+    },
+    {
+      "name": "Fiji",
+      "code": "+679",
+      "price": 70,
+      "countryId": 189,
+      "flag": "🇫🇯"
+    },
+    {
+      "name": "Taiwan",
+      "code": "+886",
+      "price": 33,
+      "countryId": 55,
+      "flag": "🇹🇼"
+    },
+    {
+      "name": "Kyrgyzstan",
+      "code": "+996",
+      "price": 30,
+      "countryId": 11,
+      "flag": "🇰🇬"
+    },
+    {
+      "name": "Bolivia",
+      "code": "+591",
+      "price": 34,
+      "countryId": 92,
+      "flag": "🇧🇴"
+    },
+    {
+      "name": "Haiti",
+      "code": "+509",
+      "price": 29,
+      "countryId": 26,
+      "flag": "🇭🇹"
+    },
+    {
+      "name": "Myanmar",
+      "code": "+95",
+      "price": 32,
+      "countryId": 5,
+      "flag": "🇲🇲"
+    },
+    {
+      "name": "Dominican Republic",
+      "code": "+1",
+      "price": 70,
+      "countryId": 109,
+      "flag": "🇩🇴"
+    },
+    {
+      "name": "Belgium",
+      "code": "+32",
+      "price": 31,
+      "countryId": 82,
+      "flag": "🇧🇪"
+    },
+    {
+      "name": "Eswatini",
+      "code": "+268",
+      "price": 33,
+      "countryId": 106,
+      "flag": "🇸🇿"
+    },
+    {
+      "name": "Kuwait",
+      "code": "+965",
+      "price": 90,
+      "countryId": 100,
+      "flag": "🇰🇼"
+    },
+    {
+      "name": "Laos",
+      "code": "+856",
+      "price": 30,
+      "countryId": 25,
+      "flag": "🇱🇦"
+    },
+    {
+      "name": "Niger",
+      "code": "+227",
+      "price": 100,
+      "countryId": 139,
+      "flag": "🇳🇪"
+    },
+    {
+      "name": "Tajikistan",
+      "code": "+992",
+      "price": 34,
+      "countryId": 143,
+      "flag": "🇹🇯"
+    },
+    {
+      "name": "Qatar",
+      "code": "+974",
+      "price": 90,
+      "countryId": 111,
+      "flag": "🇶🇦"
+    },
+    {
+      "name": "El Salvador",
+      "code": "+503",
+      "price": 80,
+      "countryId": 101,
+      "flag": "🇸🇻"
+    },
+    {
+      "name": "New Zealand",
+      "code": "+64",
+      "price": 80,
+      "countryId": 67,
+      "flag": "🇳🇿"
+    },
+    {
+      "name": "Libya",
+      "code": "+218",
+      "price": 90,
+      "countryId": 102,
+      "flag": "🇱🇾"
+    },
+    {
+      "name": "Honduras",
+      "code": "+504",
+      "price": 29,
+      "countryId": 88,
+      "flag": "🇭🇳"
+    },
+    {
+      "name": "United Arab Emirates",
+      "code": "+971",
+      "price": 60,
+      "countryId": 95,
+      "flag": "🇦🇪"
+    },
+    {
+      "name": "Namibia",
+      "code": "+264",
+      "price": 60,
+      "countryId": 138,
+      "flag": "🇳🇦"
+    },
+    {
+      "name": "Equatorial Guinea",
+      "code": "+240",
+      "price": 80,
+      "countryId": 167,
+      "flag": "🇬🇶"
+    },
+    {
+      "name": "Somalia",
+      "code": "+252",
+      "price": 70,
+      "countryId": 149,
+      "flag": "🇸🇴"
+    },
+    {
+      "name": "Jordan",
+      "code": "+962",
+      "price": 32,
+      "countryId": 116,
+      "flag": "🇯🇴"
+    },
+    {
+      "name": "Central African Republic",
+      "code": "+236",
+      "price": 32,
+      "countryId": 125,
+      "flag": "🇨🇫"
+    },
+    {
+      "name": "Zimbabwe",
+      "code": "+263",
+      "price": 80,
+      "countryId": 96,
+      "flag": "🇿🇼"
+    },
+    {
+      "name": "Turkmenistan",
+      "code": "+993",
+      "price": 31,
+      "countryId": 161,
+      "flag": "🇹🇲"
+    },
+    {
+      "name": "Rwanda",
+      "code": "+250",
+      "price": 80,
+      "countryId": 140,
+      "flag": "🇷🇼"
+    },
+    {
+      "name": "Sudan",
+      "code": "+249",
+      "price": 90,
+      "countryId": 1010,
+      "flag": "🇸🇩"
+    },
+    {
+      "name": "Reunion",
+      "code": "+262",
+      "price": 60,
+      "countryId": 146,
+      "flag": "🇷🇪"
+    },
+    {
+      "name": "Oman",
+      "code": "+968",
+      "price": 80,
+      "countryId": 107,
+      "flag": "🇴🇲"
+    },
+    {
+      "name": "Bhutan",
+      "code": "+975",
+      "price": 33,
+      "countryId": 158,
+      "flag": "🇧🇹"
+    },
+    {
+      "name": "China",
+      "code": "+86",
+      "price": 30,
+      "countryId": 3,
+      "flag": "🇨🇳"
+    },
+    {
+      "name": "Barbados",
+      "code": "+1",
+      "price": 34,
+      "countryId": 118,
+      "flag": "🇧🇧"
+    },
+    {
+      "name": "Martinique",
+      "code": "+596",
+      "price": 29,
+      "countryId": 1011,
+      "flag": "🇲🇶"
+    },
+    {
+      "name": "Puerto Rico",
+      "code": "+1",
+      "price": 60,
+      "countryId": 97,
+      "flag": "🇵🇷"
+    },
+    {
+      "name": "Guadeloupe",
+      "code": "+590",
+      "price": 32,
+      "countryId": 160,
+      "flag": "🇬🇵"
+    },
+    {
+      "name": "Luxembourg",
+      "code": "+352",
+      "price": 31,
+      "countryId": 165,
+      "flag": "🇱🇺"
+    },
+    {
+      "name": "Antigua and Barbuda",
+      "code": "+1",
+      "price": 33,
+      "countryId": 169,
+      "flag": "🇦🇬"
+    },
+    {
+      "name": "Djibouti",
+      "code": "+253",
+      "price": 30,
+      "countryId": 168,
+      "flag": "🇩🇯"
+    },
+    {
+      "name": "French Guiana",
+      "code": "+594",
+      "price": 34,
+      "countryId": 162,
+      "flag": "🇬🇫"
+    },
+    {
+      "name": "Saint Lucia",
+      "code": "+1",
+      "price": 29,
+      "countryId": 164,
+      "flag": "🇱🇨"
+    },
+    {
+      "name": "Montenegro",
+      "code": "+382",
+      "price": 80,
+      "countryId": 171,
+      "flag": "🇲🇪"
+    },
+    {
+      "name": "Bahamas",
+      "code": "+1",
+      "price": 70,
+      "countryId": 122,
+      "flag": "🇧🇸"
+    },
+    {
+      "name": "Grenada",
+      "code": "+1",
+      "price": 90,
+      "countryId": 127,
+      "flag": "🇬🇩"
+    },
+    {
+      "name": "Brunei",
+      "code": "+673",
+      "price": 170,
+      "countryId": 121,
+      "flag": "🇧🇳"
+    },
+    {
+      "name": "Cayman Islands",
+      "code": "+1",
+      "price": 32,
+      "countryId": 170,
+      "flag": "🇰🇾"
+    },
+    {
+      "name": "Saint Vincent",
+      "code": "+1",
+      "price": 31,
+      "countryId": 166,
+      "flag": "🇻🇨"
+    },
+    {
+      "name": "Saint Kitts and Nevis",
+      "code": "+1",
+      "price": 33,
+      "countryId": 134,
+      "flag": "🇰🇳"
+    },
+    {
+      "name": "Aruba",
+      "code": "+297",
+      "price": 30,
+      "countryId": 179,
+      "flag": "🇦🇼"
+    },
+    {
+      "name": "Comoros",
+      "code": "+269",
+      "price": 80,
+      "countryId": 133,
+      "flag": "🇰🇲"
+    },
+    {
+      "name": "Malta",
+      "code": "+356",
+      "price": 34,
+      "countryId": 199,
+      "flag": "🇲🇹"
+    },
+    {
+      "name": "Singapore",
+      "code": "+65",
+      "price": 29,
+      "countryId": 196,
+      "flag": "🇸🇬"
+    },
+    {
+      "name": "Anguilla",
+      "code": "+1",
+      "price": 80,
+      "countryId": 181,
+      "flag": "🇦🇮"
+    },
+    {
+      "name": "Sao Tome and Principe",
+      "code": "+239",
+      "price": 32,
+      "countryId": 178,
+      "flag": "🇸🇹"
+    },
+    {
+      "name": "Palestine",
+      "code": "+970",
+      "price": 31,
+      "countryId": 188,
+      "flag": "🇵🇸"
+    },
+    {
+      "name": "Monaco",
+      "code": "+377",
+      "price": 33,
+      "countryId": 144,
+      "flag": "🇲🇨"
+    },
+    {
+      "name": "Belize",
+      "code": "+501",
+      "price": 70,
+      "countryId": 124,
+      "flag": "🇧🇿"
+    },
+    {
+      "name": "New Caledonia",
+      "code": "+687",
+      "price": 30,
+      "countryId": 185,
+      "flag": "🇳🇨"
+    },
+    {
+      "name": "Seychelles",
+      "code": "+248",
+      "price": 34,
+      "countryId": 184,
+      "flag": "🇸🇨"
+    },
+    {
+      "name": "Montserrat",
+      "code": "+1",
+      "price": 29,
+      "countryId": 180,
+      "flag": "🇲🇸"
+    },
+    {
+      "name": "Dominica",
+      "code": "+1",
+      "price": 32,
+      "countryId": 126,
+      "flag": "🇩🇲"
+    },
+    {
+      "name": "South Korea",
+      "code": "+82",
+      "price": 31,
+      "countryId": 1002,
+      "flag": "🇰🇷"
+    },
+    {
+      "name": "Macau",
+      "code": "+853",
+      "price": 120,
+      "countryId": 20,
+      "flag": "🇲🇴"
+    },
+    {
+      "name": "Iceland",
+      "code": "+354",
+      "price": 100,
+      "countryId": 132,
+      "flag": "🇮🇸"
+    },
+    {
+      "name": "Eritrea",
+      "code": "+291",
+      "price": 33,
+      "countryId": 176,
+      "flag": "🇪🇷"
+    },
+    {
+      "name": "Kosovo",
+      "code": "+383",
+      "price": 30,
+      "countryId": 1004,
+      "flag": "🇽🇰"
+    },
+    {
+      "name": "Uzbekistan",
+      "code": "+998",
+      "price": 34,
+      "countryId": 40,
+      "flag": "🇺🇿"
+    }
+  ]
+}
