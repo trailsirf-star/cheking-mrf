@@ -1,7 +1,0 @@
-{
-  "service": "snapchat",
-  "serviceId": 235,
-  "title": "Snapchat",
-  "icon": "icons/snapchat.png",
-  "enabled": true
-}
