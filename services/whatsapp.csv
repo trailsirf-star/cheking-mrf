@@ -1,0 +1,961 @@
+Country,Rank,Agent_IDs,Original_USD,Converted_PKR,Final_PKR
+South Africa,,,,,44
+South Africa,Bronze,2217,0.624,174.72,200
+South Africa,Bronze,2260,,,220
+South Africa,Silver,3001,0.337,94.36,110
+South Africa,Bronze,3109,0.318,89.04,100
+South Africa,Bronze,3155,,,44
+South Africa,Bronze,3160,,,110
+Indonesia,,,,,90
+Indonesia,Bronze,54,,,173
+Indonesia,Bronze,1056,,,102
+Indonesia,Bronze,2260,,,253
+Indonesia,Silver,2272,,,93
+Indonesia,Bronze,2750,0.786,220.08,253
+Indonesia,Silver,3001,,,110
+Indonesia,Gold,3029,0.16,44.8,130
+Indonesia,Gold,3061,,,170
+Indonesia,Bronze,3094,,,104
+Indonesia,Bronze,3109,0.163,45.64,90
+Indonesia,Bronze,3160,,,101
+Indonesia,Silver,3168,,,99
+Indonesia,Silver,3267,,,96
+Indonesia,Silver,3320,,,92
+Indonesia,Gold,3327,,,180
+Indonesia,Silver,3334,,,94
+Indonesia,Bronze,3347,,,100
+Indonesia,Bronze,3355,,,103
+Indonesia,Bronze,3386,,,105
+Indonesia,Bronze,3406,,,110
+Indonesia,Bronze,3417,,,98
+Indonesia,Gold,3424,,,130
+Indonesia,Silver,3426,,,91
+Canada,,,,,130
+Canada,Bronze,2217,0.292,81.76,132
+Canada,Silver,2262,0.52,145.6,168
+Canada,Bronze,2430,0.286,80.08,215
+Canada,Bronze,2462,1.067,298.76,344
+Canada,Bronze,2567,0.626,175.28,227
+Canada,Silver,2568,,,215
+Canada,Bronze,2675,,,215
+Canada,Silver,3001,,,190
+Canada,Bronze,3109,0.35,98,200
+Canada,Bronze,3160,,,140
+Canada,Bronze,3198,0.315,88.2,131
+Canada,Bronze,3228,0.286,80.08,130
+Canada,Bronze,3406,,,180
+Vietnam,,,,,100
+Vietnam,Bronze,2318,0.254,71.12,130
+Vietnam,Bronze,2750,0.584,163.52,300
+Vietnam,Bronze,2840,,,196
+Vietnam,Silver,3001,0.337,94.36,200
+Vietnam,Bronze,3082,0.539,150.92,194
+Vietnam,Bronze,3109,0.24,67.2,100
+Vietnam,Bronze,3160,,,160
+Vietnam,Bronze,3237,,,197
+Philippines,,,,,140
+Philippines,Bronze,2217,0.586,164.08,190
+Philippines,Bronze,2263,1.084,303.52,349
+Philippines,Bronze,2739,0.759,212.52,244
+Philippines,Bronze,2750,1.086,304.08,350
+Philippines,Silver,3001,0.337,94.36,144
+Philippines,Bronze,3109,0.272,76.16,140
+Philippines,Bronze,3160,,,190
+Philippines,Bronze,3193,0.634,177.52,204
+Philippines,Bronze,3371,,,143
+Colombia,,,,,114
+Colombia,Gold,2236,,,110
+Colombia,Bronze,2286,0.335,93.8,130
+Colombia,Gold,2335,0.334,93.52,190
+Colombia,Bronze,2579,1.843,516.04,593
+Colombia,Bronze,3109,0.153,42.84,143
+Colombia,Bronze,3193,0.634,177.52,204
+Colombia,Gold,3243,0.14,39.2,119
+Colombia,Gold,3253,0.135,37.8,114
+Colombia,Gold,3288,0.239,66.92,140
+Saudi Arabia,,,,,240
+Thailand,,,,,188
+Thailand,Bronze,2217,0.487,136.36,188
+Thailand,Bronze,2750,1.321,369.88,426
+Thailand,Silver,3001,0.399,111.72,190
+Thailand,Bronze,3109,0.494,138.32,200
+Thailand,Bronze,3193,0.634,177.52,230
+Thailand,Bronze,3237,,,200
+Thailand,Bronze,3335,,,342
+Thailand,Bronze,3371,,,392
+Brazil,,,,,289
+Brazil,Gold,2404,,,289
+Brazil,Bronze,2579,3.53,988.4,1137
+Brazil,Bronze,2738,3.298,923.44,427
+Brazil,Bronze,2951,,,361
+Brazil,Bronze,3193,,,362
+Brazil,Silver,3229,1.047,293.16,324
+Brazil,Bronze,3252,1.039,290.92,360
+Brazil,Bronze,3264,2.038,570.64,659
+Brazil,Bronze,3274,,,304
+Brazil,Bronze,3335,,,348
+Brazil,Bronze,3363,,,303
+Brazil,Bronze,3365,,,358
+Brazil,Bronze,3398,,,345
+Brazil,Gold,3412,,,358
+Brazil,Bronze,3413,,,346
+Brazil,Bronze,3415,,,347
+United Kingdom,,,,,330
+United Kingdom,Bronze,1015,0.942,263.76,475
+United Kingdom,Bronze,2260,,,616
+United Kingdom,Bronze,2295,1.25,350,403
+United Kingdom,Bronze,2442,,,410
+United Kingdom,Bronze,2476,0.952,266.56,419
+United Kingdom,Bronze,2750,1.916,536.48,616
+United Kingdom,Bronze,3094,,,400
+United Kingdom,Bronze,3109,0.37,103.6,330
+United Kingdom,Bronze,3160,,,360
+United Kingdom,Silver,3168,,,340
+United Kingdom,Bronze,3212,,,370
+United Kingdom,Bronze,3309,1.916,536.48,477
+United Kingdom,Bronze,3328,,,390
+United Kingdom,Bronze,3329,,,380
+United Kingdom,Gold,3368,,,329
+United Kingdom,Bronze,3397,,,411
+United Kingdom,Bronze,3402,,,444
+India,,,,,530
+India,Bronze,2579,,,700
+India,Bronze,3193,0.82,229.6,530
+India,Bronze,3406,,,560
+USA,,,,,470
+USA,Gold,2266,1,280,472
+USA,Gold,2268,1,280,470
+USA,Silver,2617,,,1515
+USA,Bronze,3109,0.994,278.32,470
+USA,Gold,3170,1.196,334.88,523
+USA,Bronze,3193,1.273,356.44,607
+USA,Bronze,3237,2.876,805.28,1007
+USA,Bronze,3370,,,1515
+Chile,,,,,170.07
+Chile,Bronze,2217,0.475,133,161
+Chile,Bronze,2750,1.51,422.8,508
+Chile,Silver,3001,0.337,94.36,121
+Chile,Bronze,3109,0.231,64.68,123
+Chile,Bronze,3160,,,120
+Chile,Bronze,3193,0.634,177.52,214
+Chile,Bronze,3235,0.266,74.48,122
+Chile,Gold,3428,,,508
+Syria,,,,,43.32
+Syria,Silver,3001,0.337,94.36,120
+Syria,Silver,3168,,,181
+Syria,Bronze,3370,,,196
+Syria,Gold,3428,,,196
+Somalia,,,,,65.16
+Somalia,Silver,3001,0.337,94.36,120
+Somalia,Bronze,3370,,,196
+Somalia,Gold,3428,,,196
+Kyrgyzstan,,,,,300.8
+Kyrgyzstan,Bronze,2750,0.71,198.8,239
+Kyrgyzstan,Silver,3001,0.337,94.36,120
+Kyrgyzstan,Bronze,3109,0.318,89.04,121
+Kyrgyzstan,Silver,3178,0.24,67.2,120
+Kyrgyzstan,Bronze,3193,0.634,177.52,213
+Iraq,,,,,72.8
+Iraq,Bronze,2217,0.475,133,161
+Iraq,Bronze,2260,,,303
+Iraq,Silver,3001,0.337,94.36,120
+Iraq,Bronze,3193,0.634,177.52,213
+Iraq,Gold,3428,,,303
+Mongolia,,,,,72.8
+Mongolia,Bronze,2579,1.003,280.84,337
+Mongolia,Silver,3001,0.337,94.36,120
+Mongolia,Bronze,3193,0.634,177.52,213
+Mongolia,Silver,3225,0.534,149.52,179
+Mongolia,Gold,3428,,,337
+Myanmar,,,,,72.8
+Myanmar,Bronze,2579,0.668,187.04,224
+Myanmar,Silver,3001,0.337,94.36,120
+Myanmar,Silver,3178,,,120
+Myanmar,Bronze,3193,0.634,177.52,213
+Myanmar,Gold,3428,,,224
+Cameroon,,,,,92.46
+Cameroon,Bronze,2263,0.49,137.2,165
+Cameroon,Silver,2354,,,120
+Cameroon,Bronze,2567,,,373
+Cameroon,Silver,2709,,,123
+Cameroon,Bronze,2750,1.843,516.04,619
+Cameroon,Silver,3001,0.337,94.36,120
+Cameroon,Bronze,3109,0.298,83.44,121
+Cameroon,Silver,3168,,,122
+Cameroon,Bronze,3193,0.634,177.52,213
+Cameroon,Gold,3428,,,619
+Madagascar,,,,,94.64
+Madagascar,Bronze,2217,0.688,192.64,233
+Madagascar,Bronze,2579,0.786,220.08,264
+Madagascar,Silver,3001,0.337,94.36,120
+Madagascar,Bronze,3109,,,121
+Madagascar,Silver,3168,,,248
+Madagascar,Gold,3428,,,264
+Tanzania,,,,,97.19
+Tanzania,Silver,2354,,,120
+Tanzania,Bronze,2750,0.584,163.52,196
+Tanzania,Silver,3001,0.337,94.36,120
+Tanzania,Silver,3168,,,135
+Tanzania,Gold,3428,,,196
+Suriname,,,,,97.19
+Suriname,Silver,3001,0.337,94.36,120
+Suriname,Bronze,3370,,,196
+Suriname,Gold,3428,,,196
+Uzbekistan,,,,,97.19
+Uzbekistan,Silver,3001,0.337,94.36,120
+Uzbekistan,Bronze,3160,,,253
+Uzbekistan,Silver,3168,,,185
+Uzbekistan,Bronze,3193,0.634,177.52,213
+Uzbekistan,Gold,3428,,,253
+Tajikistan,,,,,99.01
+Tajikistan,Bronze,2579,0.652,182.56,219
+Tajikistan,Silver,3001,0.337,94.36,120
+Tajikistan,Bronze,3193,0.634,177.52,213
+Tajikistan,Silver,3225,0.294,82.32,121
+Zimbabwe,,,,,101.92
+Zimbabwe,Silver,3001,0.337,94.36,120
+Zimbabwe,Bronze,3160,,,196
+Zimbabwe,Gold,3428,,,196
+Ethiopia,,,,,101.92
+Ethiopia,Bronze,2750,0.584,163.52,196
+Ethiopia,Silver,3001,0.337,94.36,120
+Ethiopia,Silver,3168,,,121
+Ethiopia,Gold,3428,,,196
+Tunisia,,,,,101.92
+Tunisia,Bronze,2750,0.584,163.52,196
+Tunisia,Silver,3001,0.337,94.36,120
+Tunisia,Silver,3168,,,134
+Tunisia,Silver,3178,0.28,78.4,120
+Tunisia,Gold,3428,,,196
+Mauritius,,,,,101.92
+Mauritius,Bronze,2579,0.584,163.52,196
+Mauritius,Silver,3001,0.337,94.36,120
+Mauritius,Gold,3428,,,196
+Morocco,,,,,102.65
+Morocco,Bronze,2217,1.409,394.52,477
+Morocco,Bronze,2260,,,507
+Morocco,Bronze,2567,,,373
+Morocco,Silver,3001,0.337,94.36,120
+Morocco,Silver,3178,,,120
+Morocco,Bronze,3193,0.634,177.52,213
+Morocco,Silver,3225,0.4,112,134
+Morocco,Bronze,3309,,,120
+Morocco,Bronze,3335,,,122
+Morocco,Bronze,3371,,,121
+Morocco,Gold,3428,,,507
+Yemen,,,,,104.1
+Yemen,Gold,2377,0.298,83.44,121
+Yemen,Bronze,2579,0.902,252.56,303
+Yemen,Silver,3001,0.337,94.36,120
+Yemen,Bronze,3193,0.634,177.52,213
+Yemen,Gold,3428,,,303
+Cambodia,,,,,107.02
+Cambodia,Bronze,2260,,,507
+Cambodia,Silver,3001,0.337,94.36,120
+Cambodia,Bronze,3193,0.634,177.52,213
+Cambodia,Gold,3428,,,507
+Peru,,,,,122.67
+Peru,Bronze,2260,,,280
+Peru,Silver,2354,0.448,125.44,120
+Peru,Silver,3001,0.337,94.36,120
+Peru,Bronze,3109,0.419,117.32,142
+Peru,Bronze,3193,0.634,177.52,213
+Peru,Gold,3428,,,280
+Hong Kong,,,,,122.67
+Hong Kong,Bronze,2217,0.779,218.12,264
+Hong Kong,Bronze,2260,,,786
+Hong Kong,Bronze,2318,0.936,262.08,157
+Hong Kong,Bronze,2579,2.064,577.92,694
+Hong Kong,Silver,3001,0.337,94.36,120
+Hong Kong,Bronze,3193,0.634,177.52,213
+Hong Kong,Bronze,3328,,,349
+Hong Kong,Gold,3428,,,694
+Argentina,,,,,122.67
+Argentina,Bronze,2263,0.99,277.2,333
+Argentina,Bronze,2286,,,221
+Argentina,Bronze,2567,,,373
+Argentina,Bronze,2579,2.589,724.92,870
+Argentina,Bronze,2738,0.9,252,302
+Argentina,Bronze,2750,1.51,422.8,507
+Argentina,Silver,3001,0.337,94.36,120
+Argentina,Silver,3056,,,121
+Argentina,Bronze,3109,0.903,252.84,306
+Argentina,Bronze,3160,,,179
+Argentina,Bronze,3193,0.634,177.52,213
+Argentina,Bronze,3237,,,120
+Argentina,Bronze,3335,,,124
+New Zealand,,,,,122.67
+New Zealand,Bronze,2750,55.258,15472.24,18567
+New Zealand,Silver,3001,0.337,94.36,120
+New Zealand,Bronze,3160,,,482
+New Zealand,Bronze,3237,1.317,368.76,383
+New Zealand,Gold,3428,,,18567
+Sierra Leone,,,,,123.03
+Sierra Leone,Bronze,2750,0.584,163.52,196
+Sierra Leone,Silver,3001,0.337,94.36,120
+Sierra Leone,Gold,3428,,,196
+Bangladesh,,,,,131.4
+Bangladesh,Silver,3001,0.337,94.36,120
+Bangladesh,Bronze,3160,,,196
+Bangladesh,Gold,3428,,,196
+Bolivia,,,,,131.4
+Bolivia,Bronze,2750,0.584,163.52,196
+Bolivia,Silver,3001,0.337,94.36,120
+Bolivia,Gold,3428,,,196
+Senegal,,,,,131.4
+Senegal,Bronze,2750,0.584,163.52,196
+Senegal,Silver,3001,0.337,94.36,120
+Senegal,Gold,3428,,,196
+Egypt,,,,,131.4
+Egypt,Bronze,2260,,,280
+Egypt,Bronze,2750,0.584,163.52,196
+Egypt,Silver,3001,0.337,94.36,120
+Egypt,Bronze,3160,,,121
+Egypt,Bronze,3193,0.634,177.52,213
+Egypt,Gold,3428,,,280
+Moldova,,,,,131.4
+Moldova,Bronze,2260,,,896
+Moldova,Bronze,2738,0.676,189.28,227
+Moldova,Bronze,3237,0.532,148.96,179
+Moldova,Silver,3239,0.254,71.12,121
+Moldova,Bronze,3370,,,791
+Moldova,Gold,3428,,,791
+Ireland,,,,,145.6
+Ireland,Bronze,2260,,,2476
+Ireland,Bronze,2263,4.131,1156.68,1388
+Ireland,Bronze,2738,4.644,1300.32,1561
+Ireland,Silver,3001,0.337,94.36,120
+Ireland,Bronze,3160,,,296
+Ireland,Silver,3225,0.934,261.52,314
+Ireland,Bronze,3329,,,1186
+Ireland,Gold,3428,,,2476
+Kenya,,,,,146.33
+Kenya,Bronze,2260,,,280
+Kenya,Silver,3001,0.337,94.36,120
+Kenya,Bronze,3160,,,151
+Kenya,Bronze,3193,0.634,177.52,213
+Kenya,Gold,3428,,,280
+Ukraine,,,,,151.06
+Ukraine,Bronze,2260,,,743
+Ukraine,Silver,3168,0.415,116.2,233
+Ukraine,Bronze,3177,,,381
+Ukraine,Bronze,3309,,,345
+Ukraine,Bronze,3335,,,277
+Ukraine,Bronze,3340,,,291
+Ukraine,Bronze,3418,,,336
+Ukraine,Gold,3428,,,743
+Greece,,,,,161.98
+Greece,Bronze,2260,,,1783
+Greece,Bronze,2263,1.507,421.96,507
+Greece,Bronze,2738,1.808,506.24,608
+Greece,Bronze,2739,1.127,315.56,379
+Greece,Silver,3001,0.337,94.36,120
+Greece,Bronze,3109,0.447,125.16,151
+Greece,Bronze,3193,0.634,177.52,213
+Greece,Bronze,3237,0.263,73.64,121
+Greece,Bronze,3248,,,314
+Greece,Bronze,3309,5.305,1485.4,211
+Greece,Bronze,3418,,,198
+Greece,Gold,3428,,,1783
+Latvia,,,,,186
+Latvia,Bronze,2260,,,571
+Latvia,Bronze,2476,,,556
+Latvia,Silver,3001,,,120
+Latvia,Bronze,3193,,,213
+Latvia,Bronze,3237,,,540
+Latvia,Bronze,3335,,,448
+Latvia,Bronze,3340,,,527
+Latvia,Gold,3428,,,571
+Seychelles,,,,,186.37
+Seychelles,Bronze,2579,0.584,163.52,196
+Seychelles,Silver,3001,0.337,94.36,120
+Seychelles,Gold,3428,,,196
+France,,,,,194.38
+France,Bronze,2442,3.872,1084.16,1301
+France,Bronze,2579,5.883,1647.24,1977
+France,Bronze,2738,2.648,741.44,890
+France,Bronze,2750,4.422,1238.16,1486
+France,Bronze,3109,0.81,226.8,521
+France,Bronze,3160,,,738
+France,Bronze,3193,0.634,177.52,213
+France,Bronze,3237,,,991
+France,Bronze,3329,,,1107
+France,Bronze,3335,,,559
+France,Bronze,3418,,,746
+France,Gold,3428,,,1977
+Uganda,,,,,194.38
+Uganda,Bronze,2750,0.584,163.52,196
+Uganda,Silver,3001,0.337,94.36,120
+Uganda,Gold,3428,,,196
+Kazakhstan,,,,,194.38
+Kazakhstan,Bronze,2260,,,3929
+Kazakhstan,Bronze,2579,10.316,2888.48,3467
+Kazakhstan,Bronze,2750,5.526,1547.28,1857
+Kazakhstan,Silver,3001,,,120
+Kazakhstan,Bronze,3237,2.165,606.2,1591
+Kazakhstan,Bronze,3335,,,1310
+Kazakhstan,Gold,3428,,,3467
+Belgium,,,,,194.38
+Belgium,Bronze,2750,5.526,1547.28,1857
+Belgium,Silver,3001,0.337,94.36,120
+Belgium,Bronze,3160,,,269
+Belgium,Silver,3225,1.25,350,420
+Belgium,Bronze,3309,,,2195
+Belgium,Bronze,3370,,,3954
+Burundi,,,,,194.38
+Burundi,Bronze,2750,0.584,163.52,196
+Burundi,Silver,3001,0.337,94.36,120
+Burundi,Gold,3428,,,196
+Zambia,,,,,212.58
+Zambia,Bronze,2750,0.584,163.52,196
+Zambia,Silver,3001,0.337,94.36,120
+Zambia,Silver,3178,,,179
+Zambia,Gold,3428,,,196
+Ghana,,,,,212.58
+Ghana,Bronze,2217,0.552,154.56,187
+Ghana,Silver,2354,,,120
+Ghana,Bronze,2750,0.584,163.52,196
+Ghana,Silver,3001,0.337,94.36,120
+Ghana,Gold,3428,,,196
+Nepal,,,,,212.58
+Nepal,Bronze,2579,,,196
+Nepal,Silver,3001,0.337,94.36,120
+Nepal,Gold,3428,,,196
+Armenia,,,,,212.58
+Armenia,Bronze,2750,0.584,163.52,196
+Armenia,Silver,3001,0.337,94.36,120
+Algeria,,,,,212.58
+Algeria,Bronze,2750,0.584,163.52,196
+Algeria,Silver,3001,0.337,94.36,120
+Algeria,Gold,3428,,,196
+Guinea,,,,,212.58
+Guinea,Silver,2354,,,120
+Guinea,Bronze,2750,0.584,163.52,196
+Guinea,Silver,3001,0.337,94.36,120
+Guinea,Silver,3168,,,121
+Guinea,Gold,3428,,,196
+Botswana,,,,,212.58
+Botswana,Silver,2354,,,120
+Botswana,Bronze,2579,0.584,163.52,196
+Botswana,Silver,3001,0.337,94.36,120
+Botswana,Bronze,3160,,,121
+Botswana,Gold,3428,,,196
+Namibia,,,,,212.58
+Namibia,Silver,3001,0.337,94.36,120
+Namibia,Bronze,3370,,,196
+Namibia,Gold,3428,,,196
+Macedonia,,,,,212.58
+Macedonia,Bronze,2750,0.584,163.52,196
+Macedonia,Silver,3001,0.337,94.36,120
+CAF,,,,,212.58
+CAF,Silver,3001,0.337,94.36,120
+CAF,Silver,3225,0.584,163.52,196
+CAF,Gold,3428,,,196
+Ecuador,,,,,212.58
+Ecuador,Bronze,2579,0.584,163.52,196
+Ecuador,Silver,3001,0.337,94.36,120
+Ecuador,Bronze,3160,,,120
+Ecuador,Silver,3168,,,128
+Ecuador,Gold,3428,,,196
+Nicaragua,,,,,212.58
+Nicaragua,Bronze,2750,0.584,163.52,196
+Nicaragua,Silver,3001,0.337,94.36,120
+Nicaragua,Gold,3428,,,196
+El Salvador,,,,,212.58
+El Salvador,Bronze,2750,0.584,163.52,196
+El Salvador,Silver,3001,,,120
+Cuba,,,,,212.58
+Cuba,Bronze,2750,0.584,163.52,196
+Cuba,Silver,3001,0.337,94.36,120
+Cuba,Gold,3428,,,196
+Angola,,,,,212.58
+Angola,Bronze,2260,,,196
+Angola,Silver,3001,0.337,94.36,120
+Angola,Bronze,3160,,,126
+Angola,Gold,3428,,,196
+Belize,,,,,212.58
+Belize,Bronze,2579,0.584,163.52,196
+Belize,Silver,3001,0.337,94.36,120
+Belize,Gold,3428,,,196
+Sri Lanka,,,,,212.58
+Sri Lanka,Silver,2354,,,120
+Sri Lanka,Bronze,2579,,,196
+Sri Lanka,Silver,3001,0.337,94.36,120
+Sri Lanka,Bronze,3160,,,121
+Sri Lanka,Gold,3428,,,196
+Fiji,,,,,212.58
+Fiji,Bronze,2579,0.584,163.52,196
+Fiji,Silver,3001,0.337,94.36,120
+Fiji,Gold,3428,,,196
+Mozambique,,,,,212.58
+Mozambique,Silver,2354,,,120
+Mozambique,Bronze,2579,0.584,163.52,196
+Mozambique,Silver,3001,0.337,94.36,120
+Mozambique,Gold,3428,,,196
+South Sudan,,,,,212.58
+South Sudan,Bronze,2579,0.584,163.52,196
+South Sudan,Silver,3001,0.337,94.36,120
+South Sudan,Gold,3428,,,196
+Guatemala,,,,,212.58
+Guatemala,Bronze,2260,,,196
+Guatemala,Silver,3001,0.337,94.36,120
+Guatemala,Gold,3428,,,196
+Togo,,,,,212.58
+Togo,Bronze,2750,0.584,163.52,196
+Togo,Silver,3001,0.337,94.36,120
+Togo,Silver,3168,,,170
+Togo,Gold,3428,,,196
+Gambia,,,,,212.58
+Gambia,Bronze,2750,0.584,163.52,196
+Gambia,Silver,3001,0.337,94.36,120
+Gambia,Gold,3428,,,196
+Gabon,,,,,212.58
+Gabon,Bronze,2750,0.584,163.52,196
+Gabon,Silver,3001,0.337,94.36,120
+Gabon,Gold,3428,,,196
+Guinea-Bissau,,,,,212.58
+Guinea-Bissau,Bronze,2750,0.584,163.52,196
+Guinea-Bissau,Silver,3001,0.337,94.36,120
+Guinea-Bissau,Gold,3428,,,196
+Cape Verde,,,,,212.58
+Cape Verde,Silver,2354,,,120
+Cape Verde,Bronze,2579,0.584,163.52,196
+Cape Verde,Silver,3001,0.337,94.36,120
+Cape Verde,Gold,3428,,,196
+Sudan,,,,,212.58
+Sudan,Bronze,2750,0.584,163.52,196
+Sudan,Silver,3001,0.337,94.36,120
+Haiti,,,,,212.58
+Haiti,Bronze,2750,0.584,163.52,196
+Haiti,Silver,3001,0.337,94.36,120
+Haiti,Gold,3428,,,196
+Panama,,,,,212.58
+Panama,Bronze,2750,0.584,163.52,196
+Panama,Silver,3001,0.337,94.36,120
+Panama,Gold,3428,,,196
+Bosnia and Herzegovina,,,,,212.58
+Bosnia and Herzegovina,Bronze,2750,0.584,163.52,196
+Bosnia and Herzegovina,Silver,3001,0.337,94.36,120
+Barbados,,,,,212.58
+Barbados,Bronze,2579,,,196
+Barbados,Silver,3001,0.337,94.36,120
+Barbados,Gold,3428,,,196
+Mauritania,,,,,212.58
+Mauritania,Bronze,2579,0.584,163.52,196
+Mauritania,Silver,3001,0.337,94.36,120
+Mauritania,Gold,3428,,,196
+Niger,,,,,212.58
+Lesotho,,,,,212.58
+Lesotho,Bronze,2579,0.584,163.52,196
+Lesotho,Silver,3001,0.337,94.36,120
+Lesotho,Gold,3428,,,196
+Guadeloupe,,,,,212.58
+Guadeloupe,Bronze,2579,0.584,163.52,196
+Guadeloupe,Silver,3001,0.337,94.36,120
+Guadeloupe,Gold,3428,,,196
+Malawi,,,,,212.58
+Malawi,Bronze,2579,0.584,163.52,196
+Malawi,Silver,3001,0.337,94.36,120
+Malawi,Gold,3428,,,196
+Lebanon,,,,,212.58
+Lebanon,Bronze,2750,0.584,163.52,196
+Lebanon,Silver,3001,0.337,94.36,120
+Lebanon,Silver,3168,,,160
+Lebanon,Gold,3428,,,196
+Chad,,,,,212.58
+Chad,Bronze,2260,,,196
+Chad,Silver,3001,0.337,94.36,120
+Chad,Gold,3428,,,196
+Congo (Dem. Republic),,,,,212.58
+Congo (Dem. Republic),Bronze,2260,,,196
+Congo (Dem. Republic),Silver,2354,,,120
+Congo (Dem. Republic),Silver,3001,0.337,94.36,120
+Congo (Dem. Republic),Gold,3428,,,196
+Bahamas,,,,,212.58
+Bahamas,Silver,3001,0.337,94.36,120
+Bahamas,Bronze,3370,,,196
+Bahamas,Gold,3428,,,196
+Maldives,,,,,212.58
+Maldives,Silver,3001,0.337,94.36,120
+Maldives,Bronze,3160,,,196
+Maldives,Gold,3428,,,196
+Paraguay,,,,,212.58
+Paraguay,Bronze,2750,0.584,163.52,196
+Paraguay,Silver,3001,0.337,94.36,120
+Rwanda,,,,,212.58
+Rwanda,Silver,3001,0.337,94.36,120
+Rwanda,Bronze,3370,,,196
+Rwanda,Gold,3428,,,196
+Benin,,,,,212.58
+Benin,Bronze,2750,0.584,163.52,196
+Benin,Silver,3001,0.337,94.36,120
+Benin,Silver,3168,,,121
+Benin,Gold,3428,,,196
+Reunion,,,,,212.58
+Reunion,Bronze,2579,0.584,163.52,196
+Reunion,Silver,3001,0.337,94.36,120
+Reunion,Gold,3428,,,196
+Equatorial Guinea,,,,,212.58
+Equatorial Guinea,Silver,3001,0.337,94.36,120
+Equatorial Guinea,Bronze,3370,,,196
+Equatorial Guinea,Gold,3428,,,196
+Luxembourg,,,,,212.58
+Luxembourg,Bronze,2750,0.584,163.52,196
+Luxembourg,Silver,3001,0.337,94.36,120
+Djibouti,,,,,212.58
+Djibouti,Bronze,2579,0.584,163.52,196
+Djibouti,Silver,3001,0.337,94.36,120
+Djibouti,Gold,3428,,,196
+French Guiana,,,,,212.58
+French Guiana,Bronze,2579,0.584,163.52,196
+French Guiana,Silver,3001,0.337,94.36,120
+Saint Lucia,,,,,212.58
+Saint Lucia,Bronze,2579,0.584,163.52,196
+Saint Lucia,Silver,3001,0.337,94.36,120
+Brunei Darussalam,,,,,212.58
+Brunei Darussalam,Bronze,2579,,,196
+Brunei Darussalam,Silver,3001,0.337,94.36,120
+Brunei Darussalam,Gold,3428,,,196
+Aruba,,,,,212.58
+Aruba,Bronze,2579,0.584,163.52,196
+Aruba,Silver,3001,0.337,94.36,120
+Aruba,Gold,3428,,,196
+Sao Tome and Principe,,,,,212.58
+Sao Tome and Principe,Bronze,2579,0.584,163.52,196
+Sao Tome and Principe,Silver,3001,0.337,94.36,120
+Sao Tome and Principe,Gold,3428,,,196
+New Caledonia,,,,,212.58
+New Caledonia,Bronze,2579,0.584,163.52,196
+New Caledonia,Silver,3001,0.337,94.36,120
+New Caledonia,Gold,3428,,,196
+Macau,,,,,222.04
+Macau,Bronze,2217,0.682,190.96,231
+Macau,Silver,3001,0.337,94.36,120
+Switzerland,,,,,228.23
+Switzerland,Bronze,2750,4.79,1341.2,1610
+Switzerland,Silver,3001,,,120
+Switzerland,Bronze,3193,0.634,177.52,213
+Switzerland,Silver,3225,0.667,186.76,224
+Romania,,,,,230.05
+Romania,Bronze,2260,,,805
+Romania,Bronze,2263,1.507,421.96,507
+Romania,Bronze,2738,1.808,506.24,608
+Romania,Bronze,2739,1.094,306.32,368
+Romania,Silver,3001,0.337,94.36,120
+Romania,Bronze,3109,1.266,354.48,428
+Romania,Bronze,3193,0.634,177.52,213
+Romania,Bronze,3237,0.459,128.52,144
+Romania,Bronze,3312,,,172
+Romania,Bronze,3328,,,636
+Romania,Bronze,3335,,,216
+Romania,Gold,3428,,,805
+Portugal,,,,,230.78
+Portugal,Bronze,2263,2.979,834.12,1001
+Portugal,Bronze,2442,1.925,539,647
+Portugal,Bronze,2567,,,791
+Portugal,Bronze,2579,3.869,1083.32,1300
+Portugal,Bronze,2739,1.805,505.4,607
+Portugal,Bronze,3087,2.353,658.84,791
+Portugal,Bronze,"3094,3340",,,374
+Portugal,Bronze,3160,,,606
+Portugal,Bronze,3193,0.634,177.52,213
+Portugal,Bronze,3309,1.79,501.2,450
+Portugal,Bronze,3314,,,550
+Portugal,Bronze,3329,,,486
+Portugal,Bronze,3371,,,379
+Portugal,Gold,3428,,,1300
+Mexico,,,,,230.78
+Mexico,Silver,2354,,,120
+Mexico,Bronze,2579,,,448
+Mexico,Bronze,2750,0.919,257.32,309
+Mexico,Bronze,3109,,,299
+Mexico,Bronze,3160,,,291
+Mexico,Bronze,3193,,,213
+Mexico,Bronze,"3330,3370",,,420
+Poland,,,,,230.78
+Poland,Bronze,1015,,,486
+Poland,Bronze,2217,0.975,273,330
+Poland,Bronze,2263,2.059,576.52,692
+Poland,Bronze,2284,,,290
+Poland,Bronze,2295,1.507,421.96,507
+Poland,Bronze,2579,4.706,1317.68,1581
+Poland,Bronze,2738,2.471,691.88,830
+Poland,Bronze,2739,1.476,413.28,496
+Poland,Silver,3001,0.337,94.36,120
+Poland,Bronze,3094,,,281
+Poland,Bronze,3109,0.754,211.12,255
+Poland,Bronze,3193,,,213
+Poland,Bronze,3237,,,211
+Poland,Bronze,3309,,,265
+Poland,Bronze,3328,,,237
+Poland,Bronze,3418,,,368
+Poland,Gold,3428,,,1581
+Czech Republic,,,,,230.78
+Czech Republic,Bronze,2263,2.353,658.84,791
+Czech Republic,Bronze,2291,1.511,423.08,508
+Czech Republic,Bronze,2295,,,608
+Czech Republic,Bronze,2567,,,1845
+Czech Republic,Bronze,2579,8.471,2371.88,2846
+Czech Republic,Bronze,2738,2.824,790.72,949
+Czech Republic,Bronze,2739,1.687,472.36,567
+Czech Republic,Bronze,2750,3.316,928.48,1114
+Czech Republic,Silver,3001,0.337,94.36,120
+Czech Republic,Bronze,3087,1.747,489.16,587
+Czech Republic,Bronze,3193,0.634,177.52,213
+Czech Republic,Bronze,3309,,,575
+Czech Republic,Bronze,3335,,,656
+Czech Republic,Bronze,3418,,,890
+Czech Republic,Gold,3428,,,2846
+Denmark,,,,,230.78
+Denmark,Bronze,2260,,,991
+Denmark,Bronze,2263,2.845,796.6,956
+Denmark,Bronze,2750,2.948,825.44,991
+Denmark,Silver,3001,0.337,94.36,120
+Denmark,Bronze,3193,0.634,177.52,213
+Denmark,Bronze,3237,,,515
+Denmark,Gold,3428,,,991
+Venezuela,,,,,230.78
+Venezuela,Bronze,2579,,,280
+Venezuela,Bronze,2750,0.584,163.52,196
+Venezuela,Silver,3001,0.337,94.36,120
+Venezuela,Bronze,3160,,,121
+Venezuela,Bronze,3193,0.634,177.52,213
+Venezuela,Gold,3428,,,280
+Estonia,,,,,230.78
+Estonia,Bronze,2738,1.692,473.76,569
+Estonia,Bronze,2750,1.769,495.32,595
+Estonia,Silver,3001,0.337,94.36,120
+Estonia,Bronze,3193,0.634,177.52,213
+Estonia,Bronze,3309,0.828,231.84,562
+Estonia,Gold,3428,,,595
+Georgia,,,,,230.78
+Georgia,Bronze,2750,1.51,422.8,507
+Georgia,Silver,3001,0.337,94.36,120
+Georgia,Bronze,3193,0.634,177.52,213
+Georgia,Bronze,3309,,,407
+Georgia,Bronze,3335,,,248
+Georgia,Gold,3428,,,507
+Nigeria,,,,,230.78
+Nigeria,Bronze,2217,0.514,143.92,173
+Nigeria,Bronze,2579,0.835,233.8,280
+Nigeria,Silver,3001,0.337,94.36,120
+Nigeria,Silver,3168,,,121
+Nigeria,Silver,3178,,,120
+Nigeria,Bronze,3193,0.634,177.52,213
+Nigeria,Bronze,3330,,,280
+Nigeria,Bronze,3335,,,223
+Nigeria,Gold,3428,,,280
+Laos,,,,,230.78
+Laos,Bronze,2217,0.688,192.64,233
+Laos,Bronze,2579,0.768,215.04,258
+Laos,Silver,3001,0.337,94.36,120
+Laos,Bronze,3193,0.634,177.52,213
+Laos,Gold,3428,,,258
+Hungary,,,,,230.78
+Hungary,Bronze,2750,9.21,2578.8,3095
+Hungary,Silver,3001,0.337,94.36,120
+Hungary,Bronze,3193,0.634,177.52,213
+Hungary,Bronze,3237,4.313,1207.64,1449
+Hungary,Bronze,3309,,,1806
+Hungary,Gold,3428,,,3095
+Bulgaria,,,,,230.78
+Bulgaria,Bronze,2260,,,672
+Bulgaria,Bronze,2263,1.808,506.24,608
+Bulgaria,Bronze,2750,1.51,422.8,507
+Bulgaria,Silver,3001,0.337,94.36,120
+Bulgaria,Bronze,3193,0.634,177.52,213
+Bulgaria,Bronze,3237,0.538,150.64,181
+Bulgaria,Bronze,3335,,,372
+Bulgaria,Gold,3428,,,608
+Azerbaijan,,,,,230.78
+Azerbaijan,Bronze,3193,0.634,177.52,213
+Azerbaijan,Bronze,3330,,,337
+Azerbaijan,Gold,3428,,,337
+Taiwan,,,,,230.78
+Taiwan,Silver,3001,0.337,94.36,120
+Taiwan,Bronze,3193,0.634,177.52,213
+Taiwan,Bronze,3330,,,303
+Taiwan,Gold,3428,,,303
+Honduras,,,,,230.78
+Honduras,Bronze,2579,0.835,233.8,280
+Honduras,Bronze,2750,0.584,163.52,196
+Honduras,Silver,3001,0.337,94.36,120
+Honduras,Bronze,3193,0.634,177.52,213
+Honduras,Gold,3428,,,280
+Croatia,,,,,230.78
+Croatia,Bronze,2579,4.118,1153.04,1384
+Croatia,Bronze,2738,,,426
+Croatia,Bronze,2750,3.095,866.6,1040
+Croatia,Silver,3001,,,120
+Croatia,Bronze,3193,,,213
+Croatia,Bronze,3335,,,743
+Croatia,Gold,3428,,,1384
+Liberia,,,,,230.78
+Liberia,Bronze,2579,1.097,307.16,369
+Liberia,Bronze,2750,0.584,163.52,196
+Liberia,Silver,3001,0.337,94.36,120
+Liberia,Bronze,3109,0.318,89.04,121
+Liberia,Bronze,3160,,,122
+Liberia,Bronze,3193,0.634,177.52,213
+Liberia,Gold,3428,,,369
+Lithuania,,,,,230.78
+Lithuania,Bronze,2750,2.211,619.08,743
+Lithuania,Silver,3001,0.337,94.36,120
+Lithuania,Bronze,3193,,,213
+Lithuania,Bronze,3309,,,705
+Lithuania,Gold,3428,,,743
+Monaco,,,,,230.78
+Monaco,Bronze,2750,1.698,475.44,571
+Monaco,Silver,3001,0.337,94.36,120
+Monaco,Bronze,3193,0.634,177.52,213
+Monaco,Gold,3428,,,571
+Mali,,,,,230.78
+Mali,Bronze,2217,0.688,192.64,233
+Mali,Bronze,2750,0.786,220.08,264
+Mali,Silver,3001,0.337,94.36,120
+Mali,Bronze,3193,0.634,177.52,213
+Mali,Gold,3428,,,264
+Finland,,,,,230.78
+Finland,Bronze,2750,2.653,742.84,891
+Finland,Silver,3001,0.337,94.36,120
+Finland,Bronze,3193,0.634,177.52,213
+Finland,Gold,3428,,,891
+Comoros,,,,,303.94
+Comoros,Silver,3001,0.337,94.36,120
+Comoros,Bronze,3370,,,280
+Comoros,Gold,3428,,,280
+Timor-Leste,,,,,303.94
+Timor-Leste,Silver,3001,0.337,94.36,120
+Timor-Leste,Bronze,3160,,,121
+Timor-Leste,Bronze,3370,,,280
+Timor-Leste,Gold,3428,,,280
+Eritrea,,,,,380.02
+Eritrea,Bronze,2579,1.044,292.32,351
+Eritrea,Silver,3001,0.337,94.36,120
+Eritrea,Gold,3428,,,351
+Slovakia,,,,,381.11
+Slovakia,Bronze,2579,9.334,2613.52,3136
+Slovakia,Bronze,2750,,,352
+Slovakia,Silver,3001,0.337,94.36,120
+Slovakia,Bronze,3193,,,213
+Slovakia,Bronze,3370,,,2767
+Germany,,,,,455
+Germany,Bronze,2263,4.102,1148.56,1378
+Germany,Bronze,2579,9.412,2635.36,3163
+Germany,Bronze,2738,4.288,1200.64,1441
+Germany,Bronze,2750,7.369,2063.32,2476
+Germany,Bronze,3087,2.942,823.76,486
+Germany,Bronze,3193,5.305,1485.4,1783
+Germany,Silver,3225,1.25,350,420
+Germany,Bronze,3329,,,1265
+Germany,Bronze,3394,,,1202
+Germany,Bronze,3418,,,709
+Germany,Gold,3428,,,3163
+Italy,,,,,461.19
+Italy,Bronze,2263,7.059,1976.52,2372
+Italy,Silver,2354,,,120
+Italy,Bronze,2579,7.958,2228.24,3954
+Italy,Bronze,2738,7.172,2008.16,2410
+Italy,Bronze,2739,,,2069
+Italy,Bronze,2750,7.958,2228.24,2674
+Italy,Bronze,3160,,,608
+Italy,Bronze,3193,,,213
+Italy,Bronze,3304,4.084,1143.52,1972
+Italy,Bronze,3335,,,1092
+Italy,Bronze,3406,,,791
+Italy,Bronze,3418,,,1482
+Italy,Gold,3428,,,3954
+Puerto Rico,,,,,485.58
+Puerto Rico,Bronze,2579,1.334,373.52,448
+Puerto Rico,Silver,3001,0.337,94.36,120
+Puerto Rico,Bronze,3370,,,420
+Puerto Rico,Gold,3428,,,420
+Iran,,,,,494.31
+Iran,Silver,3001,0.337,94.36,120
+Iran,Bronze,3193,1.358,380.24,456
+Iran,Gold,3428,,,456
+Sweden,,,,,540.9
+Sweden,Bronze,2263,2.118,593.04,712
+Sweden,Bronze,2738,2.542,711.76,854
+Sweden,Bronze,2739,,,588
+Sweden,Bronze,2750,3.684,1031.52,1238
+Sweden,Bronze,3087,1.567,438.76,527
+Sweden,Bronze,3094,,,416
+Sweden,Bronze,3237,1.123,314.44,374
+Sweden,Bronze,3296,,,378
+Sweden,Gold,3428,,,1238
+Ivory Coast,,,,,667.21
+Ivory Coast,Bronze,32,0.574,160.72,193
+Ivory Coast,Bronze,2260,,,702
+Ivory Coast,Bronze,2750,0.735,205.8,247
+Ivory Coast,Silver,3001,0.337,94.36,120
+Ivory Coast,Silver,3168,,,121
+Ivory Coast,Bronze,3193,1.843,516.04,619
+Ivory Coast,Bronze,3237,1.043,292.04,350
+Ivory Coast,Gold,3428,,,619
+Uruguay,,,,,670.85
+Uruguay,Bronze,2260,,,619
+Uruguay,Silver,3001,0.337,94.36,120
+Uruguay,Gold,3428,,,619
+Australia,,,,,768.77
+Australia,Bronze,2260,,,24761
+Australia,Bronze,2263,2.118,593.04,712
+Australia,Bronze,2293,20.63,5776.4,6980
+Australia,Bronze,2442,3.575,1001,710
+Australia,Bronze,2567,,,6676
+Australia,Bronze,2738,2.936,822.08,987
+Australia,Bronze,3109,,,246
+Australia,Bronze,3193,12.883,3607.24,4329
+Australia,Bronze,3237,,,8633
+Australia,Gold,3428,,,24761
+Spain,,,,,980.25
+Spain,Bronze,2260,,,2476
+Spain,Bronze,2263,4.263,1193.64,1432
+Spain,Bronze,2738,6.392,1789.76,2148
+Spain,Bronze,2739,3.482,974.96,1170
+Spain,Bronze,3109,1.503,420.84,625
+Spain,Bronze,3160,,,592
+Spain,Bronze,3329,,,949
+Spain,Bronze,3335,,,469
+Spain,Gold,3428,,,2476
+Turkey,,,,,1073.07
+Turkey,Bronze,2750,,,303
+Turkey,Silver,3001,,,120
+Turkey,Bronze,3094,1.935,541.8,650
+Turkey,Bronze,3193,0.634,177.52,213
+Turkey,Bronze,3329,,,675
+Turkey,Bronze,3335,,,563
+Turkey,Bronze,3370,,,991
+Turkey,Gold,3428,,,991
+Cyprus,,,,,1073.07
+Cyprus,Bronze,2750,2.948,825.44,991
+Cyprus,Silver,3001,,,120
+Cyprus,Bronze,3193,,,213
+Cyprus,Gold,3428,,,991
+Austria,,,,,1162.98
+Austria,Bronze,2260,,,4085
+Austria,Bronze,2263,7.158,2004.24,2405
+Austria,Bronze,2567,,,3064
+Austria,Bronze,2738,7.69,2153.2,2584
+Austria,Silver,3001,,,120
+Austria,Bronze,3109,3.403,952.84,1200
+Austria,Bronze,3160,,,121
+Austria,Bronze,3193,,,213
+Austria,Bronze,3329,,,1178
+Austria,Bronze,3335,,,1186
+Austria,Gold,3428,,,4085
+Japan,,,,,1964.14
+Japan,Bronze,2217,1.45,406,491
+Japan,Bronze,2260,,,9904
+Japan,Bronze,2567,,,4744
+Japan,Silver,3001,0.337,94.36,120
+Japan,Bronze,3109,1.239,346.92,598
+Japan,Bronze,3160,,,348
+Japan,Gold,3428,,,9904
+Gibraltar,,,,,7729.54
+Gibraltar,Bronze,2750,21.235,5945.8,7135
+Gibraltar,Gold,3428,,,7135
+Singapore,,,,,8581.3
+Singapore,Bronze,2260,,,19805
+Singapore,Silver,3001,,,120
+Singapore,Gold,3428,,,19805
