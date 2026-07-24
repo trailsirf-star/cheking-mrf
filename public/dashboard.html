@@ -450,7 +450,7 @@
         #user-info [class*='bg-white/5'],#order-modal .glass [class*='bg-white/5'],#screenshot-modal .glass [class*='bg-white/5']{background:#f9fafb!important}
         #user-info button[class*='bg-blue-'],#login-prompt button[class*='bg-blue-'],#order-modal button[class*='bg-blue-']{background:var(--primary)!important;color:#ffffff!important}
         #user-info button[class*='hover:bg-blue-']:hover,#login-prompt button[class*='hover:bg-blue-']:hover,#order-modal button[class*='hover:bg-blue-']:hover{background:var(--primary-strong)!important}
-        .tawk-min-container,#tawkchat-container,iframe[title*='chat'],iframe[title*='Chat']{z-index:2147483000!important}
+      .tawk-min-container,#tawkchat-container,iframe[title*='chat'],iframe[title*='Chat']{z-index:2147483000!important;transform:scale(.78)!important;transform-origin:bottom right!important}
         @keyframes otpFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}
         @keyframes otpPulse{0%,100%{opacity:.45;transform:scale(.92)}50%{opacity:1;transform:scale(1.05)}}
         @keyframes ringSpin{to{transform:rotate(360deg)}}
@@ -1513,8 +1513,15 @@ Spam activity = Ban risk</div>
 <div id="toast-wrap" class="fixed bottom-4 right-4 z-[60] flex flex-col gap-3 sm:bottom-6 sm:right-6"></div>
     <script type="text/javascript">
         var Tawk_API = Tawk_API || {};
-        var Tawk_LoadStart = new Date();
-        (function () {
+Tawk_API.customStyle = {
+    zIndex: 2147483000,
+    visibility: {
+        desktop: { position: 'br', xOffset: 10, yOffset: 10 },
+        mobile:  { position: 'br', xOffset: 10, yOffset: 10 }
+    }
+};
+var Tawk_LoadStart = new Date();
+(function () {
             var s1 = document.createElement('script');
             s1.async = true;
             s1.src = 'https://embed.tawk.to/69c3a5ccacf0f81c37903f0d/1jki3vag6';
