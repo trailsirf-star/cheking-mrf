@@ -1768,7 +1768,9 @@ function setPaymentModalStatus(status = 'pending', request = null) {
     state.paymentModalStatus = normalized;
     const hasRequest = Boolean(request);
     qsa('[data-payment-status-card]').forEach((card) => {
-        card.classList.toggle('is-active', hasRequest && card.dataset.paymentStatusCard === normalized);
+        const isCurrentStatus = hasRequest && card.dataset.paymentStatusCard === normalized;
+        card.classList.toggle('is-active', isCurrentStatus);
+        card.classList.toggle('hidden', hasRequest && !isCurrentStatus);
     });
     qsa('.payment-status-message').forEach((message) => message.classList.remove('is-visible'));
     if (hasRequest) {
