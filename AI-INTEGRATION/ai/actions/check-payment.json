@@ -1,0 +1,55 @@
+{
+  "action": "CHECK_PAYMENT",
+  "description": "Handle all payment related questions",
+
+  "trigger": [
+    "payment",
+    "deposit",
+    "balance",
+    "wallet",
+    "payment pending",
+    "payment add nahi hui",
+    "amount add nahi hua",
+    "deposit pending"
+  ],
+
+  "steps": [
+    {
+      "step": 1,
+      "name": "Check Database",
+      "required": true,
+      "source": "payments"
+    },
+
+    {
+      "step": 2,
+      "condition": "Payment Approved",
+
+      "reply": "✅ Aap ki payment approve ho chuki hai aur wallet update ho gaya hai."
+    },
+
+    {
+      "step": 3,
+
+      "condition": "Payment Pending",
+
+      "reply": "⏳ Aap ki payment verification process me hai. Kripya thora wait karein. Verification complete hote hi wallet automatically update ho jayega."
+    },
+
+    {
+      "step": 4,
+
+      "condition": "Payment Rejected",
+
+      "reply": "❌ Aap ki payment reject hui hai. Agar aap ko lagta hai ye mistake hai to payment screenshot aur Transaction ID bhej dein."
+    },
+
+    {
+      "step": 5,
+
+      "condition": "Payment Not Found",
+
+      "reply": "Payment record nahi mila. Kripya Transaction ID aur Payment Screenshot bhej dein."
+    }
+  ]
+}

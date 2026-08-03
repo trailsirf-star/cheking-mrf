@@ -1,0 +1,10 @@
+{
+  "action": "SEND_GEMINI",
+
+  "when": [
+    "No FAQ Found",
+    "No Intent Found",
+    "Complex Question",
+    "Unknown Question"
+  ]
+}

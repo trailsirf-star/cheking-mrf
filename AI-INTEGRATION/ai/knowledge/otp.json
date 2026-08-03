@@ -1,0 +1,113 @@
+{
+  "category": "OTP Support",
+  "version": "1.0.0",
+  "items": [
+    {
+      "id": "otp_not_received",
+      "keywords": [
+        "otp nahi ayi",
+        "otp ni ayi",
+        "otp nhi ayi",
+        "otp not received",
+        "verification code nahi aya",
+        "sms nahi aya",
+        "code missing"
+      ],
+      "reply": "Agar OTP receive nahi hui to pehle TunnelBear VPN ya koi trusted VPN install karke VPN connect karein. Phir dobara OTP request karein. Agar phir bhi issue aaye to Parallel Space install karke uske andar account create karein. Agar phir bhi OTP na aaye to doosri number series ya Golden Number try karein. Agar problem continue rahe to Order ID, Service Name aur Country bhej dein."
+    },
+    {
+      "id": "otp_delay",
+      "keywords": [
+        "otp late",
+        "late otp",
+        "delay otp",
+        "sms delay"
+      ],
+      "reply": "Kabhi kabhi OTP receive hone me kuch minute lag sakte hain. Kripya 2-5 minutes wait karein aur phir check karein."
+    },
+    {
+      "id": "wrong_otp",
+      "keywords": [
+        "wrong otp",
+        "galat otp",
+        "invalid otp"
+      ],
+      "reply": "Agar wrong OTP receive hui hai to Order ID aur Service Name bhej dein taake hum case check kar saken."
+    },
+    {
+      "id": "expired_otp",
+      "keywords": [
+        "expired otp",
+        "otp expired",
+        "code expired"
+      ],
+      "reply": "OTP ki validity limited hoti hai. Agar OTP expire ho gayi hai to naya OTP request karein ya doosra number try karein."
+    },
+    {
+      "id": "whatsapp_otp",
+      "keywords": [
+        "whatsapp otp",
+        "whatsapp code"
+      ],
+      "reply": "WhatsApp verification ke liye VPN use karein. Agar issue continue ho to Parallel Space ya Golden Number try karein."
+    },
+    {
+      "id": "telegram_otp",
+      "keywords": [
+        "telegram otp",
+        "telegram code"
+      ],
+      "reply": "Telegram verification me agar OTP issue aaye to doosri number series ya Golden Number use karein."
+    },
+    {
+      "id": "facebook_otp",
+      "keywords": [
+        "facebook otp",
+        "facebook code"
+      ],
+      "reply": "Facebook verification ke liye VPN connect karke dobara try karein. Agar phir bhi issue aaye to doosra number series use karein."
+    },
+    {
+      "id": "google_otp",
+      "keywords": [
+        "gmail otp",
+        "google otp"
+      ],
+      "reply": "Google verification ke liye stable VPN use karein. Agar issue continue ho to doosra number ya Golden Number try karein."
+    },
+    {
+      "id": "tiktok_otp",
+      "keywords": [
+        "tiktok otp",
+        "tiktok code"
+      ],
+      "reply": "TikTok verification ke liye VPN aur Parallel Space dono try karein. Zarurat ho to Golden Number use karein."
+    },
+    {
+      "id": "retry_number",
+      "keywords": [
+        "another number",
+        "change number",
+        "retry"
+      ],
+      "reply": "Agar current number se OTP receive nahi ho rahi to doosri number series ya Golden Number try karein."
+    },
+    {
+      "id": "permanent_account",
+      "keywords": [
+        "permanent",
+        "permanent account",
+        "number permanent"
+      ],
+      "reply": "Virtual number temporary hota hai. Account banne ke baad turant Passkey ya Two-Step Verification enable karein taake account secure rahe."
+    },
+    {
+      "id": "login_not_available",
+      "keywords": [
+        "login not available",
+        "login unavailable"
+      ],
+      "reply": "Application ke 3 dots par click karein. Wahan 'Login Not Available Solution 1' aur 'Solution 2' available hain. Video dekh kar steps follow karein."
+    }
+  ]
+}

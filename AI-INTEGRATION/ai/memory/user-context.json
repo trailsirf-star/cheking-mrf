@@ -1,0 +1,13 @@
+{
+  "user_id": null,
+  "email": null,
+  "name": null,
+  "wallet_balance": null,
+  "language": "auto",
+  "country": null,
+  "last_login": null,
+  "total_orders": 0,
+  "total_payments": 0,
+  "vip": false,
+  "banned": false
+}

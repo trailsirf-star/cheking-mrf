@@ -1,0 +1,132 @@
+{
+  "version": "1.0.0",
+  "company": "MRFSMS",
+  "language_support": [
+    "urdu",
+    "roman_urdu",
+    "english"
+  ],
+  "faqs": [
+    {
+      "id": "otp_not_received",
+      "keywords": [
+        "otp nahi ayi",
+        "otp ni ayi",
+        "otp nhi ayi",
+        "otp not received",
+        "code nahi aya",
+        "sms nahi aya",
+        "verification code nahi aya",
+        "otp",
+        "code missing",
+        "verification failed"
+      ],
+      "answer": "Agar OTP receive nahi hui to pehle TunnelBear VPN install karke VPN connect karein. Agar phir bhi issue aaye to Parallel Space ke andar account bana kar try karein. Agar phir bhi OTP na aaye to doosri number series ya Golden Number try karein. Agar issue rahe to Order ID, Service Name aur Country bhej dein."
+    },
+
+    {
+      "id": "golden_number",
+      "keywords": [
+        "golden number",
+        "gold number",
+        "golden",
+        "best number"
+      ],
+      "answer": "Golden Numbers ki success rate aam numbers se behtar hoti hai. Agar available ho to Golden Number use karein. Lekin kisi bhi number ki 100% guarantee nahi di ja sakti."
+    },
+
+    {
+      "id": "parallel_space",
+      "keywords": [
+        "parallel space",
+        "clone app",
+        "dual app"
+      ],
+      "answer": "Agar normal app me OTP issue aa raha hai to Parallel Space install karke uske andar account create karne ki koshish karein."
+    },
+
+    {
+      "id": "vpn",
+      "keywords": [
+        "vpn",
+        "tunnelbear",
+        "vpn use"
+      ],
+      "answer": "Play Store se TunnelBear VPN ya koi trusted VPN install karein. VPN connect karne ke baad dobara OTP request karein."
+    },
+
+    {
+      "id": "permanent_number",
+      "keywords": [
+        "permanent number",
+        "number permanent",
+        "permanent account"
+      ],
+      "answer": "Virtual numbers temporary hote hain. Account banne ke baad turant Passkey ya Two-Step Verification enable karein taake account secure rahe."
+    },
+
+    {
+      "id": "login_not_available",
+      "keywords": [
+        "login not available",
+        "login unavailable",
+        "cannot login"
+      ],
+      "answer": "Application ke 3 dots par click karein. Wahan Login Not Available Solution 1 aur Solution 2 available hain. Video dekh kar steps follow karein."
+    },
+
+    {
+      "id": "payment_pending",
+      "keywords": [
+        "payment pending",
+        "payment add nahi hui",
+        "wallet empty",
+        "balance nahi aya",
+        "deposit pending"
+      ],
+      "answer": "Aap ki payment verification me ho sakti hai. Verification complete hote hi balance automatically wallet me add ho jayega."
+    },
+
+    {
+      "id": "late_payment",
+      "keywords": [
+        "11 baje payment",
+        "late payment",
+        "raat payment"
+      ],
+      "answer": "Agar payment raat 11 baje ke baad bheji gayi hai to verification subah hoti hai. Aksar payment subah 7 baje se pehle approve ho jati hai."
+    },
+
+    {
+      "id": "refund",
+      "keywords": [
+        "refund",
+        "money back",
+        "return payment"
+      ],
+      "answer": "Order purchase karte waqt aap ne Terms & Agreement accept kiye the. Company policy ke mutabiq completed ya successful orders ka refund available nahi hota. Agar technical issue ho to Order ID bhej dein, support team review karegi."
+    },
+
+    {
+      "id": "payment_methods",
+      "keywords": [
+        "payment",
+        "easypaisa",
+        "binance",
+        "deposit"
+      ],
+      "answer": "Filhal hum Easypaisa aur Binance accept karte hain. Aap kisi bhi personal account se payment bhej sakte hain."
+    },
+
+    {
+      "id": "abuse",
+      "keywords": [
+        "fraud",
+        "scam",
+        "bakwas",
+        "fake"
+      ],
+      "answer": "Hume afsos hai ke aap ko issue face karna pada. Kripya apna Order ID share karein. Hum aap ka case check karke poori koshish karenge ke aap ki madad ki ja sake."
+    }
+  ]
+}
