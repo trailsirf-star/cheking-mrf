@@ -1,0 +1,11 @@
+{
+  "current_intent": null,
+  "current_order_id": null,
+  "current_service": null,
+  "current_country": null,
+  "current_payment_method": null,
+  "current_transaction_id": null,
+  "current_issue": null,
+  "last_reply": null,
+  "waiting_for": null
+}

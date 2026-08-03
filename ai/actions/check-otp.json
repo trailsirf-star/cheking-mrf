@@ -1,0 +1,16 @@
+{
+  "action": "CHECK_OTP",
+
+  "provider": "SMSBower",
+
+  "statuses": {
+
+    "STATUS_WAIT_CODE": "OTP ka wait karein. Abhi code receive nahi hua.",
+
+    "STATUS_OK": "OTP receive ho chuki hai.",
+
+    "STATUS_CANCEL": "Order cancel ho gaya hai.",
+
+    "STATUS_WAIT_RETRY": "Kripya kuch dair baad dobara try karein."
+  }
+}

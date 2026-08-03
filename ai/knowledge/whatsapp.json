@@ -1,0 +1,95 @@
+{
+  "category": "WhatsApp Support",
+  "version": "1.0.0",
+  "items": [
+    {
+      "id": "whatsapp_otp_not_received",
+      "keywords": [
+        "whatsapp otp nahi ayi",
+        "whatsapp code nahi aya",
+        "whatsapp verification",
+        "otp not received whatsapp"
+      ],
+      "reply": "Agar WhatsApp OTP receive nahi hui to pehle TunnelBear VPN ya koi trusted VPN connect karein. Agar phir bhi issue aaye to Parallel Space use karein. Agar problem continue rahe to doosri number series ya Golden Number try karein."
+    },
+    {
+      "id": "login_not_available",
+      "keywords": [
+        "login not available",
+        "login unavailable",
+        "cannot login"
+      ],
+      "reply": "Application ke 3 dots par click karein. Wahan 'Login Not Available Solution 1' aur 'Login Not Available Solution 2' available hain. Video dekh kar steps follow karein."
+    },
+    {
+      "id": "permanent_account",
+      "keywords": [
+        "permanent account",
+        "number permanent",
+        "permanent number"
+      ],
+      "reply": "Virtual number temporary hota hai. Account banne ke baad turant Passkey ya Two-Step Verification enable karein taake account secure rahe."
+    },
+    {
+      "id": "whatsapp_business",
+      "keywords": [
+        "whatsapp business",
+        "business whatsapp"
+      ],
+      "reply": "WhatsApp Business ke liye bhi VPN aur Parallel Space try karna helpful ho sakta hai. Agar ek number work na kare to doosri series ya Golden Number try karein."
+    },
+    {
+      "id": "this_account_can_no_longer_use_whatsapp",
+      "keywords": [
+        "this account can no longer use whatsapp",
+        "banned",
+        "ban",
+        "account banned"
+      ],
+      "reply": "Agar WhatsApp account ban ho gaya hai to ye WhatsApp ki policy ka decision hota hai. Naya account banane ke liye doosra number use karein. MRFSMS kisi account ke ban ya unban ki guarantee nahi de sakta."
+    },
+    {
+      "id": "already_registered",
+      "keywords": [
+        "already registered",
+        "already in use",
+        "number already used"
+      ],
+      "reply": "Agar number already registered show ho raha hai to doosri number series ya Golden Number try karein."
+    },
+    {
+      "id": "verification_failed",
+      "keywords": [
+        "verification failed",
+        "verify failed"
+      ],
+      "reply": "Verification failed aaye to VPN connect karke dobara try karein. Agar phir bhi issue ho to Parallel Space ya doosra number use karein."
+    },
+    {
+      "id": "call_verification",
+      "keywords": [
+        "call verification",
+        "call code"
+      ],
+      "reply": "Har virtual number call verification support nahi karta. Agar sirf SMS verification available hai to SMS option use karein."
+    },
+    {
+      "id": "two_step_verification",
+      "keywords": [
+        "2 step verification",
+        "two step",
+        "passkey"
+      ],
+      "reply": "Account successfully banne ke baad turant Two-Step Verification ya Passkey enable kar dein taake account secure rahe."
+    },
+    {
+      "id": "support_request",
+      "keywords": [
+        "still not working",
+        "problem",
+        "issue"
+      ],
+      "reply": "Agar problem abhi bhi solve nahi hui to Order ID, Country, Service Name aur screenshot bhej dein. Hamari support team check karegi."
+    }
+  ]
+}

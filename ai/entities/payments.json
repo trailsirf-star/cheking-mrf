@@ -1,0 +1,18 @@
+{
+  "payment_methods": [
+    {
+      "name": "Easypaisa",
+      "aliases": [
+        "easypaisa",
+        "ep"
+      ]
+    },
+    {
+      "name": "Binance",
+      "aliases": [
+        "binance",
+        "usdt"
+      ]
+    }
+  ]
+}

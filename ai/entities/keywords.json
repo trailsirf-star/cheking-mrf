@@ -1,0 +1,23 @@
+{
+  "otp": [
+    "otp",
+    "sms",
+    "verification",
+    "code"
+  ],
+  "payment": [
+    "payment",
+    "deposit",
+    "wallet",
+    "balance"
+  ],
+  "refund": [
+    "refund",
+    "money back"
+  ],
+  "login": [
+    "login",
+    "login not available",
+    "verify"
+  ]
+}
