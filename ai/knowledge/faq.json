@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "2.0.0",
   "company": "MRFSMS",
   "language_support": [
     "urdu",
@@ -7,126 +7,217 @@
     "english"
   ],
   "faqs": [
+
+    {
+      "id": "greeting",
+      "keywords": [
+        "hi","hello","helo","hy","hey","assalam","salam","aoa","start","help"
+      ],
+      "replies": [
+        "👋 Assalam-o-Alaikum! MRFSMS me khush aamdeed. Main aap ki kis cheez me madad kar sakta hoon?",
+        "😊 Salam! Main MRFSMS AI Assistant hoon. Virtual Numbers, OTP aur Wallet se related har sawal pooch sakte hain.",
+        "🤖 Welcome! Aaj kis service ki zarurat hai?"
+      ]
+    },
+
     {
       "id": "otp_not_received",
       "keywords": [
-        "otp nahi ayi",
-        "otp ni ayi",
-        "otp nhi ayi",
-        "otp not received",
-        "code nahi aya",
-        "sms nahi aya",
-        "verification code nahi aya",
-        "otp",
-        "code missing",
-        "verification failed"
+        "otp nahi ayi","otp ni ayi","otp not received","sms nahi aya",
+        "verification code","code missing","otp failed"
       ],
-      "answer": "Agar OTP receive nahi hui to pehle TunnelBear VPN install karke VPN connect karein. Agar phir bhi issue aaye to Parallel Space ke andar account bana kar try karein. Agar phir bhi OTP na aaye to doosri number series ya Golden Number try karein. Agar issue rahe to Order ID, Service Name aur Country bhej dein."
+      "replies": [
+        "😔 Mujhe afsos hai ke OTP receive nahi hui.\n\n✅ TunnelBear VPN use karein.\n✅ Parallel Space try karein.\n✅ Golden Number select karein.\n\nAgar phir bhi issue aaye to Order ID, Country aur Service Name bhej dein.",
+        "OTP issue aam baat hai.\n\nVPN connect karke dobara request karein.\nAgar phir bhi na aaye to doosri number series try karein."
+      ]
     },
 
     {
       "id": "golden_number",
       "keywords": [
-        "golden number",
-        "gold number",
-        "golden",
-        "best number"
+        "golden number","gold number","best number","premium number"
       ],
-      "answer": "Golden Numbers ki success rate aam numbers se behtar hoti hai. Agar available ho to Golden Number use karein. Lekin kisi bhi number ki 100% guarantee nahi di ja sakti."
-    },
-
-    {
-      "id": "parallel_space",
-      "keywords": [
-        "parallel space",
-        "clone app",
-        "dual app"
-      ],
-      "answer": "Agar normal app me OTP issue aa raha hai to Parallel Space install karke uske andar account create karne ki koshish karein."
+      "replies": [
+        "⭐ Golden Numbers ki success rate normal numbers se zyada hoti hai.",
+        "Golden Number choose karne se OTP receive hone ke chances improve hote hain."
+      ]
     },
 
     {
       "id": "vpn",
       "keywords": [
-        "vpn",
-        "tunnelbear",
-        "vpn use"
+        "vpn","tunnelbear","vpn use","vpn kaise"
       ],
-      "answer": "Play Store se TunnelBear VPN ya koi trusted VPN install karein. VPN connect karne ke baad dobara OTP request karein."
+      "replies": [
+        "TunnelBear VPN install karein aur target country connect karke dobara OTP request karein.",
+        "Trusted VPN use karna OTP success rate improve kar sakta hai."
+      ]
     },
 
     {
-      "id": "permanent_number",
+      "id": "parallel_space",
       "keywords": [
-        "permanent number",
-        "number permanent",
-        "permanent account"
+        "parallel space","clone app","dual app"
       ],
-      "answer": "Virtual numbers temporary hote hain. Account banne ke baad turant Passkey ya Two-Step Verification enable karein taake account secure rahe."
+      "replies": [
+        "Parallel Space install karke uske andar account banane ki koshish karein.",
+        "Agar normal app me issue ho raha hai to Clone App use karein."
+      ]
     },
 
     {
-      "id": "login_not_available",
+      "id": "wallet",
       "keywords": [
-        "login not available",
-        "login unavailable",
-        "cannot login"
+        "wallet","balance","wallet topup","add balance"
       ],
-      "answer": "Application ke 3 dots par click karein. Wahan Login Not Available Solution 1 aur Solution 2 available hain. Video dekh kar steps follow karein."
+      "replies": [
+        "Wallet recharge karne ke liye Dashboard → Wallet Topup open karein aur payment submit karein.",
+        "Payment approve hote hi balance automatically wallet me add ho jayega."
+      ]
     },
 
     {
       "id": "payment_pending",
       "keywords": [
-        "payment pending",
-        "payment add nahi hui",
-        "wallet empty",
-        "balance nahi aya",
-        "deposit pending"
+        "payment pending","deposit pending","balance nahi aya",
+        "wallet empty","payment verify"
       ],
-      "answer": "Aap ki payment verification me ho sakti hai. Verification complete hote hi balance automatically wallet me add ho jayega."
-    },
-
-    {
-      "id": "late_payment",
-      "keywords": [
-        "11 baje payment",
-        "late payment",
-        "raat payment"
-      ],
-      "answer": "Agar payment raat 11 baje ke baad bheji gayi hai to verification subah hoti hai. Aksar payment subah 7 baje se pehle approve ho jati hai."
-    },
-
-    {
-      "id": "refund",
-      "keywords": [
-        "refund",
-        "money back",
-        "return payment"
-      ],
-      "answer": "Order purchase karte waqt aap ne Terms & Agreement accept kiye the. Company policy ke mutabiq completed ya successful orders ka refund available nahi hota. Agar technical issue ho to Order ID bhej dein, support team review karegi."
+      "replies": [
+        "⏳ Aap ki payment verification me ho sakti hai. Approval ke baad balance automatically add ho jayega.",
+        "Agar 30 minutes se zyada ho gaye hain to Transaction ID share karein."
+      ]
     },
 
     {
       "id": "payment_methods",
       "keywords": [
-        "payment",
-        "easypaisa",
-        "binance",
-        "deposit"
+        "payment","easypaisa","binance","deposit","jazzcash"
       ],
-      "answer": "Filhal hum Easypaisa aur Binance accept karte hain. Aap kisi bhi personal account se payment bhej sakte hain."
+      "replies": [
+        "Filhal Easypaisa aur Binance supported hain.",
+        "Payment kisi bhi personal account se bheji ja sakti hai."
+      ]
+    },
+
+    {
+      "id": "refund",
+      "keywords": [
+        "refund","money back","return payment"
+      ],
+      "replies": [
+        "😔 Mujhe afsos hai ke issue face hua.\nCompleted orders normally refundable nahi hote.\nAgar technical issue hai to Order ID share karein.",
+        "Refund company policy ke mutabiq sirf eligible cases me diya jata hai."
+      ]
+    },
+
+    {
+      "id": "order_status",
+      "keywords": [
+        "order","pending order","my order","status"
+      ],
+      "replies": [
+        "Please apna Order ID bhej dein. Main next steps guide karunga.",
+        "Order Pending hai to thori dair wait karein. Agar zyada delay hai to support ko Order ID bhej dein."
+      ]
+    },
+
+    {
+      "id": "login_issue",
+      "keywords": [
+        "login","cannot login","login failed","password"
+      ],
+      "replies": [
+        "Password reset try karein aur browser cache clear karein.",
+        "Incognito mode ya dusre browser me login karke check karein."
+      ]
+    },
+
+    {
+      "id": "permanent_number",
+      "keywords": [
+        "permanent number","permanent account"
+      ],
+      "replies": [
+        "Virtual Numbers temporary hote hain. Account banne ke baad Passkey ya Two-Step Verification enable zaroor karein."
+      ]
+    },
+
+    {
+      "id": "countries",
+      "keywords": [
+        "usa","uk","canada","pakistan","indonesia","thailand",
+        "vietnam","colombia","brazil","germany"
+      ],
+      "replies": [
+        "Ji, agar country dashboard me available hogi to aap turant order place kar sakte hain.",
+        "Latest availability aur price Dashboard par live update hoti rehti hai."
+      ]
+    },
+
+    {
+      "id": "price",
+      "keywords": [
+        "price","cost","rate","kitne ka","charges"
+      ],
+      "replies": [
+        "Latest prices Dashboard me live update hoti rehti hain.",
+        "Main exact live price guarantee nahi kar sakta, Dashboard check karein."
+      ]
+    },
+
+    {
+      "id": "services",
+      "keywords": [
+        "whatsapp","facebook","telegram","gmail","google",
+        "instagram","snapchat","discord","tiktok","twitter"
+      ],
+      "replies": [
+        "Ji, agar service dashboard me available hai to aap uska order place kar sakte hain.",
+        "Service availability aur countries live update hoti rehti hain."
+      ]
+    },
+
+    {
+      "id": "thanks",
+      "keywords": [
+        "thanks","thank you","shukriya","jazakallah"
+      ],
+      "replies": [
+        "😊 Aap ka bohot shukriya. Agar aur madad chahiye ho to zaroor batayein.",
+        "Khushi hui madad karke. Allah Hafiz ❤️"
+      ]
+    },
+
+    {
+      "id": "bye",
+      "keywords": [
+        "bye","allah hafiz","goodbye"
+      ],
+      "replies": [
+        "Allah Hafiz 😊 MRFSMS use karne ka shukriya.",
+        "Take care! Kabhi bhi help chahiye ho to wapas aa jaiye."
+      ]
     },
 
     {
       "id": "abuse",
       "keywords": [
-        "fraud",
-        "scam",
-        "bakwas",
-        "fake"
+        "fake","fraud","scam","bakwas"
       ],
-      "answer": "Hume afsos hai ke aap ko issue face karna pada. Kripya apna Order ID share karein. Hum aap ka case check karke poori koshish karenge ke aap ki madad ki ja sake."
+      "replies": [
+        "😔 Hume afsos hai ke aap naraz hain.\nKripya Order ID share karein. Hum aap ki madad karne ki puri koshish karenge.",
+        "Agar kisi order me issue hai to Order ID bhej dein. Hum review karenge."
+      ]
+    },
+
+    {
+      "id": "fallback",
+      "keywords": [],
+      "replies": [
+        "Mujhe is sawal ka exact jawab nahi mila.\n\nAgar sawal OTP, Virtual Numbers, Wallet, Deposit, Orders ya MRFSMS Services se related hai to main madad kar sakta hoon.",
+        "Is topic ki information mere knowledge base me nahi hai. Zarurat par Gemini AI ya support team aap ki madad karegi."
+      ]
     }
+
   ]
 }
