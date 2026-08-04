@@ -1,5 +1,5 @@
 {
-  "version": "2.0.0",
+  "version": "3.0.0",
   "company": "MRFSMS",
   "language_support": [
     "urdu",
@@ -7,11 +7,10 @@
     "english"
   ],
   "faqs": [
-
     {
       "id": "greeting",
       "keywords": [
-        "hi","hello","helo","hy","hey","assalam","salam","aoa","start","help"
+        "hi","hello","helo","hy","hey","assalam","salam","aoa","start","help","good morning","good evening","good afternoon","salaam","aslam o alakum","aslamulaikum","salam alaikum","mrf sms","mrf","start karo","shuru karo","help me","madad","need help","kia hal","kaise ho","kya haal hai","how are you","gm","gn","salam sir","aoa sir","hello mrfsms","hi bot","salam bot"
       ],
       "replies": [
         "👋 Assalam-o-Alaikum! MRFSMS me khush aamdeed. Main aap ki kis cheez me madad kar sakta hoon?",
@@ -19,205 +18,562 @@
         "🤖 Welcome! Aaj kis service ki zarurat hai?"
       ]
     },
-
     {
       "id": "otp_not_received",
       "keywords": [
-        "otp nahi ayi","otp ni ayi","otp not received","sms nahi aya",
-        "verification code","code missing","otp failed"
+        "otp nahi ayi","otp ni ayi","otp nhi ayi","code nahi aya","verification code","didn't receive code","no sms","otp not received","verification failed","otp nahi araha","code nahi araha","sms nahi aya","sms nahi mila","code nahi mila","otp missing","code missing","verification nahi ho rahi","no code","didn't get otp","otp error","otp fail","otp stuck","waiting for code","code delay","otp timeout","code timed out","otp not coming","sms late","no verification sms","code received wrong","otp rejected","verification sms not received","problem receiving otp","unable to get otp","otp service down","code aaya nahi","otp ni aaya","sms receive nahi hua"
       ],
       "replies": [
         "😔 Mujhe afsos hai ke OTP receive nahi hui.\n\n✅ TunnelBear VPN use karein.\n✅ Parallel Space try karein.\n✅ Golden Number select karein.\n\nAgar phir bhi issue aaye to Order ID, Country aur Service Name bhej dein.",
         "OTP issue aam baat hai.\n\nVPN connect karke dobara request karein.\nAgar phir bhi na aaye to doosri number series try karein."
       ]
     },
-
     {
-      "id": "golden_number",
+      "id": "sms_delay",
       "keywords": [
-        "golden number","gold number","best number","premium number"
+        "sms delay","late sms","late code","delay ho raha","der ho rahi","time lag raha","slow sms","slow otp","awaiting sms","waiting for code","code late aaya","otp slow","sms taking time","kitni der","how long to wait","wait time","der se aya","delayed otp","late verification","sms stuck"
       ],
       "replies": [
-        "⭐ Golden Numbers ki success rate normal numbers se zyada hoti hai.",
-        "Golden Number choose karne se OTP receive hone ke chances improve hote hain."
+        "⏳ SMS me thori der ho sakti hai. Kripya 2-3 minute wait karein.",
+        "Agar code 5 minute tak nahi aaya to order cancel karke dobara try karein ya Golden Number use karein."
       ]
     },
-
     {
-      "id": "vpn",
+      "id": "code_expired",
       "keywords": [
-        "vpn","tunnelbear","vpn use","vpn kaise"
+        "code expired","otp expired","code time out","otp time out","expired code","code ki time khatam","verification code expired","otp validity","code ghalat ho gaya","expired verification","timeout error"
+      ],
+      "replies": [
+        "⏱️ Code expire ho gaya hai. Kripya order cancel karke naya order banayein aur jald se jald OTP request karein."
+      ]
+    },
+    {
+      "id": "wrong_code",
+      "keywords": [
+        "wrong code","incorrect code","ghalat code","invalid otp","code not working","error code","code mismatch","code reject","wrong otp","galt code","code sahi nahi","invalid code","system rejecting code"
+      ],
+      "replies": [
+        "❌ Agar code wrong aa raha hai to number pehle se kisi aur account se linked ho sakta hai. Naya number order karein."
+      ]
+    },
+    {
+      "id": "temporary_unavailable",
+      "keywords": [
+        "temporary unavailable","service down","server down","not available","abhi nahi hai","out of stock","number khatam","no numbers","service offline","temporarily out","koi number nahi","empty stock","no sim"
+      ],
+      "replies": [
+        "🚧 Aap ki selected service is waqt temporary unavailable hai. Kripya thori der baad try karein ya doosra country select karein."
+      ]
+    },
+    {
+      "id": "need_vpn",
+      "keywords": [
+        "vpn","tunnelbear","vpn use","vpn kaise","need vpn","vpn required","vpn lagao","tunnel bear","connect vpn","vpn app","best vpn","free vpn","which vpn","vpn error","vpn not connecting","vpn download","vpn settings","tunnelbear vpn","vpn country","otp ke liye vpn","konsa vpn","vpn zaroori hai","vpn without vpn","no vpn","vpn issue"
       ],
       "replies": [
         "TunnelBear VPN install karein aur target country connect karke dobara OTP request karein.",
-        "Trusted VPN use karna OTP success rate improve kar sakta hai."
+        "Trusted VPN use karna OTP success rate improve kar sakta hai. Hamesha free VPN se behtar TunnelBear ya koi premium VPN use karein."
       ]
     },
-
     {
       "id": "parallel_space",
       "keywords": [
-        "parallel space","clone app","dual app"
+        "parallel space","clone app","dual app","clone","space app","app clone","dual space","multiple accounts","multi account","app duplicator","app twin","double app","clone app kaise","dual app use","parallel space download","clone application"
       ],
       "replies": [
         "Parallel Space install karke uske andar account banane ki koshish karein.",
-        "Agar normal app me issue ho raha hai to Clone App use karein."
+        "Agar normal app me issue ho raha hai to Clone App use karein. Yeh OTP receive karne me madad karta hai."
       ]
     },
-
     {
-      "id": "wallet",
+      "id": "golden_number",
       "keywords": [
-        "wallet","balance","wallet topup","add balance"
+        "golden number","gold number","best number","premium number","premium","star number","high success","zyada chance","best otp","golden series","gold series","best sim","premium sim","vip number","success rate number","golden number kya hai","golden number price","gold number cost"
+      ],
+      "replies": [
+        "⭐ Golden Numbers ki success rate normal numbers se zyada hoti hai.",
+        "Golden Number choose karne se OTP receive hone ke chances improve hote hain. Iske liye dashboard me Golden Number filter select karein."
+      ]
+    },
+    {
+      "id": "number_banned",
+      "keywords": [
+        "number banned","banned number","number block","account banned","number suspend","number suspended","ban account","account ban","number restricted","blocked number","number reject","number ban ho gaya","account disabled","ban issue"
+      ],
+      "replies": [
+        "🚫 Agar number banned ho gaya hai to us number se dobara account nahi ban sakta. Naya number order karke account banayein."
+      ]
+    },
+    {
+      "id": "too_many_attempts",
+      "keywords": [
+        "too many attempts","attempt limit","try again later","limit exceeded","zyada koshish","attempts full","max attempts","try again","limit try","bar bar try","retry limit","blocked due to attempts","many tries"
+      ],
+      "replies": [
+        "⚠️ Aap ne OTP ki zyada koshish ki hai. Kripya 24 ghante baad try karein ya naya number use karein."
+      ]
+    },
+    {
+      "id": "cannot_register",
+      "keywords": [
+        "cannot register","register nahi ho raha","signup fail","sign up error","account nahi ban raha","register issue","registration failed","signup problem","create account fail","register error","sign up nahi ho raha","cannot signup"
+      ],
+      "replies": [
+        "❌ Registration fail ho sakti hai agar number pehle se use ho chuka ho. Kripya naya number order karein aur VPN ke sath try karein."
+      ]
+    },
+    {
+      "id": "number_already_used",
+      "keywords": [
+        "number already used","used number","number pehle se use","number already registered","number exists","already taken","number previously used","number taken","registered number","number linked"
+      ],
+      "replies": [
+        "🔄 Yeh number pehle use ho chuka hai. Kripya fresh number ke liye naya order place karein."
+      ]
+    },
+    {
+      "id": "wallet_balance",
+      "keywords": [
+        "wallet","balance","wallet topup","add balance","recharge","top up","topup karo","wallet empty","kam balance","low balance","zero balance","balance khatam","balance nahi","paisa dalo","money add","add money","fund add","wallet recharge","wallet balance check","kitna balance hai"
       ],
       "replies": [
         "Wallet recharge karne ke liye Dashboard → Wallet Topup open karein aur payment submit karein.",
-        "Payment approve hote hi balance automatically wallet me add ho jayega."
+        "Payment approve hote hi balance automatically wallet me add ho jayega. Apna current balance Dashboard par check kar sakte hain."
       ]
     },
-
+    {
+      "id": "low_balance",
+      "keywords": [
+        "low balance","insufficient funds","balance kam hai","not enough balance","kam paise","balance khatam hogaya","insufficient balance","need more balance","balance zero","empty wallet","out of funds"
+      ],
+      "replies": [
+        "⚠️ Aap ke wallet me balance kam hai. Kripya Wallet Topup karein taake aap apna order complete kar sakein."
+      ]
+    },
     {
       "id": "payment_pending",
       "keywords": [
-        "payment pending","deposit pending","balance nahi aya",
-        "wallet empty","payment verify"
+        "payment pending","deposit pending","balance nahi aya","wallet empty","payment verify","manual payment","verification","payment approved","late payment","deposit proof","transaction id","txn id","payment processing","payment hold","payment delay","paisa nahi aya","deposit nahi hua","balance pending","payment stuck","payment review","payment confirming","verify payment","approval waiting"
       ],
       "replies": [
         "⏳ Aap ki payment verification me ho sakti hai. Approval ke baad balance automatically add ho jayega.",
-        "Agar 30 minutes se zyada ho gaye hain to Transaction ID share karein."
+        "Agar 30 minutes se zyada ho gaye hain to Transaction ID share karein taake hum check kar sakein."
       ]
     },
-
     {
       "id": "payment_methods",
       "keywords": [
-        "payment","easypaisa","binance","deposit","jazzcash"
+        "payment","easypaisa","binance","deposit","jazzcash","payment methods","payment kaise kare","deposit methods","easy paisa","jazz cash","binance pay","crypto","usdt","bank transfer","how to pay","payment option","paisa kaise bheje","payment ways","deposit kaise kare","payment confirm","payment options","deposit options","bank deposit"
       ],
       "replies": [
-        "Filhal Easypaisa aur Binance supported hain.",
-        "Payment kisi bhi personal account se bheji ja sakti hai."
+        "Filhal Easypaisa, JazzCash aur Binance supported hain.",
+        "Payment kisi bhi supported method (Easypaisa, JazzCash, Binance) se bheji ja sakti hai. Dashboard me options available hain."
       ]
     },
-
     {
-      "id": "refund",
+      "id": "refund_policy",
       "keywords": [
-        "refund","money back","return payment"
+        "refund","money back","return payment","refund do","paisa wapas","wapas karo","refund request","refund status","refund kab","paisa wapis karo","money refund","chargeback","return money","refund nahi mila","refund policy","refund eligibility","paise wapas chahiye","refund process"
       ],
       "replies": [
         "😔 Mujhe afsos hai ke issue face hua.\nCompleted orders normally refundable nahi hote.\nAgar technical issue hai to Order ID share karein.",
-        "Refund company policy ke mutabiq sirf eligible cases me diya jata hai."
+        "Refund company policy ke mutabiq sirf eligible cases me diya jata hai. Agar order fail ho gaya hai to balance automatically wallet me wapas aa jata hai."
       ]
     },
-
     {
-      "id": "order_status",
+      "id": "cancel_refund_delay",
       "keywords": [
-        "order","pending order","my order","status"
+        "number cancel kiya payment wapas nahi hui","cancel ke baad balance nahi aya","payment wapas nahi howi","balance wapas nahi aya","refund after cancel","cancel number no refund","paisa wapas nahi aya","wallet update nahi hua","payment update nahi hui","cancel order refund delay","balance not returned","money not returned after cancel","cancel karne ke baad paisa nahi mila","payment stuck after cancel"
       ],
       "replies": [
-        "Please apna Order ID bhej dein. Main next steps guide karunga.",
-        "Order Pending hai to thori dair wait karein. Agar zyada delay hai to support ko Order ID bhej dein."
+        "⏳ Agar aap ne number cancel kiya hai aur payment wapas update nahi hui, to kripya thora wait karein. Balance automatically aap ke account me wapas aa jayegi.",
+        "System balance update me 5-10 minute le sakta hai. Agar itne arse baad bhi balance wallet me nahi aya, to apna Order ID bhej dein."
       ]
     },
-
     {
-      "id": "login_issue",
+      "id": "number_expiry_cancel",
       "keywords": [
-        "login","cannot login","login failed","password"
+        "number kharab ho jayega","number expire ho raha hai","number khatam ho jayega","cancel kaise kare","how to cancel number","agar number kaam na kare","number expire","timer khatam ho gaya","number validity","agar number ghalat ho to","kya cancel kar sakte hain","order cancel karne ka tarika","cancel number","expire ho gaya","number time out","number kharab hai","number not working cancel","expiry time"
       ],
       "replies": [
-        "Password reset try karein aur browser cache clear karein.",
-        "Incognito mode ya dusre browser me login karke check karein."
+        "Agar number kharab ho jaye ya expire ho raha ho, to aap use cancel kar sakte hain. Order cancel karne par aap ki payment automatically aap ke account (wallet) me wapas aa jayegi.",
+        "Number expire hone se daraen nahi, bas order cancel kar dein. Payment wapas mil jayegi aur aap naya number order kar sakte hain."
       ]
     },
-
     {
-      "id": "permanent_number",
+      "id": "bonus",
       "keywords": [
-        "permanent number","permanent account"
+        "bonus","reward","free balance","discount","promo","coupon","code","gift","free money","free paisa","bonus kahan hai","promo code","discount code","referral bonus","signup bonus"
       ],
       "replies": [
-        "Virtual Numbers temporary hote hain. Account banne ke baad Passkey ya Two-Step Verification enable zaroor karein."
+        "🎁 Promo codes aur bonuses time-to-time offer kiye jate hain. Active offers Dashboard ya Notifications me check karein."
       ]
     },
-
     {
-      "id": "countries",
+      "id": "pricing_rates",
       "keywords": [
-        "usa","uk","canada","pakistan","indonesia","thailand",
-        "vietnam","colombia","brazil","germany"
-      ],
-      "replies": [
-        "Ji, agar country dashboard me available hogi to aap turant order place kar sakte hain.",
-        "Latest availability aur price Dashboard par live update hoti rehti hai."
-      ]
-    },
-
-    {
-      "id": "price",
-      "keywords": [
-        "price","cost","rate","kitne ka","charges"
+        "price","cost","rate","kitne ka","charges","price kya hai","rate kya hai","cost kitna","kitne paise","how much","fees","charge","pricing","price list","rate list","service cost","number price","otp price","kitne ka number"
       ],
       "replies": [
         "Latest prices Dashboard me live update hoti rehti hain.",
-        "Main exact live price guarantee nahi kar sakta, Dashboard check karein."
+        "Main exact live price guarantee nahi kar sakta, Dashboard check karein. Har country aur service ki price mukhtalif hoti hai."
       ]
     },
-
     {
-      "id": "services",
+      "id": "order_status",
       "keywords": [
-        "whatsapp","facebook","telegram","gmail","google",
-        "instagram","snapchat","discord","tiktok","twitter"
+        "order","pending order","my order","status","order dhoondo","order check","order id","order pending","order failed","order cancel","order expired","order running","order processing","auto cancel","cancel order","order details","order kahan hai","order status check","where is my order","order delayed","order time"
       ],
       "replies": [
-        "Ji, agar service dashboard me available hai to aap uska order place kar sakte hain.",
-        "Service availability aur countries live update hoti rehti hain."
+        "Please apna Order ID bhej dein. Main next steps guide karunga.",
+        "Order Pending hai to thori dair wait karein. Agar zyada delay hai to support ko Order ID bhej dein. Auto cancel hone par balance wapas aa jata hai."
       ]
     },
-
     {
-      "id": "thanks",
+      "id": "order_failed",
       "keywords": [
-        "thanks","thank you","shukriya","jazakallah"
+        "order failed","failed order","order error","order cancel ho gaya","cancel order","auto cancel","order unsuccessful","order rejected","error order","order didn't work"
+      ],
+      "replies": [
+        "❌ Agar order fail ho gaya hai to balance automatically wallet me wapas aa jayega. Kripya naya number try karein."
+      ]
+    },
+    {
+      "id": "login_issue",
+      "keywords": [
+        "login","cannot login","login failed","password","account locked","login unavailable","login nahi ho raha","password galat","forgot password","account block","login error","sign in","sign in problem","access denied","login issue","password reset","cannot access","account access"
+      ],
+      "replies": [
+        "Password reset try karein aur browser cache clear karein.",
+        "Incognito mode ya dusre browser me login karke check karein. Agar account lock ho gaya hai to support se contact karein."
+      ]
+    },
+    {
+      "id": "permanent_vs_temporary",
+      "keywords": [
+        "permanent number","permanent account","temporary number","temp number","reuse","number reuse","dobara use","again use","number delete","number expired","sim valid","how long","kitne time","validity","number validity","rent number","temp number time"
+      ],
+      "replies": [
+        "Virtual Numbers temporary hote hain (usually 10-20 minutes). Account banne ke baad Passkey ya Two-Step Verification enable zaroor karein.",
+        "Permanent numbers normally provide nahi kiye jate. Numbers temporary hote hain aur dobara use nahi ho sakte."
+      ]
+    },
+    {
+      "id": "account_2fa_passkey",
+      "keywords": [
+        "passkey","2fa","two step verification","2 step","security","recover account","backup","backup code","recovery code","account secure","secure account","2 factor","authenticator","google authenticator","backup keys","2fa code","passkey setup"
+      ],
+      "replies": [
+        "🔐 Account security ke liye 2FA aur Passkey zaroori hain. Account banne ke baad fauran 2FA enable karein aur backup codes save kar lein."
+      ]
+    },
+    {
+      "id": "account_recover",
+      "keywords": [
+        "recover account","account recovery","lost account","backup code","restore account","account wapas","recover password","forgot login","recover access","account hack","recover id"
+      ],
+      "replies": [
+        "Account recover karne ke liye 2FA backup codes ya recovery keys zaroori hain. Agar codes lost hain to recovery mushkil ho sakti hai."
+      ]
+    },
+    {
+      "id": "country_usa",
+      "keywords": [
+        "usa","america","united states","us number","usa number","us sim","american number","us otp","us virtual number","usa verification","us country","america number","us whatsapp","us telegram"
+      ],
+      "replies": [
+        "🇺🇸 USA numbers available hain. Dashboard par USA select karein aur service choose karein. Golden Number use karne se success rate behtar hogi."
+      ]
+    },
+    {
+      "id": "country_uk",
+      "keywords": [
+        "uk","england","britain","united kingdom","uk number","british number","uk sim","uk otp","uk virtual number","uk verification","london number","uk country"
+      ],
+      "replies": [
+        "🇬🇧 UK numbers available hain. Dashboard par UK select karke order place karein. OTP success ke liye VPN use karein."
+      ]
+    },
+    {
+      "id": "country_pakistan",
+      "keywords": [
+        "pakistan","pk","pak number","pakistani number","pk sim","pk otp","pakistan virtual number","pk verification","pak country","pakistan sim"
+      ],
+      "replies": [
+        "🇵🇰 Pakistan numbers available hain. Dashboard se Pakistan select karein. Payments ke liye Easypaisa aur JazzCash use kar sakte hain."
+      ]
+    },
+    {
+      "id": "country_india",
+      "keywords": [
+        "india","indian number","india sim","india otp","india virtual number","india verification","indian country","in number","bharat"
+      ],
+      "replies": [
+        "🇮🇳 India numbers dashboard par available hain. Service select karke order place karein."
+      ]
+    },
+    {
+      "id": "country_other_general",
+      "keywords": [
+        "indonesia","vietnam","thailand","malaysia","brazil","mexico","colombia","russia","ukraine","turkey","germany","france","italy","spain","saudi arabia","uae","qatar","kuwait","south africa","nigeria","egypt","indonesian","vietnamese","thai","malaysian","brazilian","mexican","colombian","russian","ukrainian","turkish","german","french","italian","spanish","saudi","emirati","qatari","kuwaiti","south african","nigerian","egyptian","other country","europe","asia","africa"
+      ],
+      "replies": [
+        "🌍 Hamare dashboard par 50+ countries available hain. Kripya Dashboard par ja kar apni desired country select karein. Agar country list me nahi hai to abhi available nahi hai."
+      ]
+    },
+    {
+      "id": "service_whatsapp",
+      "keywords": [
+        "whatsapp","wa","watsapp","whats app","whatsapp verification","whatsapp code","wa otp","whatsapp number","whatsapp sms","whatsapp not receiving","wa verification","whatsapp account","whatsapp otp nahi aya","wa code","wa sms","whatsapp login code","wa login","whatsapp signup","whatsapp register","create whatsapp account","whatsapp otp nahi araha","wa verification code","whatsapp sms verify","whatsapp phone number","whatsapp banned","whatsapp activate","whatsapp otp error","whatsapp link"
+      ],
+      "replies": [
+        "🟢 WhatsApp verification ke liye number order karein. Agar OTP na aaye to TunnelBear VPN use karein aur Parallel Space me try karein."
+      ]
+    },
+    {
+      "id": "service_facebook",
+      "keywords": [
+        "facebook","fb","meta","fb verification","fb code","facebook otp","fb number","facebook account","fb sms","fb otp nahi aya","messenger","fb login","facebook signup","facebook register","fb otp error","create fb account","facebook code not received","fb sms verify"
+      ],
+      "replies": [
+        "🔵 Facebook OTP ke liye fresh number order karein. Agar code error aaye to number pehle se registered ho sakta hai, naya number try karein."
+      ]
+    },
+    {
+      "id": "service_instagram",
+      "keywords": [
+        "instagram","insta","ig","insta verification","insta code","ig otp","insta number","insta account","insta sms","ig otp nahi aya","insta login","ig login","instagram signup","instagram register","create insta account","insta otp error","ig verification code"
+      ],
+      "replies": [
+        "📸 Instagram verification ke liye country select karke number order karein. VPN use karna success rate improve karega."
+      ]
+    },
+    {
+      "id": "service_telegram",
+      "keywords": [
+        "telegram","tg","tel","tg verification","tg code","telegram otp","tg number","telegram account","tg sms","telegram otp nahi aya","telegram login","tg login","telegram signup","telegram register","create telegram account","tg otp error","telegram activation","tg code not received"
+      ],
+      "replies": [
+        "✈️ Telegram verification ke liye number lein. Agar account ban jaye to 2FA enable zaroor karein. OTP na aane par Golden Number try karein."
+      ]
+    },
+    {
+      "id": "service_tiktok",
+      "keywords": [
+        "tiktok","tik tok","tt","tiktok verification","tiktok code","tt otp","tiktok number","tiktok account","tiktok sms","tiktok login","tiktok signup","tiktok register","create tiktok account","tiktok otp error","tik tok code"
+      ],
+      "replies": [
+        "🎵 TikTok OTP ke liye number order karein. TikTok security strict ho sakti hai, isliye VPN aur Parallel Space use karein."
+      ]
+    },
+    {
+      "id": "service_google_gmail",
+      "keywords": [
+        "google","gmail","mail","google verification","gmail code","google otp","gmail number","google account","google sms","gmail otp nahi aya","g mail","google login","gmail signup","gmail register","create google account","create gmail","google otp error","google phone verification"
+      ],
+      "replies": [
+        "🔴 Google/Gmail verification ke liye Golden Number use karein. Normal numbers par Google OTP send nahi karta. VPN connect karke try karein."
+      ]
+    },
+    {
+      "id": "service_discord",
+      "keywords": [
+        "discord","disc","discord verification","discord code","discord otp","discord number","discord account","discord sms","discord login","discord signup","discord register","create discord account","discord otp error","discord verification code"
+      ],
+      "replies": [
+        "🎮 Discord verification ke liye number order karein. Agar code na aaye to doosra country number try karein."
+      ]
+    },
+    {
+      "id": "service_microsoft",
+      "keywords": [
+        "microsoft","ms","outlook","ms verification","outlook code","ms otp","outlook number","ms account","office 365","hotmail","microsoft sms","outlook login","outlook signup","hotmail signup","ms otp error","microsoft verification","outlook verification"
+      ],
+      "replies": [
+        "🪟 Microsoft/Outlook OTP ke liye fresh number lein. Number already used error aaye to naya number try karein."
+      ]
+    },
+    {
+      "id": "service_uber",
+      "keywords": [
+        "uber","uber verification","uber code","uber otp","uber number","uber account","uber sms","uber login","uber signup","uber register","create uber account","uber otp error"
+      ],
+      "replies": [
+        "🚗 Uber account banane ke liye number order karein. Local country number zyada behtar kaam karta hai."
+      ]
+    },
+    {
+      "id": "service_signal",
+      "keywords": [
+        "signal","signal verification","signal code","signal otp","signal number","signal account","signal sms","signal login","signal signup","signal register","create signal account","signal otp error"
+      ],
+      "replies": [
+        "📱 Signal verification ke liye number order karein. VPN use karke OTP request karein."
+      ]
+    },
+    {
+      "id": "service_snapchat",
+      "keywords": [
+        "snapchat","snap","snap verification","snap code","snap otp","snapchat number","snap account","snap sms","snapchat login","snapchat signup","snapchat register","create snap account","snapchat otp error"
+      ],
+      "replies": [
+        "👻 Snapchat OTP ke liye number order karein. Golden number use karne se zyada chances honge."
+      ]
+    },
+    {
+      "id": "service_binance",
+      "keywords": [
+        "binance","crypto","usdt","binance verification","binance code","binance otp","binance number","binance account","binance sms","binance pay","web3","binance login","binance signup","binance otp error","binance register"
+      ],
+      "replies": [
+        "🟡 Binance verification ke liye number order karein. Binance strict security use karta hai, isliye VPN aur high-quality number use karein."
+      ]
+    },
+    {
+      "id": "service_amazon",
+      "keywords": [
+        "amazon","amzn","amazon verification","amazon code","amazon otp","amazon number","amazon account","amazon sms","aws","prime","amazon login","amazon signup","amazon register","amazon otp error"
+      ],
+      "replies": [
+        "📦 Amazon OTP ke liye number lein. Agar code na aaye to order cancel karke naya number try karein."
+      ]
+    },
+    {
+      "id": "service_twitter_x",
+      "keywords": [
+        "twitter","x","twit","tweet","twitter verification","twitter code","twitter otp","twitter number","twitter account","twitter sms","x login","twitter signup","twitter register","create twitter account","twitter otp error","x verification"
+      ],
+      "replies": [
+        "🐦 Twitter/X verification ke liye number order karein. OTP delay ho to 5 min wait karein."
+      ]
+    },
+    {
+      "id": "service_linkedin",
+      "keywords": [
+        "linkedin","li","link","linkedin verification","linkedin code","linkedin otp","linkedin number","linkedin account","linkedin sms","linkedin login","linkedin signup","linkedin register","linkedin otp error"
+      ],
+      "replies": [
+        "💼 LinkedIn account ke liye number order karein. Professional accounts ke liye USA ya UK numbers behtar rehte hain."
+      ]
+    },
+    {
+      "id": "service_wechat",
+      "keywords": [
+        "wechat","we chat","weixin","wechat verification","wechat code","wechat otp","wechat number","wechat account","wechat sms","wechat login","wechat signup","wechat register","wechat otp error"
+      ],
+      "replies": [
+        "💬 WeChat verification mushkil ho sakti hai. Kripya China ya nearby country ka number use karein aur VPN connect karke try karein."
+      ]
+    },
+    {
+      "id": "service_viber",
+      "keywords": [
+        "viber","viber verification","viber code","viber otp","viber number","viber account","viber sms","viber login","viber signup","viber register","viber otp error"
+      ],
+      "replies": [
+        "📞 Viber OTP ke liye number order karein. Agar issue aaye to dusra country try karein."
+      ]
+    },
+    {
+      "id": "service_imo",
+      "keywords": [
+        "imo","imo verification","imo code","imo otp","imo number","imo account","imo sms","imo login","imo signup","imo register","imo otp error"
+      ],
+      "replies": [
+        "📲 IMO verification ke liye number lein. Number order karke OTP ka wait karein."
+      ]
+    },
+    {
+      "id": "service_line",
+      "keywords": [
+        "line","line app","line verification","line code","line otp","line number","line account","line sms","line login","line signup","line register","line otp error"
+      ],
+      "replies": [
+        "🟢 LINE app verification ke liye number order karein. Japan ya Asian countries ke numbers behtar result dete hain."
+      ]
+    },
+    {
+      "id": "service_yahoo",
+      "keywords": [
+        "yahoo","ymail","yahoo verification","yahoo code","yahoo otp","yahoo number","yahoo account","yahoo mail","yahoo sms","yahoo login","yahoo signup","yahoo register","yahoo otp error"
+      ],
+      "replies": [
+        "🟣 Yahoo verification ke liye number order karein. Agar code na aaye to 24h baad try karein."
+      ]
+    },
+    {
+      "id": "service_apple",
+      "keywords": [
+        "apple","apple id","ios","iphone","apple verification","apple code","apple otp","apple number","apple account","app store","icloud","apple login","apple signup","apple id create","apple otp error"
+      ],
+      "replies": [
+        "🍎 Apple ID banane ke liye number lein. Apple strict verification karta hai, isliye Golden Number use karein."
+      ]
+    },
+    {
+      "id": "service_netflix",
+      "keywords": [
+        "netflix","nf","netflix verification","netflix code","netflix otp","netflix number","netflix account","netflix sms","netflix login","netflix signup","netflix register","netflix otp error"
+      ],
+      "replies": [
+        "🎬 Netflix OTP ke liye number order karein. USA ya UK numbers best rehte hain Netflix ke liye."
+      ]
+    },
+    {
+      "id": "service_paypal",
+      "keywords": [
+        "paypal","pp","paypal verification","paypal code","paypal otp","paypal number","paypal account","paypal sms","paypal login","paypal signup","paypal register","paypal otp error"
+      ],
+      "replies": [
+        "💳 PayPal verification ke liye number lein. PayPal fraud check karta hai, isliye VPN country aur Number country same rakhein."
+      ]
+    },
+    {
+      "id": "customer_thanks",
+      "keywords": [
+        "thanks","thank you","shukriya","jazakallah","thankx","thnx","ty","thanks alot","bohat shukriya","appreciate","good","nice","thanx","thanku"
       ],
       "replies": [
         "😊 Aap ka bohot shukriya. Agar aur madad chahiye ho to zaroor batayein.",
         "Khushi hui madad karke. Allah Hafiz ❤️"
       ]
     },
-
     {
-      "id": "bye",
+      "id": "customer_bye",
       "keywords": [
-        "bye","allah hafiz","goodbye"
+        "bye","allah hafiz","goodbye","good night","gn","khuda hafiz","see you","alvida","take care","bye bye","khuda hafiz","sleep well","tata"
       ],
       "replies": [
         "Allah Hafiz 😊 MRFSMS use karne ka shukriya.",
-        "Take care! Kabhi bhi help chahiye ho to wapas aa jaiye."
+        "Take care! Kabhi bhi help chahiye ho to wapas aa jaiye. Good Night!"
       ]
     },
-
     {
-      "id": "abuse",
+      "id": "customer_sorry_complaint",
       "keywords": [
-        "fake","fraud","scam","bakwas"
+        "sorry","complaint","complain","issue","problem","masla","takleef","report","galti","mistake","problem hai","issue hai","complaint karna hai","report issue","bad service","worst","not working","angry","naraz","fraud","scam","fake","bakwas","bakwas hai","fraud hai","scammer","chor","loota","fake site","fake app","time waste","gali","abuse","bekar","kharab"
       ],
       "replies": [
-        "😔 Hume afsos hai ke aap naraz hain.\nKripya Order ID share karein. Hum aap ki madad karne ki puri koshish karenge.",
-        "Agar kisi order me issue hai to Order ID bhej dein. Hum review karenge."
+        "😔 Hume afsos hai ke aap naraz hain. Kripya Order ID share karein. Hum aap ki madad karne ki puri koshish karenge.",
+        "Agar kisi order me issue hai to Order ID bhej dein. Hum review karenge aur company policy ke mutabiq solve karenge. Hum scam nahi hain, trusted service hai."
       ]
     },
-
+    {
+      "id": "ai_behavior_limits",
+      "keywords": [
+        "guarantee","promise","refund guarantee","otp guarantee","success guarantee","100 percent","pakka otp","confirm otp","account pakka","banayeonge pakka","guarantee chahiye","will it work","refun guarantee","100% work","pakka kaam karega"
+      ],
+      "replies": [
+        "⚠️ Hum OTP ya account creation ki koi guarantee nahi dete. Virtual numbers temporary hote hain aur OTP success service-to-service mukhtalif hota hai. Refund policy strict hai."
+      ]
+    },
     {
       "id": "fallback",
       "keywords": [],
       "replies": [
         "Mujhe is sawal ka exact jawab nahi mila.\n\nAgar sawal OTP, Virtual Numbers, Wallet, Deposit, Orders ya MRFSMS Services se related hai to main madad kar sakta hoon.",
-        "Is topic ki information mere knowledge base me nahi hai. Zarurat par Gemini AI ya support team aap ki madad karegi."
+        "Is topic ki information mere knowledge base me nahi hai. Zarurat par Gemini AI ya support team aap ki madad karegi. Kripya apna sawal thora clear karein."
       ]
     }
-
   ]
 }
