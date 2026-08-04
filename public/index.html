@@ -952,5 +952,23 @@
         loadCountries();
         checkAuth();
     </script>
+    <!-- MRFSMS AI -->
+<link rel="stylesheet" href="/ai/ai.css">
+
+<div id="ai-root"></div>
+
+<script>
+fetch("/ai/ai.html")
+  .then(r => r.text())
+  .then(html => {
+    document.getElementById("ai-root").innerHTML = html;
+
+    const script = document.createElement("script");
+    script.src = "/ai/ai.js?v=" + Date.now(); // cache avoid
+    document.body.appendChild(script);
+  })
+  .catch(err => console.error("AI Widget Load Error:", err));
+</script>
+<!-- END MRFSMS AI -->
 </body>
 </html>
