@@ -1,123 +1,129 @@
-const widget = document.getElementById("mrf-ai-widget");
-const button = document.getElementById("mrf-ai-button");
-const input = document.getElementById("aiMessage");
-const sendBtn = document.getElementById("sendMessage");
-const messages = document.getElementById("mrf-ai-messages");
+(function () {
 
-let opened = false;
+    function init(retry = 0) {
 
-button.addEventListener("click", () => {
+        const widget = document.getElementById("mrf-ai-widget");
+        const button = document.getElementById("mrf-ai-button");
+        const input = document.getElementById("aiMessage");
+        const sendBtn = document.getElementById("sendMessage");
+        const messages = document.getElementById("mrf-ai-messages");
 
-    opened = !opened;
+        if (!widget || !button || !input || !sendBtn || !messages) {
 
-    if (opened) {
+            if (retry < 50) {
+                console.log("[AI] waiting for DOM...");
+                return setTimeout(() => init(retry + 1), 100);
+            }
 
-        widget.style.display = "flex";
+            console.error("[AI] Widget elements not found.");
+            return;
+        }
 
-        setTimeout(() => {
+        if (window.__MRF_AI_INITIALIZED__) return;
+        window.__MRF_AI_INITIALIZED__ = true;
 
-            input.focus();
+        console.log("[AI] initialized");
 
-        }, 150);
+        let opened = false;
 
-    } else {
+        button.addEventListener("click", () => {
 
-        widget.style.display = "none";
+            opened = !opened;
 
-    }
+            widget.style.display = opened ? "flex" : "none";
 
-});
-
-function appendUserMessage(text) {
-
-    messages.innerHTML += `
-        <div class="user-message">
-            ${text}
-        </div>
-    `;
-
-    messages.scrollTop = messages.scrollHeight;
-
-}
-
-function appendBotMessage(text) {
-
-    messages.innerHTML += `
-        <div class="bot-message">
-            ${text}
-        </div>
-    `;
-
-    messages.scrollTop = messages.scrollHeight;
-
-}
-
-async function sendMessage() {
-
-    const text = input.value.trim();
-
-    if (!text) return;
-
-    appendUserMessage(text);
-
-    input.value = "";
-
-    messages.innerHTML += `
-        <div class="bot-message" id="typing">
-            ⏳ Thinking...
-        </div>
-    `;
-
-    messages.scrollTop = messages.scrollHeight;
-
-    try {
-
-        const res = await fetch("/api/ai/chat", {
-
-            method: "POST",
-
-            headers: {
-                "Content-Type": "application/json"
-            },
-
-            body: JSON.stringify({
-                message: text
-            })
+            if (opened) {
+                setTimeout(() => input.focus(), 100);
+            }
 
         });
 
-        const data = await res.json();
+        function appendUserMessage(text) {
 
-        document.getElementById("typing")?.remove();
+            messages.insertAdjacentHTML("beforeend", `
+                <div class="user-message">${text}</div>
+            `);
 
-        appendBotMessage(
-            data.reply || "Sorry, I couldn't understand your request."
-        );
+            messages.scrollTop = messages.scrollHeight;
+
+        }
+
+        function appendBotMessage(text) {
+
+            messages.insertAdjacentHTML("beforeend", `
+                <div class="bot-message">${text}</div>
+            `);
+
+            messages.scrollTop = messages.scrollHeight;
+
+        }
+
+        async function sendMessage() {
+
+            const text = input.value.trim();
+
+            if (!text) return;
+
+            appendUserMessage(text);
+
+            input.value = "";
+
+            messages.insertAdjacentHTML("beforeend", `
+                <div class="bot-message" id="typing">
+                    ⏳ Thinking...
+                </div>
+            `);
+
+            messages.scrollTop = messages.scrollHeight;
+
+            try {
+
+                const res = await fetch("/api/ai/chat", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({
+                        message: text
+                    })
+                });
+
+                const data = await res.json();
+
+                document.getElementById("typing")?.remove();
+
+                appendBotMessage(
+                    data.reply || "Sorry, I couldn't understand your request."
+                );
+
+            } catch (err) {
+
+                document.getElementById("typing")?.remove();
+
+                appendBotMessage("⚠️ AI server is currently unavailable.");
+
+                console.error(err);
+
+            }
+
+        }
+
+        sendBtn.addEventListener("click", sendMessage);
+
+        input.addEventListener("keydown", (e) => {
+
+            if (e.key === "Enter") {
+                sendMessage();
+            }
+
+        });
 
     }
 
-    catch (err) {
-
-        document.getElementById("typing")?.remove();
-
-        appendBotMessage(
-            "⚠️ AI server is currently unavailable."
-        );
-
-        console.error(err);
-
+    if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", () => init());
+    } else {
+        init();
     }
 
-}
-
-sendBtn.addEventListener("click", sendMessage);
-
-input.addEventListener("keypress", (e) => {
-
-    if (e.key === "Enter") {
-
-        sendMessage();
-
-    }
-
-});
+})();
