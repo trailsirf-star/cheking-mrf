@@ -1,36 +1,109 @@
 /**
- * services/memory.service.js
- * Simple in-memory user context
+ * services/ai.service.js
+ * MRFSMS AI Engine
  */
 
-const store = new Map();
+const { askGemini, getGeminiHealth } = require("./gemini.service");
+const { detectIntent } = require("./intent.service");
+const { extractEntities } = require("./entity.service");
+const { getReply } = require("./knowledge.service");
+const memory = require("./memory.service");
 
-function get(userId) {
-    return store.get(String(userId)) || {};
-}
+function normalizeChatInput(input = {}) {
+    const message = String(input.message || input.text || "").trim();
 
-function merge(userId, data = {}) {
-    const id = String(userId);
+    const messages = Array.isArray(input.messages)
+        ? input.messages
+        : null;
 
-    const previous = store.get(id) || {};
-
-    const updated = {
-        ...previous,
-        ...data,
-        updatedAt: Date.now()
+    return {
+        message,
+        messages
     };
-
-    store.set(id, updated);
-
-    return updated;
 }
 
-function clear(userId) {
-    store.delete(String(userId));
+function getUserId(input = {}, user = {}) {
+    return (
+        user?.id ||
+        user?.email ||
+        input?.conversationId ||
+        input?.sessionId ||
+        "anonymous"
+    );
+}
+
+async function chat(input = {}, user = {}) {
+
+    const normalized = normalizeChatInput(input);
+
+    const message = normalized.message;
+
+    if (!message) {
+        const error = new Error("Message is required");
+        error.statusCode = 400;
+        throw error;
+    }
+
+    const userId = getUserId(input, user);
+
+    // Previous memory
+    const previousMemory = memory.get(userId) || {};
+
+    // Detect intent
+    const intent = detectIntent(message);
+
+    // Detect entities
+    const entities = extractEntities(message);
+
+    // Save memory
+    memory.merge(userId, {
+        intent,
+        ...entities
+    });
+
+    // Try local knowledge
+    const localReply = getReply(intent);
+
+    if (localReply) {
+        return {
+            success: true,
+            source: "knowledge",
+            intent,
+            entities,
+            reply: localReply
+        };
+    }
+
+    // Gemini fallback
+    const reply = await askGemini(message, {
+        userId,
+        memory: previousMemory
+    });
+
+    return {
+        success: true,
+        source: "gemini",
+        intent,
+        entities,
+        reply
+    };
+}
+
+function health() {
+
+    const gemini = getGeminiHealth();
+
+    return {
+        success: true,
+        service: "ai",
+        gemini,
+        status: gemini.configured
+            ? "ready"
+            : "not_configured"
+    };
 }
 
 module.exports = {
-    get,
-    merge,
-    clear
+    chat,
+    health
 };
