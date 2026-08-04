@@ -1,26 +1,36 @@
-const conversations = new Map();
+/**
+ * services/memory.service.js
+ * Simple Memory Store
+ */
 
-function getHistory(userId) {
-    return conversations.get(userId) || [];
+const store = new Map();
+
+function get(userId) {
+    return store.get(String(userId)) || {};
 }
 
-function addMessage(userId, role, content) {
-    const history = conversations.get(userId) || [];
-    history.push({ role, content });
+function merge(userId, data = {}) {
+    const id = String(userId);
 
-    if (history.length > 20) {
-        history.shift();
-    }
+    const previous = get(id);
 
-    conversations.set(userId, history);
+    const updated = {
+        ...previous,
+        ...data,
+        updatedAt: Date.now()
+    };
+
+    store.set(id, updated);
+
+    return updated;
 }
 
-function clearHistory(userId) {
-    conversations.delete(userId);
+function clear(userId) {
+    store.delete(String(userId));
 }
 
 module.exports = {
-    getHistory,
-    addMessage,
-    clearHistory
+    get,
+    merge,
+    clear
 };
