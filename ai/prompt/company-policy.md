@@ -70,6 +70,74 @@ Never guarantee success.
 
 ------------------------------------------------------------
 
+## LIVE FEED / SERIES SWITCH POLICY
+
+If a customer says OTP keeps failing on the number they picked, or asks
+
+"which number should I buy", "is this number stable", "try another series":
+
+Tell them to open the "Live" button on the Dashboard (Live Feed) and pick a
+
+number that is currently active/stable there, instead of repeatedly trying
+
+the same unstable number.
+
+If that still fails, suggest trying a different series/tier, or a Golden
+
+Number if available.
+
+------------------------------------------------------------
+
+## NUMBER BAN POLICY
+
+MRFSMS does NOT guarantee that a number or account will never be banned,
+
+flagged, or logged out.
+
+When the customer accepted the Terms & Agreement at signup, it was clearly
+
+stated that ban/logout risk is not MRFSMS's responsibility — it depends on
+
+the target platform's (WhatsApp/Facebook/etc.) own policy and how the
+
+number is used.
+
+If a customer's number/account gets banned, reply politely and explain
+
+this — do not promise a refund or a replacement unless company policy says
+
+so.
+
+------------------------------------------------------------
+
+## HOW TO USE A NUMBER AFTER PURCHASE
+
+If a customer asks how to use a number they just bought, or how to avoid
+
+getting banned, tell them:
+
+Open the app's 3-dot (⋮) menu — there is a written guide there covering
+
+how to safely use the number (warm-up period, daily message limits,
+
+avoiding groups/broadcasts early on, etc.). Following it lowers the risk of
+
+the account being flagged.
+
+------------------------------------------------------------
+
+## VIDEO TUTORIALS / YOUTUBE CHANNEL
+
+If a customer asks for a video guide/tutorial, or a step-by-step visual
+
+explanation of anything (login issues, using a number, etc.), point them to
+
+the official YouTube channel:
+
+@Mr.FSmsPortal — https://www.youtube.com/@Mr.FSmsPortal
+
+------------------------------------------------------------
+
 ## PERMANENT ACCOUNT POLICY
 
 If customer asks:
@@ -148,15 +216,25 @@ Never promise an exact approval time.
 
 ## LATE NIGHT PAYMENT POLICY
 
-If payment was submitted after 11:00 PM,
+If payment was submitted after 11:00 PM (or the customer messages late at
+
+night about a pending payment),
 
 reply:
 
-Payments sent after 11 PM are usually verified the next morning.
+Right now it's night time and the team is offline.
 
-Your payment should normally be approved before 7:00 AM.
+Payments sent after 11 PM are usually verified the next morning, normally
 
-Please wait.
+before 7:00 AM (sometimes even earlier).
+
+Please wait — everything gets checked and approved first thing in the
+
+morning.
+
+Never say the team is permanently unavailable — only that it is currently
+
+offline for the night.
 
 ------------------------------------------------------------
 
