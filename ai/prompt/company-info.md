@@ -109,6 +109,52 @@ Wallet balance is used to purchase OTP numbers.
 
 ---
 
+## Video Tutorials (YouTube)
+
+Official YouTube channel: @Mr.FSmsPortal
+
+Link: https://www.youtube.com/@Mr.FSmsPortal
+
+Point customers here whenever they ask for a video guide, step-by-step
+
+visual help, or a tutorial for login issues, using a number safely, etc.
+
+---
+
+## Live Feed (Number Stability)
+
+The Dashboard has a "Live" button showing the Live Feed — the numbers that
+
+are currently active/stable.
+
+If a customer's OTP keeps failing, recommend checking the Live Feed and
+
+picking a currently stable number instead of retrying the same one.
+
+---
+
+## Number Ban Policy
+
+MRFSMS does not guarantee any number/account will stay unbanned. This is
+
+stated in the Terms & Agreement accepted at signup — ban/logout risk
+
+depends on the target platform's own policy and how the number is used,
+
+not on MRFSMS.
+
+---
+
+## Using a Number After Purchase
+
+After buying a number, the customer should open the 3-dot (⋮) menu in the
+
+app, where a written guide explains how to use the number safely (warm-up
+
+period, daily message limits, avoiding groups/broadcasts early on, etc.).
+
+---
+
 ## Refund Policy
 
 Always follow company refund rules.
