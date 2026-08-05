@@ -1,0 +1,37 @@
+{
+  "version": "1.0.0",
+  "company": "MRFSMS",
+  "note": "Support / escalation / contact knowledge. Always included in every Gemini fallback reply alongside the filtered FAQ subset.",
+  "faqs": [
+    {
+      "id": "support_youtube",
+      "q": "Tutorial ya video guide kahan milega",
+      "keywords": ["youtube", "video", "tutorial", "guide"],
+      "answer": "Hamara official YouTube channel @Mr.FSmsPortal hai: https://www.youtube.com/@Mr.FSmsPortal — yahan Login Not Available Solutions, number use karne ka tarika aur baaki common issues ke step-by-step video tutorials mojood hain."
+    },
+    {
+      "id": "support_whatsapp_channel",
+      "q": "Updates ke liye kahan follow karen",
+      "keywords": ["whatsapp channel", "updates", "follow"],
+      "answer": "Aap MRFSMS ka WhatsApp Channel join kar ke latest updates aur announcements paa sakte hain. Link Dashboard ke quick menu me maujood hai."
+    },
+    {
+      "id": "support_live_feed",
+      "q": "Kaunsa number stable hai kaise pata chale",
+      "keywords": ["live feed", "stable number", "live"],
+      "answer": "Dashboard par 'Live' button click karein — Live Feed me abhi ke stable/active numbers dikhte hain. OTP fail ho rahi ho to yahan se behtar number choose karna zyada faydemand hota hai."
+    },
+    {
+      "id": "support_escalation",
+      "q": "Issue solve nahi ho raha ab kya karen",
+      "keywords": ["escalate", "issue not solved", "help nahi mila"],
+      "answer": "Agar diye gaye steps se bhi issue solve nahi hota to Order ID, Service, Country aur (agar relevant ho) Screenshot bhej dein — support team case ko manually review kar ke jald az jald reply karegi."
+    },
+    {
+      "id": "support_agreement",
+      "q": "Terms and agreement kahan parh sakte hain",
+      "keywords": ["terms", "agreement", "policy"],
+      "answer": "Terms & Conditions login/register ke waqt dikhaye jate hain aur accept karna zaroori hota hai. Inme OTP, ban, payment aur refund se related tamam policies clearly likhi hoti hain."
+    }
+  ]
+}
