@@ -18,10 +18,39 @@ Please ye steps follow karein:
 1️⃣ TunnelBear VPN install karein.
 2️⃣ VPN connect karein.
 3️⃣ Parallel Space use karein.
-4️⃣ Golden Number select karein.
-5️⃣ Agar phir bhi issue aaye to dusri number series try karein.
+4️⃣ Dashboard ke "Live" button se Live Feed check karein aur jo number stable dikhe wahi try karein.
+5️⃣ Agar phir bhi issue aaye to dusri number series ya Golden Number try karein.
 
-Agar phir bhi problem solve na ho to hame dobara message karein.`,
+Agar phir bhi problem solve na ho to apna Order ID, Service Name aur Country bhej dein.`,
+
+    youtube_tutorial: `🎬 Video Tutorials
+
+Hamara official YouTube channel: @Mr.FSmsPortal
+https://www.youtube.com/@Mr.FSmsPortal
+
+Yahan Login Not Available Solutions, number use karne ka tarika, aur baaki common issues ke step-by-step video mojood hain.`,
+
+    number_ban: `⚠️ Number/Account Ban
+
+Hum kisi bhi number ki ban na hone ki guarantee nahi dete.
+
+Order lete waqt aap ne Terms & Agreement accept kiya tha jisme saaf likha hai ke ban/logout ki zimmedari MRFSMS ki nahi hoti — ye us platform (WhatsApp/Facebook/etc.) ki apni policy aur number ke istimaal ke tareeqe par depend karta hai.
+
+Number ko 3 dots menu wali guide ke mutabiq use karne se ban hone ke chances kaafi kam ho jate hain.`,
+
+    how_to_use_number: `📖 Number Use Karne Ka Tarika
+
+Number purchase karne ke baad app ke 3 dots (⋮) menu me jayein.
+
+Wahan hamari complete guide di hui hai ke number ko safely kaise use karna hai (warm-up period, daily message limit, shuru me groups/broadcast se parhez waghera).
+
+Guide follow karne se account zyada stable rehta hai.`,
+
+    live_feed_help: `📡 Live Feed
+
+Dashboard par "Live" button click karein — wahan abhi ke stable/active numbers dikhte hain.
+
+Ek number par OTP na aaye to wahi number baar baar try karne ke bajaye Live Feed se koi doosra stable number ya series/tier change kar ke try karein.`,
 
     vpn_help: `🌍 VPN Guide
 
@@ -71,9 +100,9 @@ ki video follow karein.`,
 
     payment_pending: `💰 Payment Pending
 
-Agar payment abhi approve nahi hui to thoda wait karein.
+Aap ki payment abhi verification me hai, admin manually check kar ke approve karta hai.
 
-Raat 11 PM ke baad submit ki gayi payments aam tor par subah 7 AM se pehle approve kar di jati hain.`,
+Agar raat ka waqt hai to team abhi offline hai — raat 11 PM ke baad submit ki gayi payments aam tor par subah 7 AM se pehle (kabhi kabhi us se bhi pehle) approve kar di jati hain. Please thoda wait karein.`,
 
     payment_approved: `✅ Payment Successfully Approved.
 
