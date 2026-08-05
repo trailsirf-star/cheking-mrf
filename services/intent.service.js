@@ -160,6 +160,61 @@ const intents = [
             "transaction id",
             "reference id"
         ]
+    },
+
+    {
+        name: "youtube_tutorial",
+        keywords: [
+            "youtube",
+            "tutorial",
+            "video guide",
+            "video dekh",
+            "guide video",
+            "step by step video",
+            "koi video",
+            "video chahiye"
+        ]
+    },
+
+    {
+        name: "number_ban",
+        keywords: [
+            "ban ho gaya",
+            "banned",
+            "account ban",
+            "number ban",
+            "suspend ho gaya",
+            "account suspend",
+            "block ho gaya",
+            "ban ki guarantee",
+            "ban guarantee"
+        ]
+    },
+
+    {
+        name: "how_to_use_number",
+        keywords: [
+            "number kaise use",
+            "number use karne ka tarika",
+            "purchase ke baad kya karna",
+            "number lene ke baad",
+            "number activate kaise",
+            "number ko safe kaise",
+            "naya number kaise chalayen"
+        ]
+    },
+
+    {
+        name: "live_feed_help",
+        keywords: [
+            "live feed",
+            "stable number",
+            "kaunsa number lena",
+            "best number kaunsa",
+            "dusra number try",
+            "series change",
+            "tier change"
+        ]
     }
 ];
 
@@ -172,40 +227,80 @@ function normalize(text = "") {
         .trim();
 }
 
-function detectIntent(message = "") {
+const { canonicalize } = require("./synonym.service");
+const { isFuzzyMatch, fuzzyPhraseInTokens } = require("./fuzzy.service");
 
-    const text = normalize(message);
+const EXACT_WEIGHT = 2;
+const FUZZY_WEIGHT = 1;
+const FUZZY_THRESHOLD = 0.82;
+// One exact keyword hit (weight 2) already saturates confidence to 1.0.
+// Tune via env if a business needs a stricter/looser fast-path gate.
+const CONFIDENCE_SATURATION = Number(process.env.AI_INTENT_CONFIDENCE_SATURATION || 2);
+
+/**
+ * Confidence-aware intent detection.
+ * Returns { intent, score, confidence, matchedKeywords }.
+ * confidence is 0..1 — higher means "safe to answer from the local
+ * knowledge base", lower means "let Gemini handle it".
+ */
+function detectIntentWithConfidence(message = "") {
+
+    const text = canonicalize(message) || normalize(message);
+    const tokens = text.split(" ").filter(Boolean);
 
     let best = {
         intent: "unknown",
-        score: 0
+        score: 0,
+        matchedKeywords: []
     };
 
     for (const intent of intents) {
 
         let score = 0;
+        const matchedKeywords = [];
 
-        for (const keyword of intent.keywords) {
+        for (const rawKeyword of intent.keywords) {
 
-            if (text.includes(keyword.toLowerCase())) {
-                score++;
+            const keyword = canonicalize(rawKeyword) || normalize(rawKeyword);
+            if (!keyword) continue;
+
+            if (text.includes(keyword)) {
+                score += EXACT_WEIGHT;
+                matchedKeywords.push(rawKeyword);
+                continue;
             }
 
+            if (fuzzyPhraseInTokens(tokens, keyword, FUZZY_THRESHOLD)) {
+                score += FUZZY_WEIGHT;
+                matchedKeywords.push(`~${rawKeyword}`);
+            }
         }
 
         if (score > best.score) {
-
-            best.intent = intent.name;
-            best.score = score;
-
+            best = { intent: intent.name, score, matchedKeywords };
         }
-
     }
 
-    return best.intent;
+    const confidence = best.score > 0
+        ? Math.min(1, best.score / CONFIDENCE_SATURATION)
+        : 0;
 
+    return {
+        intent: best.intent,
+        score: best.score,
+        confidence: Number(confidence.toFixed(2)),
+        matchedKeywords: best.matchedKeywords
+    };
+}
+
+function detectIntent(message = "") {
+    // Kept for backward compatibility — same signature/return type as
+    // before (plain intent-name string). New code should prefer
+    // detectIntentWithConfidence().
+    return detectIntentWithConfidence(message).intent;
 }
 
 module.exports = {
-    detectIntent
+    detectIntent,
+    detectIntentWithConfidence
 };
