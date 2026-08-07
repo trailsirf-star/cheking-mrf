@@ -54,7 +54,7 @@ async function createPaymentRequestSubmission(req) {
     const browserFingerprint = normalizeBrowserFingerprint(req.body.browserFingerprint);
     const note = String(req.body.note || '').trim().slice(0, 500) || null;
     const creditedAmount = roundMoney(methodConfig.creditedAmountCalculator(amount));
-const insertedPaymentRequest = await queryOne(
+    const insertedPaymentRequest = await queryOne(
         `
             INSERT INTO payment_requests (
                 user_id,
@@ -1749,7 +1749,12 @@ async function initDB() {
     await queryRun('ALTER TABLE payment_requests ADD COLUMN IF NOT EXISTS request_ip TEXT');
     await queryRun('ALTER TABLE payment_requests ADD COLUMN IF NOT EXISTS device_fingerprint TEXT');
     await queryRun('ALTER TABLE payment_requests ADD COLUMN IF NOT EXISTS browser_fingerprint TEXT');
-  await queryRun(`
+    await queryRun('ALTER TABLE payment_requests ADD COLUMN IF NOT EXISTS proof_hash TEXT');
+    await queryRun('CREATE INDEX IF NOT EXISTS idx_payment_requests_proof_hash ON payment_requests (proof_hash) WHERE proof_hash IS NOT NULL');
+
+    // --- Payment auto-verify: stores an Easypaisa notification that arrived
+    // BEFORE the matching client request was submitted on the site ---
+    await queryRun(`
         CREATE TABLE IF NOT EXISTS unmatched_notifications (
             id SERIAL PRIMARY KEY,
             amount NUMERIC(12,2) NOT NULL,
@@ -7325,26 +7330,6 @@ app.post('/api/admin/payment-requests/:id/approve', ensureAdmin, async (req, res
 });
 
 app.post('/api/admin/payment-requests/:id/reject', ensureAdmin, async (req, res) => {
-    // Called by the phone (Kotlin app or MacroDroid) whenever a new Easypaisa
-// notification is read. Protected by a shared secret so nobody else can
-// hit this and fake-approve payments.
-app.post('/api/payments/notification-webhook', async (req, res) => {
-    try {
-        const { secret, amount, rawText } = req.body;
-        const expectedSecret = process.env.WEBHOOK_SECRET;
-        if (!expectedSecret || secret !== expectedSecret) {
-            return res.status(401).json({ error: 'invalid secret' });
-        }
-        if (amount === undefined || amount === null) {
-            return res.status(400).json({ error: 'amount missing' });
-        }
-        const result = await handleIncomingNotificationForPayments(amount, rawText);
-        res.json(result);
-    } catch (err) {
-        console.error('[payment-auto-verify] webhook error:', formatSafeError(err));
-        res.status(500).json({ error: 'internal error' });
-    }
-});
     const client = await pool.connect();
     let screenshotToDelete = null;
     try {
@@ -7369,6 +7354,27 @@ app.post('/api/payments/notification-webhook', async (req, res) => {
         res.status(400).send(formatSafeError(err, 'Payment request cancellation failed'));
     } finally {
         client.release();
+    }
+});
+
+// Called by the phone (Kotlin app or MacroDroid) whenever a new Easypaisa
+// notification is read. Protected by a shared secret so nobody else can
+// hit this and fake-approve payments.
+app.post('/api/payments/notification-webhook', async (req, res) => {
+    try {
+        const { secret, amount, rawText } = req.body;
+        const expectedSecret = process.env.WEBHOOK_SECRET;
+        if (!expectedSecret || secret !== expectedSecret) {
+            return res.status(401).json({ error: 'invalid secret' });
+        }
+        if (amount === undefined || amount === null) {
+            return res.status(400).json({ error: 'amount missing' });
+        }
+        const result = await handleIncomingNotificationForPayments(amount, rawText);
+        res.json(result);
+    } catch (err) {
+        console.error('[payment-auto-verify] webhook error:', formatSafeError(err));
+        res.status(500).json({ error: 'internal error' });
     }
 });
 
