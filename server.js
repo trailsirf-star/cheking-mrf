@@ -40,8 +40,10 @@ async function createPaymentRequestSubmission(req) {
     if (!(await isValidUploadedPaymentProof(screenshot))) {
         throw new Error('Invalid payment proof file');
     }
-    if (methodConfig.requiresTransactionId && !transactionId) {
-        throw new Error(`${methodConfig.transactionLabel} is required`);
+if (methodConfig.requiresTransactionId && !transactionId) {
+        throw new Error(methodConfig.paymentMethod === 'easypaisa'
+            ? 'Please enter your payment TRX ID first'
+            : `${methodConfig.transactionLabel} is required`);
     }
     const proofHash = await hashUploadedFile(screenshot);
     if (proofHash) {
@@ -96,10 +98,10 @@ async function createPaymentRequestSubmission(req) {
     );
     paymentRateLimiter[req.session.userId] = Date.now();
 
-    if (methodConfig.paymentMethod === 'easypaisa' && insertedPaymentRequest?.id) {
+if (methodConfig.paymentMethod === 'easypaisa' && insertedPaymentRequest?.id) {
         // If a matching Easypaisa notification already arrived before this
-        // request was submitted, auto-approve immediately.
-        await tryMatchExistingNotificationForRequest(insertedPaymentRequest.id, amount);
+        // request was submitted, auto-approve immediately (TRX ID + amount).
+        await tryMatchExistingNotificationForRequest(insertedPaymentRequest.id, amount, transactionId);
     }
     return {
         success: true,
@@ -1220,7 +1222,7 @@ function getPaymentMethodConfig(paymentMethod) {
             creditedAmountLabel: 'PKR wallet credit',
             creditedAmountCalculator: (amount) => usdToPkr(amount),
             transactionLabel: 'Binance transaction ID',
-            requiresTransactionId: true
+            requiresTransactionId: false
         };
     }
     return {
@@ -1230,7 +1232,7 @@ function getPaymentMethodConfig(paymentMethod) {
         creditedAmountLabel: 'PKR wallet credit',
         creditedAmountCalculator: (amount) => roundMoney(amount),
         transactionLabel: 'Transaction ID',
-        requiresTransactionId: false
+        requiresTransactionId: true
     };
 }
 
@@ -1754,7 +1756,7 @@ async function initDB() {
 
     // --- Payment auto-verify: stores an Easypaisa notification that arrived
     // BEFORE the matching client request was submitted on the site ---
-    await queryRun(`
+  await queryRun(`
         CREATE TABLE IF NOT EXISTS unmatched_notifications (
             id SERIAL PRIMARY KEY,
             amount NUMERIC(12,2) NOT NULL,
@@ -1763,7 +1765,9 @@ async function initDB() {
             received_at TIMESTAMPTZ DEFAULT CURRENT_TIMESTAMP
         )
     `);
+    await queryRun('ALTER TABLE unmatched_notifications ADD COLUMN IF NOT EXISTS trx_id TEXT');
     await queryRun('CREATE INDEX IF NOT EXISTS idx_unmatched_notifications_amount ON unmatched_notifications (amount, consumed, received_at)');
+    await queryRun('CREATE INDEX IF NOT EXISTS idx_unmatched_notifications_trx_id ON unmatched_notifications (trx_id, consumed, received_at)');
     await queryRun(`
         CREATE TABLE IF NOT EXISTS referrals (
             id SERIAL PRIMARY KEY,
@@ -2062,23 +2066,30 @@ async function approvePaymentRequestById(paymentRequestId) {
 // Case B: no matching request yet (client hasn't submitted the form on the
 // site yet, e.g. money arrived first) -> store it so the request-submission
 // flow can pick it up the moment the client does submit.
-async function handleIncomingNotificationForPayments(amount, rawText) {
+async function handleIncomingNotificationForPayments(amount, rawText, trxId) {
     const normalizedAmount = roundMoney(Number(amount));
+    const normalizedTrxId = normalizePaymentReference(trxId);
     if (!Number.isFinite(normalizedAmount) || normalizedAmount <= 0) {
         return { matched: false, reason: 'invalid_amount' };
     }
-    const matchRes = await queryOne(
-        `
-            SELECT id FROM payment_requests
-            WHERE status = 'pending'
-              AND payment_method = 'easypaisa'
-              AND amount = $1
-              AND created_at >= now() - interval '10 minutes'
-            ORDER BY created_at ASC
-            LIMIT 1
-        `,
-        [normalizedAmount]
-    );
+    // TRX ID is now the primary identifier. Without it we never auto-approve
+    // by amount alone (that was the bug: Rs.200 from Client A could approve
+    // Client B's Rs.200 request). We only store the notification for later.
+    const matchRes = normalizedTrxId
+        ? await queryOne(
+            `
+                SELECT id FROM payment_requests
+                WHERE status = 'pending'
+                  AND payment_method = 'easypaisa'
+                  AND amount = $1
+                  AND transaction_id = $2
+                  AND created_at >= now() - interval '10 minutes'
+                ORDER BY created_at ASC
+                LIMIT 1
+            `,
+            [normalizedAmount, normalizedTrxId]
+        )
+        : null;
     if (matchRes) {
         try {
             await approvePaymentRequestById(matchRes.id);
@@ -2089,8 +2100,8 @@ async function handleIncomingNotificationForPayments(amount, rawText) {
         }
     }
     await queryRun(
-        `INSERT INTO unmatched_notifications (amount, raw_text) VALUES ($1, $2)`,
-        [normalizedAmount, String(rawText || '').slice(0, 1000)]
+        `INSERT INTO unmatched_notifications (amount, raw_text, trx_id) VALUES ($1, $2, $3)`,
+        [normalizedAmount, String(rawText || '').slice(0, 1000), normalizedTrxId || null]
     );
     return { matched: false, reason: 'stored_for_later_match' };
 }
@@ -2098,18 +2109,21 @@ async function handleIncomingNotificationForPayments(amount, rawText) {
 // Called right after a client submits a new payment request.
 // Checks if a matching notification already arrived earlier (within 10 min)
 // and, if so, consumes it and auto-approves immediately.
-async function tryMatchExistingNotificationForRequest(paymentRequestId, amount) {
+async function tryMatchExistingNotificationForRequest(paymentRequestId, amount, trxId) {
     const normalizedAmount = roundMoney(Number(amount));
+    const normalizedTrxId = normalizePaymentReference(trxId);
+    if (!normalizedTrxId) return false;
     const notification = await queryOne(
         `
             SELECT id FROM unmatched_notifications
             WHERE consumed = FALSE
               AND amount = $1
+              AND trx_id = $2
               AND received_at >= now() - interval '10 minutes'
             ORDER BY received_at ASC
             LIMIT 1
         `,
-        [normalizedAmount]
+        [normalizedAmount, normalizedTrxId]
     );
     if (!notification) return false;
     await queryRun('UPDATE unmatched_notifications SET consumed = TRUE WHERE id = $1', [notification.id]);
@@ -7362,7 +7376,7 @@ app.post('/api/admin/payment-requests/:id/reject', ensureAdmin, async (req, res)
 // hit this and fake-approve payments.
 app.post('/api/payments/notification-webhook', async (req, res) => {
     try {
-        const { secret, amount, rawText } = req.body;
+        const { secret, amount, rawText, trxId } = req.body;
         const expectedSecret = process.env.WEBHOOK_SECRET;
         if (!expectedSecret || secret !== expectedSecret) {
             return res.status(401).json({ error: 'invalid secret' });
@@ -7370,7 +7384,7 @@ app.post('/api/payments/notification-webhook', async (req, res) => {
         if (amount === undefined || amount === null) {
             return res.status(400).json({ error: 'amount missing' });
         }
-        const result = await handleIncomingNotificationForPayments(amount, rawText);
+        const result = await handleIncomingNotificationForPayments(amount, rawText, trxId);
         res.json(result);
     } catch (err) {
         console.error('[payment-auto-verify] webhook error:', formatSafeError(err));
