@@ -45,6 +45,9 @@ if (methodConfig.requiresTransactionId && !transactionId) {
             ? 'Please enter your payment TRX ID first'
             : `${methodConfig.transactionLabel} is required`);
     }
+    if (methodConfig.paymentMethod === 'easypaisa' && !/^\d{11}$/.test(transactionId)) {
+        throw new Error('Please enter your complete 11-digit TRX ID');
+    }
     const proofHash = await hashUploadedFile(screenshot);
     if (proofHash) {
         const duplicateProof = await queryOne('SELECT id FROM payment_requests WHERE proof_hash = $1 LIMIT 1', [proofHash]);
