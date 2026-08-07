@@ -77,7 +77,7 @@ const PAYMENT_METHOD_META = {
         currency: 'PKR',
         amountPlaceholder: 'Amount (Minimum 100 PKR)',
         transactionPlaceholder: 'Easypaisa Transaction ID (optional but recommended)',
-        transactionRequired: false,
+        transactionRequired: true,
         uploadTitle: 'Upload Easypaisa payment screenshot',
         guidanceText: 'پیمنٹ کی اسکرین شاٹ اس باکس میں ڈال کر سبمٹ پیمنٹ پر کلک کر دیجیے',
         guidanceDirection: 'rtl',
@@ -5738,8 +5738,10 @@ function bindStaticEvents() {
             showPaymentFormError(methodMeta.key === 'binance' ? 'Minimum Binance deposit is 1 USDT' : 'Minimum amount is 100 PKR');
             return;
         }
-        if (methodMeta.transactionRequired && !transactionId) {
-            showPaymentFormError('Binance transaction ID is required');
+     if (methodMeta.transactionRequired && !transactionId) {
+            showPaymentFormError(methodMeta.key === 'easypaisa'
+                ? 'Please enter your payment TRX ID first'
+                : 'Binance transaction ID is required');
             return;
         }
         if (!screenshotFile) {
