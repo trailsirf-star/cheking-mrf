@@ -70,13 +70,13 @@ const adminAccordion = {
 };
 
 const PAYMENT_METHOD_META = {
-    easypaisa: {
+  easypaisa: {
         key: 'easypaisa',
         label: 'Easypaisa',
         minAmount: 100,
         currency: 'PKR',
         amountPlaceholder: 'Amount (Minimum 100 PKR)',
-        transactionPlaceholder: 'Easypaisa Transaction ID (optional but recommended)',
+        transactionPlaceholder: 'Enter your 11-digit TRX ID',
         transactionRequired: true,
         uploadTitle: 'Upload Easypaisa payment screenshot',
         guidanceText: 'پیمنٹ کی اسکرین شاٹ اس باکس میں ڈال کر سبمٹ پیمنٹ پر کلک کر دیجیے',
