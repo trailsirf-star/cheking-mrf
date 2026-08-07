@@ -1560,9 +1560,9 @@ Spam activity = Ban risk</div>
                             <input type="number" name="amount" id="payment-amount-input" placeholder="Amount (Minimum 100 PKR)" min="100" step="0.01" required>
                         </div>
                         
-                    <div class="input-wrap">
-                        <input type="text" name="transaction_id" id="payment-transaction-id-input" placeholder="Transaction ID" required>
-                                 </div>
+                 <div class="input-wrap">
+                                <input type="text" name="transaction_id" id="payment-transaction-id-input" placeholder="Transaction ID" inputmode="numeric" maxlength="11" pattern="[0-9]{11}" required>
+                                </div>
                         <label class="payment-upload-box">
                             <div class="payment-upload-top">
                                 <div>
