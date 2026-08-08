@@ -57,7 +57,8 @@ const state = {
     tierCache: new Map(),
     expandedTierCountryId: null,
     orderTierMeta: new Map(),
-    paymentModalStatus: 'pending'
+    paymentModalStatus: 'pending',
+    transactionGuideAttentionTimer: null
 };
 
 const ORDER_PROVIDER_WAITING_STATUS = 'STATUS_WAIT_CODE';
@@ -1612,7 +1613,8 @@ function clearPaymentFormError() {
         errorBox.textContent = '';
         errorBox.classList.remove('show');
     }
- setTransactionIdError(false);
+    setTransactionIdError(false);
+    setTransactionIdGuideAttention(false);
 }
 
 function showPaymentFormError(message) {
@@ -1629,6 +1631,47 @@ function setTransactionIdError(hasError) {
     if (input) {
         input.classList.toggle('is-invalid', Boolean(hasError));
     }
+}
+
+function setTransactionIdGuideAttention(shouldPulse) {
+    const guideButton = qs('transaction-id-guide-modal')?.previousElementSibling?.querySelector('.transaction-id-guide-button')
+        || document.querySelector('.transaction-id-guide-button');
+    if (!guideButton) return;
+    if (state.transactionGuideAttentionTimer) {
+        window.clearTimeout(state.transactionGuideAttentionTimer);
+        state.transactionGuideAttentionTimer = null;
+    }
+    guideButton.classList.remove('is-attention');
+    if (!shouldPulse) return;
+    void guideButton.offsetWidth;
+    guideButton.classList.add('is-attention');
+    state.transactionGuideAttentionTimer = window.setTimeout(() => {
+        guideButton.classList.remove('is-attention');
+        state.transactionGuideAttentionTimer = null;
+    }, 2300);
+}
+
+function showTransactionIdValidationError(message) {
+    setTransactionIdError(true);
+    setTransactionIdGuideAttention(true);
+    showPaymentFormError(`${message} Need help? Open the guide.`);
+}
+
+function looksLikePhoneNumber(value) {
+    const normalized = String(value || '').replace(/[\s()-]/g, '');
+    return /^03\d{9}$/.test(normalized)
+        || /^\+923\d{9}$/.test(normalized)
+        || /^00923\d{9}$/.test(normalized);
+}
+
+function isTransactionIdFormatInvalid(value) {
+    const normalized = String(value || '').trim();
+    return normalized.length > 0 && (normalized.length < 4 || !/[a-z0-9]/i.test(normalized));
+}
+
+function openTransactionIdGuide() {
+    setTransactionIdGuideAttention(false);
+    openModal('transaction-id-guide-modal');
 }
 function getPaymentMethodMeta(method) {
     const normalizedMethod = String(method || 'easypaisa').trim().toLowerCase();
@@ -5726,9 +5769,23 @@ function bindStaticEvents() {
         if (file) clearPaymentFormError();
     });
     qs('payment-transaction-id-input')?.addEventListener('input', () => {
-    setTransactionIdError(false);
+        setTransactionIdError(false);
+        setTransactionIdGuideAttention(false);
         clearPaymentFormError();
     });
+    qs('transaction-id-guide-image')?.addEventListener('load', (event) => {
+        event.currentTarget.hidden = false;
+        qs('transaction-id-guide-image-missing')?.setAttribute('hidden', '');
+    });
+    qs('transaction-id-guide-image')?.addEventListener('error', (event) => {
+        event.currentTarget.hidden = true;
+        qs('transaction-id-guide-image-missing')?.removeAttribute('hidden');
+    });
+    const transactionGuideImage = qs('transaction-id-guide-image');
+    if (transactionGuideImage?.complete && transactionGuideImage.naturalWidth > 0) {
+        transactionGuideImage.hidden = false;
+        qs('transaction-id-guide-image-missing')?.setAttribute('hidden', '');
+    }
     qs('addFundsForm').addEventListener('submit', async (event) => {
         event.preventDefault();
         const button = qs('submit-payment-btn');
@@ -5747,10 +5804,18 @@ function bindStaticEvents() {
             showPaymentFormError('Minimum amount is 100 PKR');
             return;
         }
-     if (methodMeta.transactionRequired && !transactionId) {
-            showPaymentFormError(methodMeta.key === 'easypaisa'
-                ? 'Please enter your payment TRX ID first'
-                : 'Transaction ID / Reference ID is required');
+        if (methodMeta.transactionRequired && !transactionId) {
+            showTransactionIdValidationError(methodMeta.key === 'easypaisa'
+                ? 'Please enter your Transaction ID / Reference ID.'
+                : 'Please enter your Transaction ID / Reference ID.');
+            return;
+        }
+        if (transactionId && looksLikePhoneNumber(transactionId)) {
+            showTransactionIdValidationError('Please enter the actual Transaction ID / Reference ID, not your mobile phone number.');
+            return;
+        }
+        if (transactionId && isTransactionIdFormatInvalid(transactionId)) {
+            showTransactionIdValidationError('Please enter a valid Transaction ID / Reference ID.');
             return;
         }
         if (!screenshotFile) {
@@ -5783,6 +5848,8 @@ function bindStaticEvents() {
             });
             if (!response.ok) throw new Error(await response.text());
             const result = await response.json();
+            qs('payment-amount-input').value = '';
+            qs('payment-transaction-id-input').value = '';
             updatePaymentSuccessView(methodMeta.key, result || {});
             qs('payment-form-view')?.classList.add('hidden');
             if (state.currentUser) {
@@ -5877,6 +5944,10 @@ function bindStaticEvents() {
         if (action === 'open-whatsapp-guide-modal') {
             hideHeaderQuickMenu();
             openModal('whatsapp-guide-modal');
+            return;
+        }
+        if (action === 'open-transaction-id-guide') {
+            openTransactionIdGuide();
             return;
         }
         if (action === 'open-referral-modal') {
