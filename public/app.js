@@ -1658,7 +1658,7 @@ function getPaymentRequestReferenceValue(request) {
     if (request?.transaction_id) {
         return request.transaction_id;
     }
-    return methodMeta.key === 'all-banks' ? 'Required for approval' : 'Awaiting verification';
+    return methodMeta.key === 'all-banks' ? 'Not provided — manual review' : 'Awaiting verification';
 }
 
 function getPaymentVerificationUrl(request) {
