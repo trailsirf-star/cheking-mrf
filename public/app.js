@@ -91,14 +91,13 @@ const PAYMENT_METHOD_META = {
         currency: 'PKR',
         amountPlaceholder: 'Amount (Minimum 100 PKR)',
         transactionPlaceholder: 'Transaction ID / Reference ID',
-        transactionRequired: false,
+        transactionRequired: true,
         uploadTitle: 'Upload payment screenshot',
         guidanceText: 'Send payment via SadaPay, bank transfer, or other available payment methods, then upload your screenshot. Your payment will be manually checked by our admin team.',
         guidanceDirection: 'ltr',
         submitLabel: 'Submit Payment',
         successTitle: 'Payment Submitted Successfully'
     }
-
 const PAYMENT_PROOF_ALLOWED_EXTENSIONS = new Set(['jpg', 'jpeg', 'png', 'webp']);
 
 const serviceMeta = {
