@@ -1608,9 +1608,11 @@ function openModal(id) {
 
 function clearPaymentFormError() {
     const errorBox = qs('payment-form-error');
-    if (!errorBox) return;
-    errorBox.textContent = '';
-    errorBox.classList.remove('show');
+    if (errorBox) {
+        errorBox.textContent = '';
+        errorBox.classList.remove('show');
+    }
+    setTransactionIdError('');
 }
 
 function showPaymentFormError(message) {
@@ -1621,6 +1623,17 @@ function showPaymentFormError(message) {
     }
     errorBox.textContent = message;
     errorBox.classList.add('show');
+}
+function setTransactionIdError(message) {
+    const errorBox = qs('payment-transaction-id-error');
+    const input = qs('payment-transaction-id-input');
+    if (errorBox) {
+        errorBox.textContent = message || '';
+        errorBox.style.display = message ? 'block' : 'none';
+    }
+    if (input) {
+        input.classList.toggle('is-invalid', Boolean(message));
+    }
 }
 
 function getPaymentMethodMeta(method) {
@@ -5719,6 +5732,10 @@ function bindStaticEvents() {
         qs('payment-screenshot-name').textContent = file ? '✔ Screenshot Selected' : 'Payment screenshot upload کریں';
         uploadBox?.classList.toggle('is-selected', Boolean(file));
         if (file) clearPaymentFormError();
+    });
+    qs('payment-transaction-id-input')?.addEventListener('input', () => {
+        setTransactionIdError('');
+        clearPaymentFormError();
     });
     qs('addFundsForm').addEventListener('submit', async (event) => {
         event.preventDefault();
