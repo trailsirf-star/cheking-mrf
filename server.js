@@ -1212,6 +1212,9 @@ function normalizePaymentReference(value) {
 
 function normalizePaymentMethod(value) {
     const normalizedValue = String(value || '').trim().toLowerCase();
+    if (normalizedValue === 'all-banks') {
+        return 'all-banks';
+    }
     return normalizedValue === 'binance' ? 'binance' : 'easypaisa';
 }
 
@@ -1225,7 +1228,7 @@ function getPaymentMethodConfig(paymentMethod) {
             creditedAmountLabel: 'PKR wallet credit',
             creditedAmountCalculator: (amount) => roundMoney(amount),
             transactionLabel: 'Transaction / Reference ID',
-            requiresTransactionId: true
+            requiresTransactionId: false
         };
     }
     return {
