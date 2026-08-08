@@ -1624,18 +1624,12 @@ function showPaymentFormError(message) {
     errorBox.textContent = message;
     errorBox.classList.add('show');
 }
-function setTransactionIdError(message) {
-    const errorBox = qs('payment-transaction-id-error');
+function setTransactionIdError(hasError) {
     const input = qs('payment-transaction-id-input');
-    if (errorBox) {
-        errorBox.textContent = message || '';
-        errorBox.style.display = message ? 'block' : 'none';
-    }
     if (input) {
-        input.classList.toggle('is-invalid', Boolean(message));
+        input.classList.toggle('is-invalid', Boolean(hasError));
     }
 }
-
 function getPaymentMethodMeta(method) {
     const normalizedMethod = String(method || 'easypaisa').trim().toLowerCase();
     return PAYMENT_METHOD_META[normalizedMethod] || PAYMENT_METHOD_META.easypaisa;
@@ -5734,7 +5728,7 @@ function bindStaticEvents() {
         if (file) clearPaymentFormError();
     });
     qs('payment-transaction-id-input')?.addEventListener('input', () => {
-        setTransactionIdError('');
+    setTransactionIdError(false);
         clearPaymentFormError();
     });
     qs('addFundsForm').addEventListener('submit', async (event) => {
