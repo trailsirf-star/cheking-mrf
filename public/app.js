@@ -84,21 +84,20 @@ const PAYMENT_METHOD_META = {
         submitLabel: 'Submit Payment',
         successTitle: 'Payment Submitted Successfully'
     },
-    'all-banks': {
+'all-banks': {
         key: 'all-banks',
         label: 'All Bank Payments',
         minAmount: 100,
         currency: 'PKR',
         amountPlaceholder: 'Amount (Minimum 100 PKR)',
         transactionPlaceholder: 'Transaction ID / Reference ID',
-        transactionRequired: true,
+        transactionRequired: false,
         uploadTitle: 'Upload payment screenshot',
         guidanceText: 'Send payment via SadaPay, bank transfer, or other available payment methods, then upload your screenshot. Your payment will be manually checked by our admin team.',
         guidanceDirection: 'ltr',
         submitLabel: 'Submit Payment',
         successTitle: 'Payment Submitted Successfully'
     }
-};
 
 const PAYMENT_PROOF_ALLOWED_EXTENSIONS = new Set(['jpg', 'jpeg', 'png', 'webp']);
 
