@@ -1612,7 +1612,7 @@ function clearPaymentFormError() {
         errorBox.textContent = '';
         errorBox.classList.remove('show');
     }
-    setTransactionIdError('');
+ setTransactionIdError(false);
 }
 
 function showPaymentFormError(message) {
