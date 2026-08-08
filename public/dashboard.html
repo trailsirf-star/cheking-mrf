@@ -1545,7 +1545,7 @@ Spam activity = Ban risk</div>
                                 <ul class="payment-instruction-list">
                                     <li>You may send payment from any bank or wallet.</li>
                                     <li>Payment must be received in Easypaisa.</li>
-                                    <li>Upload the same payment screenshot.</li>
+                                    <li>Enter the correct Transaction ID / Reference ID from your receipt.</li>
                                     <li>Minimum deposit 100 PKR.</li>
                                 </ul>
                             </div>
@@ -1606,7 +1606,7 @@ Spam activity = Ban risk</div>
                             <input type="text" name="transaction_id" id="payment-transaction-id-input" placeholder="Transaction ID / Reference ID" inputmode="text" maxlength="100" aria-describedby="payment-transaction-id-help">
                             <div id="payment-transaction-id-help" class="sr-only">Enter the Transaction ID or Reference ID shown on your payment receipt. Do not enter your mobile phone number.</div>
                         </div>
-                        <label class="payment-upload-box">
+                        <label id="payment-proof-upload-field" class="payment-upload-box hidden">
                             <div class="payment-upload-top">
                                 <div>
                                     <div id="payment-upload-title" class="payment-upload-title">Upload payment screenshot</div>
@@ -1614,10 +1614,10 @@ Spam activity = Ban risk</div>
                                 </div>
                                 <span class="payment-upload-button">Upload</span>
                             </div>
-                            <input type="file" name="screenshot" id="payment-screenshot-input" accept=".jpg,.jpeg,.png,.webp,image/jpeg,image/png,image/webp" required>
+                            <input type="file" name="screenshot" id="payment-screenshot-input" accept=".jpg,.jpeg,.png,.webp,image/jpeg,image/png,image/webp">
                         </label>
-                        <p id="payment-method-guidance" class="payment-note-urdu" dir="rtl">پیمنٹ کی اسکرین شاٹ اس باکس میں ڈال کر سبمٹ پیمنٹ پر کلک کر دیجیے</p>
-                        <div class="payment-help-row">
+                        <p id="payment-method-guidance" class="payment-note-urdu hidden" dir="rtl">پیمنٹ کی اسکرین شاٹ اس باکس میں ڈال کر سبمٹ پیمنٹ پر کلک کر دیجیے</p>
+                        <div id="payment-proof-format-row" class="payment-help-row hidden">
                             <div class="payment-format-note">Allowed: JPG, JPEG, PNG, WEBP</div>
                         </div>
                         <div id="payment-form-error" class="payment-form-error"></div>
