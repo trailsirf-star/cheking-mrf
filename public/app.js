@@ -101,7 +101,6 @@ const PAYMENT_METHOD_META = {
 };
 
 const PAYMENT_PROOF_ALLOWED_EXTENSIONS = new Set(['jpg', 'jpeg', 'png', 'webp']);
-const PAYMENT_PROOF_ALLOWED_EXTENSIONS = new Set(['jpg', 'jpeg', 'png', 'webp']);
 
 const serviceMeta = {
     whatsapp: {
@@ -1883,7 +1882,6 @@ if (transactionInput) {
     if (transactionFieldWrap) {
         transactionFieldWrap.classList.toggle('hidden', methodMeta.key === 'all-banks');
     }
-    if (uploadTitle) {
     if (uploadTitle) {
         uploadTitle.textContent = methodMeta.uploadTitle;
     }
