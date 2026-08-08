@@ -335,6 +335,40 @@
         .payment-format-note{font-size:12px;font-weight:800;color:#64748b}
         .payment-form-error{min-height:20px;font-size:13px;font-weight:800;color:#dc2626}
         .payment-form-error.show{border:1px solid #fecaca;border-radius:16px;background:#fff1f2;padding:10px 12px}
+        .payment-transaction-field{display:grid;gap:8px}
+        .payment-field-label-row{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:0 4px}
+        .payment-field-label{font-size:12px;font-weight:900;letter-spacing:.08em;text-transform:uppercase;color:#475569}
+        .transaction-id-guide-button{display:inline-flex;height:28px;width:28px;align-items:center;justify-content:center;flex:0 0 auto;border:1px solid #86efac;border-radius:999px;background:#ecfdf5;color:#166534;font-size:13px;font-weight:900;cursor:pointer;box-shadow:0 8px 16px rgba(22,163,74,.10)}
+        .transaction-id-guide-button:hover{border-color:#22c55e;background:#dcfce7;transform:translateY(-1px)}
+        .transaction-id-guide-button:focus-visible{outline:3px solid rgba(34,197,94,.24);outline-offset:2px}
+        .transaction-id-guide-button.is-attention{border-color:#ef4444;background:#fff1f2;color:#b91c1c;box-shadow:0 0 0 5px rgba(239,68,68,.10)}
+        .transaction-id-guide-button.is-attention{animation:transactionGuideAttention .72s ease-in-out 3}
+        #transaction-id-guide-modal{align-items:center!important;justify-content:center!important;overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;background:rgba(15,23,42,.72)!important;padding:18px!important}
+        .transaction-id-guide-shell{width:min(720px,100%);max-height:calc(100vh - 36px);overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;border-radius:30px;background:linear-gradient(180deg,#ffffff 0%,#f8fafc 100%);border:1px solid rgba(226,232,240,.95);padding:22px;box-shadow:0 24px 70px rgba(15,23,42,.28);animation:transactionGuideModalIn .24s ease}
+        .transaction-id-guide-topbar{display:flex;align-items:flex-start;justify-content:space-between;gap:14px}
+        .transaction-id-guide-kicker{font-size:11px;font-weight:900;letter-spacing:.18em;text-transform:uppercase;color:#16a34a}
+        .transaction-id-guide-title{margin:7px 0 0;font-size:24px;font-weight:900;line-height:1.2;color:#0f172a}
+        .transaction-id-guide-subtitle{margin:8px 0 0;max-width:560px;font-size:13px;font-weight:600;line-height:1.6;color:#64748b}
+        #transaction-id-guide-modal .close-x{display:inline-flex;height:42px;width:42px;align-items:center;justify-content:center;flex:0 0 auto;border:1px solid #e2e8f0;border-radius:15px;background:#ffffff;font-size:17px;color:#64748b;box-shadow:0 8px 18px rgba(15,23,42,.08);cursor:pointer}
+        #transaction-id-guide-modal .close-x:hover{background:#f8fafc;color:#0f172a;transform:translateY(-1px)}
+        .transaction-id-guide-copy{display:grid;gap:12px;margin-top:18px}
+        .transaction-id-guide-copy-card{border:1px solid #dbeafe;border-radius:20px;background:#eff6ff;padding:14px 16px;font-size:14px;font-weight:700;line-height:1.7;color:#1e3a8a}
+        .transaction-id-guide-copy-card[dir='rtl']{border-color:#d1fae5;background:#ecfdf5;color:#166534;text-align:right}
+        .transaction-id-guide-image-frame{position:relative;display:flex;min-height:250px;align-items:center;justify-content:center;margin-top:18px;overflow:hidden;border:1px solid #e2e8f0;border-radius:24px;background:#f8fafc;padding:12px}
+        .transaction-id-guide-image{display:block;max-height:56vh;width:100%;border-radius:16px;object-fit:contain}
+        .transaction-id-guide-image[hidden],.transaction-id-guide-image-missing[hidden]{display:none}
+        .transaction-id-guide-image-missing{max-width:440px;padding:22px;text-align:center}
+        .transaction-id-guide-image-missing-icon{display:inline-flex;height:48px;width:48px;align-items:center;justify-content:center;border-radius:16px;background:#ecfdf5;color:#16a34a;font-size:20px}
+        .transaction-id-guide-image-missing-title{margin-top:12px;font-size:14px;font-weight:900;color:#0f172a}
+        .transaction-id-guide-image-missing-copy{margin-top:6px;font-size:12px;font-weight:600;line-height:1.6;color:#64748b}
+        .transaction-id-guide-examples{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:18px}
+        .transaction-id-guide-example{display:grid;gap:6px;border-radius:18px;padding:14px}
+        .transaction-id-guide-example--right{border:1px solid #bbf7d0;background:#f0fdf4;color:#166534}
+        .transaction-id-guide-example--wrong{border:1px solid #fecaca;background:#fff1f2;color:#b91c1c}
+        .transaction-id-guide-example-label{font-size:12px;font-weight:900;letter-spacing:.12em;text-transform:uppercase}
+        .transaction-id-guide-example-copy{font-size:13px;font-weight:700;line-height:1.5}
+        @keyframes transactionGuideAttention{0%,100%{transform:scale(1)}35%{transform:scale(1.12)}70%{transform:scale(.96)}}
+        @keyframes transactionGuideModalIn{0%{opacity:0;transform:translateY(12px) scale(.98)}100%{opacity:1;transform:translateY(0) scale(1)}}
         #payment-modal .btn-primary{position:relative;display:inline-flex;width:100%;align-items:center;justify-content:center;min-height:56px;overflow:hidden;border:none;border-radius:20px;background:linear-gradient(135deg,#22c55e 0%,#16a34a 100%);padding:0 18px;font-size:16px;font-weight:900;color:#ffffff;box-shadow:0 18px 32px rgba(34,197,94,.22);cursor:pointer}
         #payment-modal .btn-primary:hover{background:linear-gradient(135deg,#16a34a 0%,#15803d 100%);transform:translateY(-1px)}
         #payment-modal .btn-primary:active{transform:scale(.99)}
@@ -520,6 +554,7 @@
         @keyframes referralModalIn{0%{opacity:0;transform:translateY(14px) scale(.98)}100%{opacity:1;transform:translateY(0) scale(1)}}
         @media (max-width:640px){.topbar-referral-button{padding:0 10px;font-size:11px}.admin-panel .admin-panel-header{flex-direction:column;align-items:stretch}.admin-panel .admin-refresh-button{width:100%}.admin-panel .admin-accordion-trigger{padding:14px 14px 12px}.admin-panel .admin-section-title{font-size:18px}.admin-panel .admin-accordion-panel-inner{padding:0 12px 12px}.admin-panel .admin-data-card{padding:12px}}
         @media (max-width:640px){#referral-program-modal{padding:12px!important;align-items:flex-start!important}.referral-modal-shell{width:min(100%,calc(100vw - 12px))!important;max-height:calc(100vh - 24px)!important;border-radius:24px!important;padding:16px!important}.referral-modal-title{font-size:22px!important}.referral-modal-subtitle{font-size:13px!important}.referral-copy-row{flex-direction:column!important;align-items:stretch!important}.referral-copy-button{width:100%!important;min-width:0!important}.referral-stats-grid{grid-template-columns:1fr!important}.referral-copy-card{padding:16px!important}.referral-activity-list{max-height:none!important}}
+        @media (max-width:640px){#transaction-id-guide-modal{padding:10px!important;align-items:flex-start!important}.transaction-id-guide-shell{width:min(100%,calc(100vw - 12px));max-height:calc(100vh - 20px);border-radius:24px;padding:16px}.transaction-id-guide-title{font-size:21px}.transaction-id-guide-subtitle{font-size:12px}.transaction-id-guide-image-frame{min-height:190px;margin-top:14px;padding:8px}.transaction-id-guide-image{max-height:48vh}.transaction-id-guide-examples{grid-template-columns:1fr;margin-top:14px}.transaction-id-guide-copy{margin-top:14px}}
         @media (max-width:640px){body #login-prompt{padding:14px!important;align-items:center!important}body .auth-modal-shell{width:min(100%,calc(100vw - 12px))!important;max-height:calc(100vh - 28px)!important;border-radius:28px!important;padding:16px!important}body .auth-modal-topbar{margin-bottom:14px!important;gap:12px!important}body .auth-brand-title{font-size:20px!important;letter-spacing:.16em!important}body .auth-brand-subtitle{font-size:12px!important}body #login-prompt .close-x{height:42px!important;width:42px!important;border-radius:16px!important;font-size:18px!important}body .auth-form-card{gap:14px!important;border-radius:24px!important;padding:12px!important}body .auth-switch-grid{gap:8px!important;padding:7px!important}body .auth-switch-button{padding:11px 10px!important;font-size:13px!important}body .auth-form-stack{gap:12px!important}body .auth-input-shell{min-height:52px!important;border-radius:18px!important;padding:0 16px!important}body .auth-input{font-size:14px!important}body .auth-primary-action,body .auth-google-action{min-height:52px!important;border-radius:18px!important;font-size:14px!important}body .auth-google-logo{height:20px!important;width:20px!important}body .auth-form-error{border-radius:18px!important;padding:10px 12px!important;font-size:12px!important}body .auth-forgot-link{font-size:12px!important}}
         .guest-access-card{display:flex;align-items:center;justify-content:space-between;gap:16px}
 
@@ -1563,9 +1598,14 @@ Spam activity = Ban risk</div>
                             <input type="number" name="amount" id="payment-amount-input" placeholder="Amount (Minimum 100 PKR)" min="100" step="0.01" required>
                         </div>
                         
-          <div class="input-wrap">
-    <input type="text" name="transaction_id" id="payment-transaction-id-input" placeholder="Transaction ID / Reference ID" inputmode="text" maxlength="100">
-</div>
+                        <div class="input-wrap payment-transaction-field">
+                            <div class="payment-field-label-row">
+                                <label class="payment-field-label" for="payment-transaction-id-input">Transaction ID / Reference ID</label>
+                                <button type="button" class="transaction-id-guide-button" data-action="open-transaction-id-guide" aria-label="How to find your Transaction ID" title="How to find your Transaction ID">?</button>
+                            </div>
+                            <input type="text" name="transaction_id" id="payment-transaction-id-input" placeholder="Transaction ID / Reference ID" inputmode="text" maxlength="100" aria-describedby="payment-transaction-id-help">
+                            <div id="payment-transaction-id-help" class="sr-only">Enter the Transaction ID or Reference ID shown on your payment receipt. Do not enter your mobile phone number.</div>
+                        </div>
                         <label class="payment-upload-box">
                             <div class="payment-upload-top">
                                 <div>
@@ -1645,6 +1685,47 @@ Spam activity = Ban risk</div>
             </div>
         </div>
     </section>
+
+    <div id="transaction-id-guide-modal" class="app-modal hidden fixed inset-0 z-[145] flex items-center justify-center">
+        <div class="transaction-id-guide-shell" role="dialog" aria-modal="true" aria-labelledby="transaction-id-guide-title">
+            <div class="transaction-id-guide-topbar">
+                <div>
+                    <div class="transaction-id-guide-kicker">Payment help</div>
+                    <h3 id="transaction-id-guide-title" class="transaction-id-guide-title">How to Find Your Transaction ID?</h3>
+                    <p class="transaction-id-guide-subtitle">Use the Transaction ID / Reference ID shown on your payment receipt. It is not your mobile phone number.</p>
+                </div>
+                <button data-close-modal="transaction-id-guide-modal" class="close-x" type="button" aria-label="Close Transaction ID guide"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="transaction-id-guide-copy">
+                <div class="transaction-id-guide-copy-card">
+                    Enter the Transaction ID / Reference ID shown on your payment receipt.<br>
+                    Do not enter your mobile phone number.
+                </div>
+                <div class="transaction-id-guide-copy-card" dir="rtl">
+                    اپنی ادائیگی کی رسید پر موجود Transaction ID / Reference ID یہاں درج کریں۔<br>
+                    اپنا موبائل نمبر یہاں درج نہ کریں۔
+                </div>
+            </div>
+            <div class="transaction-id-guide-image-frame">
+                <img id="transaction-id-guide-image" class="transaction-id-guide-image" src="/assets/payment/transaction-id-guide.png" alt="Easypaisa payment receipt with the TRX ID highlighted" hidden>
+                <div id="transaction-id-guide-image-missing" class="transaction-id-guide-image-missing">
+                    <span class="transaction-id-guide-image-missing-icon" aria-hidden="true"><i class="fa-solid fa-image"></i></span>
+                    <div class="transaction-id-guide-image-missing-title">Receipt example unavailable</div>
+                    <div class="transaction-id-guide-image-missing-copy">Please keep the uploaded payment receipt image in the same asset location so the highlighted TRX ID can be displayed.</div>
+                </div>
+            </div>
+            <div class="transaction-id-guide-examples">
+                <div class="transaction-id-guide-example transaction-id-guide-example--right">
+                    <div class="transaction-id-guide-example-label">✓ Correct</div>
+                    <div class="transaction-id-guide-example-copy">Transaction ID / Reference ID from your payment receipt</div>
+                </div>
+                <div class="transaction-id-guide-example transaction-id-guide-example--wrong">
+                    <div class="transaction-id-guide-example-label">✕ Wrong</div>
+                    <div class="transaction-id-guide-example-copy">Your mobile phone number</div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div id="order-modal" class="app-modal hidden fixed inset-0 z-50 flex items-start justify-center bg-slate-950/75 px-4 py-6">
         <div class="glass max-h-[80vh] w-full max-w-3xl overflow-y-auto rounded-[28px] border border-white/10 p-4 shadow-glow sm:p-5">
