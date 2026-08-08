@@ -15,9 +15,9 @@ try {
 
 async function createPaymentRequestSubmission(req) {
     const requestedPaymentMethod = String(req.body.payment_method || '').trim().toLowerCase();
-    if (requestedPaymentMethod && !['easypaisa', 'binance'].includes(requestedPaymentMethod)) {
-        throw new Error('Unsupported payment method');
-    }
+   if (requestedPaymentMethod && !['easypaisa', 'all-banks'].includes(requestedPaymentMethod)) {
+    throw new Error('Unsupported payment method');
+}
     const methodConfig = getPaymentMethodConfig(requestedPaymentMethod);
     const amount = roundMoney(Number.parseFloat(req.body.amount));
     if (!Number.isFinite(amount) || amount < methodConfig.minimumAmount) {
@@ -1217,15 +1217,15 @@ function normalizePaymentMethod(value) {
 
 function getPaymentMethodConfig(paymentMethod) {
     const normalizedMethod = normalizePaymentMethod(paymentMethod);
-    if (normalizedMethod === 'binance') {
+    if (normalizedMethod === 'all-banks') {
         return {
-            paymentMethod: 'binance',
-            amountCurrency: 'USDT',
-            minimumAmount: BINANCE_MIN_DEPOSIT_USDT,
+            paymentMethod: 'all-banks',
+            amountCurrency: 'PKR',
+            minimumAmount: EASYPAISA_MIN_DEPOSIT_PKR,
             creditedAmountLabel: 'PKR wallet credit',
-            creditedAmountCalculator: (amount) => usdToPkr(amount),
-            transactionLabel: 'Binance transaction ID',
-            requiresTransactionId: false
+            creditedAmountCalculator: (amount) => roundMoney(amount),
+            transactionLabel: 'Transaction / Reference ID',
+            requiresTransactionId: true
         };
     }
     return {
@@ -1238,7 +1238,6 @@ function getPaymentMethodConfig(paymentMethod) {
         requiresTransactionId: true
     };
 }
-
 function getPaymentRequestCreditAmount(paymentRequest) {
     const methodConfig = getPaymentMethodConfig(paymentRequest?.payment_method);
     const storedCreditAmount = Number(paymentRequest?.credit_amount || 0);
