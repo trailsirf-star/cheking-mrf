@@ -79,8 +79,8 @@ const PAYMENT_METHOD_META = {
         amountPlaceholder: 'Amount (Minimum 100 PKR)',
         transactionPlaceholder: 'Enter your 11-digit TRX ID',
         transactionRequired: true,
-        uploadTitle: 'Upload Easypaisa payment screenshot',
-        guidanceText: 'پیمنٹ کی اسکرین شاٹ اس باکس میں ڈال کر سبمٹ پیمنٹ پر کلک کر دیجیے',
+        uploadTitle: '',
+        guidanceText: '',
         guidanceDirection: 'rtl',
         submitLabel: 'Submit Payment',
         successTitle: 'Payment Submitted Successfully'
@@ -1896,8 +1896,11 @@ function setActivePaymentMethod(method = 'easypaisa') {
     const methodMeta = getPaymentMethodMeta(method);
     const amountInput = qs('payment-amount-input');
     const transactionInput = qs('payment-transaction-id-input');
+    const proofUploadField = qs('payment-proof-upload-field');
+    const proofInput = qs('payment-screenshot-input');
     const uploadTitle = qs('payment-upload-title');
     const guidance = qs('payment-method-guidance');
+    const proofFormatRow = qs('payment-proof-format-row');
     const submitButton = qs('submit-payment-btn');
     const methodInput = qs('payment-method-input');
     if (methodInput) {
@@ -1925,6 +1928,11 @@ if (transactionInput) {
     if (transactionFieldWrap) {
         transactionFieldWrap.classList.toggle('hidden', methodMeta.key === 'all-banks');
     }
+    const requiresPaymentProof = methodMeta.key === 'all-banks';
+    proofUploadField?.classList.toggle('hidden', !requiresPaymentProof);
+    proofInput?.toggleAttribute('required', requiresPaymentProof);
+    guidance?.classList.toggle('hidden', !requiresPaymentProof);
+    proofFormatRow?.classList.toggle('hidden', !requiresPaymentProof);
     if (uploadTitle) {
         uploadTitle.textContent = methodMeta.uploadTitle;
     }
@@ -5799,7 +5807,8 @@ function bindStaticEvents() {
         const amount = Number(qs('payment-amount-input').value || 0);
         const transactionId = qs('payment-transaction-id-input')?.value.trim() || '';
         const note = qs('payment-note-input')?.value.trim() || '';
-        const screenshotFile = qs('payment-screenshot-input')?.files?.[0];
+        const requiresPaymentProof = methodMeta.key === 'all-banks';
+        const screenshotFile = requiresPaymentProof ? qs('payment-screenshot-input')?.files?.[0] : null;
         if (!amount || amount < methodMeta.minAmount) {
             showPaymentFormError('Minimum amount is 100 PKR');
             return;
@@ -5818,21 +5827,23 @@ function bindStaticEvents() {
             showTransactionIdValidationError('Please enter a valid Transaction ID / Reference ID.');
             return;
         }
-        if (!screenshotFile) {
+        if (requiresPaymentProof && !screenshotFile) {
             showPaymentFormError('Screenshot upload is required');
             return;
         }
-        if (!validatePaymentProofFile(screenshotFile)) {
+        if (requiresPaymentProof && !validatePaymentProofFile(screenshotFile)) {
             showPaymentFormError('Only JPG, JPEG, PNG, and WEBP payment proofs are allowed');
             return;
         }
-        setLoading(button, 'Uploading Payment...');
+        setLoading(button, requiresPaymentProof ? 'Uploading Payment...' : 'Submitting Payment...');
         try {
             const clientSignals = await getClientSignals();
             const formData = new FormData();
             formData.append('amount', String(amount));
             formData.append('payment_method', methodMeta.key);
-            formData.append('screenshot', screenshotFile);
+            if (screenshotFile) {
+                formData.append('screenshot', screenshotFile);
+            }
             if (transactionId) {
                 formData.append('transaction_id', transactionId);
             }
