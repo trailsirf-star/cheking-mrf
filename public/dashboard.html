@@ -252,7 +252,7 @@
         .payment-method-tab:hover{background:#ffffff;color:#0f172a;transform:translateY(-1px)}
         .payment-method-tab:focus-visible,.payment-copy-button:focus-visible,.payment-upload-box:focus-within,#payment-modal .btn-primary:focus-visible{outline:3px solid rgba(59,130,246,.22);outline-offset:2px}
         .payment-method-tab.active{border-color:#bbf7d0;background:#ffffff;color:#166534;box-shadow:0 12px 28px rgba(15,23,42,.08)}
-        .payment-method-tab[data-payment-method-tab='binance'].active{border-color:#fde68a;background:#ffffff;color:#92400e;box-shadow:0 12px 28px rgba(146,64,14,.10)}
+        .payment-method-tab[data-payment-method-tab='all-banks'].active{border-color:#fde68a;background:#ffffff;color:#92400e;box-shadow:0 12px 28px rgba(146,64,14,.10)}
       .payment-method-tab-mark{
     display:inline-flex;
     width:42px;
@@ -270,45 +270,45 @@
     object-fit:contain;
     display:block;
 }
-        .payment-method-tab[data-payment-method-tab='binance'].active .payment-method-tab-mark{background:#111827;color:#facc15;box-shadow:none}
+        .payment-method-tab[data-payment-method-tab='all-banks'].active .payment-method-tab-mark{background:#111827;color:#facc15;box-shadow:none}
         .payment-method-panel{display:grid;gap:14px;animation:paymentPanelSlide .28s ease both}
         .payment-method-panel.hidden{display:none}
         .payment-info-box{position:relative;display:grid;gap:14px;overflow:hidden;border:1px solid #d1fae5;border-radius:26px;background:linear-gradient(145deg,#ffffff 0%,#f0fdf4 100%);padding:18px;box-shadow:0 16px 34px rgba(22,163,74,.09)}
-        .payment-info-box--binance{border-color:#fde68a;background:linear-gradient(145deg,#ffffff 0%,#fffbeb 100%);box-shadow:0 16px 34px rgba(202,138,4,.10)}
+        .payment-info-box--bank{border-color:#fde68a;background:linear-gradient(145deg,#ffffff 0%,#fffbeb 100%);box-shadow:0 16px 34px rgba(202,138,4,.10)}
         .payment-card-head{display:flex;align-items:center;justify-content:space-between;gap:14px}
         .payment-card-brand{display:flex;align-items:center;gap:12px;min-width:0}
         .payment-card-logo{display:inline-flex;height:52px;width:52px;align-items:center;justify-content:center;flex:0 0 auto;border-radius:18px;background:#ffffff;box-shadow:0 12px 26px rgba(15,23,42,.08),inset 0 0 0 1px rgba(226,232,240,.9)}
         .payment-card-title{font-size:20px;font-weight:900;color:#0f172a;letter-spacing:-.03em}
         .payment-card-subtitle{margin-top:3px;font-size:12px;font-weight:800;color:#16a34a;text-transform:uppercase;letter-spacing:.14em}
-        .payment-info-box--binance .payment-card-subtitle{color:#a16207}
+        .payment-info-box--bank .payment-card-subtitle{color:#a16207}
         .payment-brand-watermark{font-size:34px;font-weight:900;letter-spacing:-.07em;color:rgba(22,163,74,.10);white-space:nowrap}
-        .payment-info-box--binance .payment-brand-watermark{color:rgba(202,138,4,.14)}
+        .payment-info-box--bank .payment-brand-watermark{color:rgba(202,138,4,.14)}
         #payment-modal .payment-info-row:first-child{display:none}
         .payment-info-row{display:grid;gap:7px;border-radius:18px;border:1px solid rgba(226,232,240,.9);background:rgba(255,255,255,.78);padding:12px 14px}
         .payment-info-row > span{font-size:11px;font-weight:900;letter-spacing:.16em;text-transform:uppercase;color:#64748b}
-        .payment-info-box--binance .payment-info-row > span{color:#92400e}
+        .payment-info-box--bank .payment-info-row > span{color:#92400e}
         .payment-info-row > strong{font-size:16px;font-weight:900;color:#0f172a}
         .payment-number-group{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
         .payment-number-group strong{font-size:20px;font-weight:900;color:#0f172a;letter-spacing:.02em}
         .payment-copy-button{display:inline-flex;align-items:center;justify-content:center;min-height:38px;border:none;border-radius:999px;background:#16a34a;padding:0 16px;font-size:13px;font-weight:900;color:#ffffff;box-shadow:0 12px 22px rgba(22,163,74,.18);cursor:pointer}
         .payment-copy-button:hover{background:#15803d;transform:translateY(-1px)}
         .payment-copy-button:active{transform:scale(.96)}
-        .payment-copy-button--binance{background:#111827;box-shadow:0 12px 22px rgba(17,24,39,.16)}
-        .payment-copy-button--binance:hover{background:#0f172a}
+        .payment-copy-button--bank{background:#111827;box-shadow:0 12px 22px rgba(17,24,39,.16)}
+        .payment-copy-button--bank:hover{background:#0f172a}
         .payment-method-banner{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}
         .payment-method-badge{display:inline-flex;align-items:center;border-radius:999px;background:#111827;padding:6px 10px;font-size:10px;font-weight:900;letter-spacing:.18em;text-transform:uppercase;color:#facc15}
         .payment-method-banner-title{margin-top:10px;font-size:18px;font-weight:900;color:#111827}
         .payment-method-banner-subtitle{margin-top:4px;font-size:12px;line-height:1.6;color:#6b7280}
         .payment-method-icon{display:inline-flex;height:52px;width:52px;align-items:center;justify-content:center;flex:0 0 auto;border-radius:18px}
-        .payment-method-icon--binance{background:linear-gradient(180deg,#111827 0%,#0f172a 100%);box-shadow:0 14px 24px rgba(17,24,39,.18)}
+        .payment-method-icon--bank{background:linear-gradient(180deg,#111827 0%,#0f172a 100%);box-shadow:0 14px 24px rgba(17,24,39,.18)}
         .payment-method-warning{display:grid;gap:8px;border:1px solid #e2e8f0;border-radius:22px;background:#ffffff;padding:14px 16px;font-size:13px;line-height:1.65;color:#334155;box-shadow:0 10px 24px rgba(15,23,42,.05)}
         .payment-method-warning strong{font-size:12px;font-weight:900;letter-spacing:.16em;text-transform:uppercase;color:#166534}
-        .payment-method-warning--binance{border-color:#fde68a;background:#fffbeb;color:#78350f}
-        .payment-method-warning--binance strong{color:#a16207}
+        .payment-method-warning--bank{border-color:#fde68a;background:#fffbeb;color:#78350f}
+        .payment-method-warning--bank strong{color:#a16207}
         .payment-instruction-list{display:grid;gap:7px;margin:0;padding:0;list-style:none}
         .payment-instruction-list li{display:flex;gap:8px;align-items:flex-start}
         .payment-instruction-list li::before{content:'✓';display:inline-flex;height:18px;width:18px;align-items:center;justify-content:center;flex:0 0 auto;border-radius:999px;background:#dcfce7;color:#166534;font-size:11px;font-weight:900;margin-top:1px}
-        .payment-method-warning--binance .payment-instruction-list li::before{background:#fef3c7;color:#92400e}
+        .payment-method-warning--bank .payment-instruction-list li::before{background:#fef3c7;color:#92400e}
         .payment-night-notice{display:flex;gap:12px;border:1px solid #fde68a;border-radius:22px;background:#fffbeb;padding:14px 16px;color:#78350f;box-shadow:0 12px 26px rgba(202,138,4,.08);animation:paymentMethodFade .25s ease both}
         .payment-night-notice.hidden{display:none!important}
         .payment-night-icon{display:inline-flex;height:34px;width:34px;align-items:center;justify-content:center;flex:0 0 auto;border-radius:12px;background:#fef3c7;color:#a16207}
@@ -1471,13 +1471,11 @@ Spam activity = Ban risk</div>
                                 </span>
                                 <span>Easypaisa</span>
                             </button>
-                            <button type="button" class="payment-method-tab" data-payment-method-tab="binance" aria-selected="false" role="tab">
+                            <button type="button" class="payment-method-tab" data-payment-method-tab="all-banks" aria-selected="false" role="tab">
                            <span class="payment-method-tab-mark" aria-hidden="true">
-                           <img src="/assets/payment/binance.png"
-                             alt="Binance"
-                             class="payment-method-logo">
+                           <i class="fa-solid fa-building-columns"></i>
                             </span>
-                                <span>Binance</span>
+                                <span>All Bank Payments</span>
                             </button>
                         </div>
                         <input type="hidden" name="payment_method" id="payment-method-input" value="easypaisa">
@@ -1522,38 +1520,39 @@ Spam activity = Ban risk</div>
                                 </div>
                             </div>
                         </div>
-                        <div class="payment-method-panel hidden" data-payment-method-panel="binance" role="tabpanel">
-                            <div class="payment-info-box payment-info-box--binance">
+                        <div class="payment-method-panel hidden" data-payment-method-panel="all-banks" role="tabpanel">
+                            <div class="payment-info-box payment-info-box--bank">
                                 <div class="payment-card-head">
                                     <div class="payment-card-brand">
                                    <span class="payment-card-logo" aria-hidden="true">
-                                      <img src="/assets/payment/binance.png" alt="Binance">
+                                      <i class="fa-solid fa-building-columns"></i>
                                          </span>
                                         <div>
-                                            <div class="payment-card-title">Binance</div>
-                                            <div class="payment-card-subtitle">UID transfer</div>
+                                            <div class="payment-card-title">All Bank Payments</div>
+                                            <div class="payment-card-subtitle">Manual payment</div>
                                         </div>
                                     </div>
-                                    <div class="payment-brand-watermark">BNB</div>
                                 </div>
+                                <div class="payment-info-row"><span>Account Type</span><strong>SadaPay</strong></div>
                                 <div class="payment-info-row">
-                                    <span>Binance UID</span>
+                                    <span>Account Number</span>
                                     <div class="payment-number-group">
-                                        <strong>1049681083</strong>
-                                        <button type="button" class="payment-copy-button payment-copy-button--binance" data-action="copy-payment-target" data-copy-value="1049681083">Copy UID</button>
+                                        <strong>03439898333</strong>
+                                        <button type="button" class="payment-copy-button payment-copy-button--bank" data-action="copy-payment-target" data-copy-value="03439898333">Copy</button>
                                     </div>
                                 </div>
-                                <div class="payment-info-row"><span>Account Name</span><strong>M3_Faisal_Bro</strong></div>
-                                <div class="payment-info-row"><span>Minimum Deposit</span><strong>1 USDT</strong></div>
-                                <div class="payment-info-row"><span>Transfer Type</span><strong>Internal Transfer Only</strong></div>
+                                <div class="payment-info-row"><span>Account Name</span><strong>Nihayat Begum</strong></div>
+                                <div class="payment-info-row"><span>Minimum Deposit</span><strong>100 PKR</strong></div>
+                                <div class="payment-info-row"><span>Verification</span><strong>👨‍💼 Manual</strong></div>
                             </div>
-                            <div class="payment-method-warning payment-method-warning--binance">
+                            <div class="payment-method-warning payment-method-warning--bank">
                                 <strong>Important Instructions</strong>
                                 <ul class="payment-instruction-list">
-                                    <li>Use Binance UID Transfer only.</li>
-                                    <li>Do not use blockchain network transfer.</li>
-                                    <li>Only direct Binance internal transfer accepted.</li>
-                                    <li>Minimum deposit: 1 USDT.</li>
+                                    <li>You can send payment through SadaPay, bank transfer, or other available payment methods.</li>
+                                    <li>Upload the same payment screenshot after completing your payment.</li>
+                                    <li>Enter the correct transaction/reference ID if available.</li>
+                                    <li>Your payment will be manually checked by our admin team.</li>
+                                    <li>Balance will be added after payment approval.</li>
                                 </ul>
                             </div>
                         </div>
@@ -1562,7 +1561,7 @@ Spam activity = Ban risk</div>
                         </div>
                         
           <div class="input-wrap">
-    <input type="text" name="transaction_id" id="payment-transaction-id-input" placeholder="Transaction ID" inputmode="numeric" maxlength="11">
+    <input type="text" name="transaction_id" id="payment-transaction-id-input" placeholder="Transaction ID / Reference ID" inputmode="text" maxlength="100">
 </div>
                         <label class="payment-upload-box">
                             <div class="payment-upload-top">
